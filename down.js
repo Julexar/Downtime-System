@@ -12,7 +12,7 @@
 var Downtime = Downtime || (function(){
     'use strict';
     
-    var version='0.7a',
+    var version='0.8a',
     
     setDefaults = function() {
         state.down = {
@@ -39,9 +39,6 @@ var Downtime = Downtime || (function(){
                 case '!setdown':
                     setdown(args[1],args[2],args[3],msg);
                     downmenu(args[1],msg);
-                    return;
-                case '!setdc':
-                    state.down.now.dc=args[1];
                     return;
             }
         }
