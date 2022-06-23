@@ -12,7 +12,7 @@
 var Downtime = Downtime || (function(){
     'use strict';
     
-    var version='0.8a',
+    var version='0.8b',
     
     setDefaults = function() {
         state.down = {
@@ -126,7 +126,7 @@ var Downtime = Downtime || (function(){
                                 '<div style="text-align:center;"><a ' + astyle2 + '" href="!brewmenu --charid ' + charid + ' --rarity ?{Type?|Common|Uncommon|Rare|Very Rare|Legendary} --amount ?{Amount?|1}">Brew Potion</a></div>' + //--
                                 '<div style="text-align:center;"><a ' + astyle2 + '" href="!craftmenu --charid ' + charid + ' --type ?{Type?|Weapon|Armor|Accessoires|Scroll} --rarity ?{Rarity?|Common|Uncommon|Rare|Very Rare|Legendary} --time ?{Time?|1}">Craft Items</a></div>' + //--
                                 '<div style="text-align:center;"><a ' + astyle2 + '" href="!work --charid ' + charid + '--skill ?{Skill?|Acrobatics|Animal Handling|Arcana|Athletics|Deception|History|Insight|Intimidation|Investigation|Medicine|Nature|Perception|Performance|Persuasion|Religion|Sleight of Hand|Stealth|Survival} --time ?{Time?|1}">Work</a></div>' + //--
-                                '<div style="text-align:center;"><a ' + astyle2 + '" href="!trainmenu --charid ' + charid + ' --type ?{Type?|Tool|Language} --time ?{Time?|25}">Train</a></div>' + //--
+                                '<div style="text-align:center;"><a ' + astyle2 + '" href="!trainmenu --charid ' + charid + ' --type ?{Type?|Tool|Language}">Train</a></div>' + //--
                                 '<div style="text-align:center;"><a ' + astyle2 + '" href="!crimemenu --charid ' + charid + ' --type ?{Type?|Stealth|Thieves\' Tools|Investigation|Perception|Deception}">Commit Crime</a></div>' + //--
                                 '<div style="text-align:center;"><a ' + astyle2 + '" href="!research --charid ' + charid + ' --time ?{Time?|7}">Research</a></div>' + //--
                                 '</div>'
@@ -207,7 +207,7 @@ var Downtime = Downtime || (function(){
                                 '<div style="text-align:center;"><a ' + astyle2 + '" href="!brewmenu --charid ' + charid + ' --rarity ?{Type?|Common|Uncommon|Rare|Very Rare|Legendary} --amount ?{Amount?|1}">Brew Potion</a></div>' + //--
                                 '<div style="text-align:center;"><a ' + astyle2 + '" href="!craftmenu --charid ' + charid + ' --type ?{Type?|Weapon|Armor|Accessoires|Scroll} --rarity ?{Rarity?|Common|Uncommon|Rare|Very Rare|Legendary} --time ?{Time?|1}">Craft Items</a></div>' + //--
                                 '<div style="text-align:center;"><a ' + astyle2 + '" href="!work --charid ' + charid + '--skill ?{Skill?|Acrobatics|Animal Handling|Arcana|Athletics|Deception|History|Insight|Intimidation|Investigation|Medicine|Nature|Perception|Performance|Persuasion|Religion|Sleight of Hand|Stealth|Survival} --time ?{Time?|1}">Work</a></div>' + //--
-                                '<div style="text-align:center;"><a ' + astyle2 + '" href="!trainmenu --charid ' + charid + ' --type ?{Type?|Tool|Language} --time ?{Time?|25}">Train</a></div>' + //--
+                                '<div style="text-align:center;"><a ' + astyle2 + '" href="!trainmenu --charid ' + charid + ' --type ?{Type?|Tool|Language}">Train</a></div>' + //--
                                 '<div style="text-align:center;"><a ' + astyle2 + '" href="!crimemenu --charid ' + charid + ' --type ?{Type?|Stealth|Thieves\' Tools|Investigation|Perception|Deception}">Commit Crime</a></div>' + //--
                                 '<div style="text-align:center;"><a ' + astyle2 + '" href="!research --charid ' + charid + ' --time ?{Time?|7}">Research</a></div>' + //--
                                 '</div>'
@@ -839,6 +839,7 @@ var Downtime = Downtime || (function(){
         let dc=state.down.now.dc;
         type=type.replace("type ","");
         charid=charid.replace("charid ","");
+        var amount=7;
         let char = findObjs({
             _type: 'character',
             _id: charid
