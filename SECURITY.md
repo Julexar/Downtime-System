@@ -7,10 +7,8 @@ I am not liable for any issues that you might experience with unsupported Versio
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| 0.5a   | :x: |
+| 0.7a   | :x:                |
 
 ## Reporting an Issue
 
