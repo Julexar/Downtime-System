@@ -121,7 +121,7 @@ var Downtime = Downtime || (function(){
                                 'Downtime: ' + gmnotes + //--
                                 '</table>' + //--
                                 '<br>' + //--
-                                '<div style="text-align:center;">Avialable Downtime Activities</div>' + //--
+                                '<div style="text-align:center;">Available Downtime Activities</div>' + //--
                                 '<br>' + //--
                                 '<div style="text-align:center;"><a ' + astyle2 + '" href="!brewmenu --charid ' + charid + ' --rarity ?{Type?|Common|Uncommon|Rare|Very Rare|Legendary} --amount ?{Amount?|1}">Brew Potion</a></div>' + //--
                                 '<div style="text-align:center;"><a ' + astyle2 + '" href="!craftmenu --charid ' + charid + ' --type ?{Type?|Weapon|Armor|Accessoires|Scroll} --rarity ?{Rarity?|Common|Uncommon|Rare|Very Rare|Legendary} --time ?{Time?|1}">Craft Items</a></div>' + //--
@@ -202,7 +202,7 @@ var Downtime = Downtime || (function(){
                                 'Downtime: ' + time + //--
                                 '</table>' + //--
                                 '<br>' + //--
-                                '<div style="text-align:center;">Avialable Downtime Activities</div>' + //--
+                                '<div style="text-align:center;">Available Downtime Activities</div>' + //--
                                 '<br>' + //--
                                 '<div style="text-align:center;"><a ' + astyle2 + '" href="!brewmenu --charid ' + charid + ' --rarity ?{Type?|Common|Uncommon|Rare|Very Rare|Legendary} --amount ?{Amount?|1}">Brew Potion</a></div>' + //--
                                 '<div style="text-align:center;"><a ' + astyle2 + '" href="!craftmenu --charid ' + charid + ' --type ?{Type?|Weapon|Armor|Accessoires|Scroll} --rarity ?{Rarity?|Common|Uncommon|Rare|Very Rare|Legendary} --time ?{Time?|1}">Craft Items</a></div>' + //--
