@@ -10,6 +10,7 @@ I am not liable for any issues that you might experience with unsupported Versio
 | 0.5a   | :x: |
 | 0.7a   | :x: |
 | 0.8a   | :x: |
+| 0.8b   | :x: |
 
 ## Reporting an Issue
 
