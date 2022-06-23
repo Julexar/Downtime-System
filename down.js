@@ -12,7 +12,7 @@
 var Downtime = Downtime || (function(){
     'use strict';
     
-    var version='0.8b',
+    var version='0.8c',
     
     setDefaults = function() {
         state.down = {
