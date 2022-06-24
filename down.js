@@ -12,7 +12,7 @@
 var Downtime = Downtime || (function(){
     'use strict';
     
-    var version='0.8c',
+    var version='0.9a',
     
     setDefaults = function() {
         state.down = {
@@ -96,7 +96,7 @@ var Downtime = Downtime || (function(){
                     _id: charid
                 })[0];
                 if (playerIsGM(msg.playerid)) {
-                    let name=option;
+                    let name=char.get('name');
                     char.get('gmnotes',function(gmnotes) {
                         sendChat("Downtime","/w gm <div "+ divstyle + ">" + //--
                             '<div ' + headstyle + '>Downtime</div>' + //--
@@ -142,21 +142,9 @@ var Downtime = Downtime || (function(){
                 }, {caseInsensitive: true});
                 if (char.length>1) {
                     sendChar("Downtime","/w "+msg.who+" Multiple Characters with the same name exist, please select the token and use >>!down --sel<< instead");
-                }
-            } else if (option.includes('charid')) {
-                option.replace("charid ","");
-                char=findObjs({
-                    _type: 'character',
-                    _id: option
-                }, {caseInsensitive: true})[0];
-            }
-            if (option.includes("type")) {
-                option=option.replace("type ","");
-                if (option=="All") {
-                    
                 } else {
                     if (playerIsGM(msg.playerid)) {
-                        let name=option;
+                        let name = char.get('name');
                         char.get('gmnotes',function(gmnotes) {
                             sendChat("Downtime","/w gm <div "+ divstyle + ">" + //--
                                 '<div ' + headstyle + '>Downtime</div>' + //--
@@ -168,27 +156,160 @@ var Downtime = Downtime || (function(){
                                 '</div>'
                             );
                         });
+                    } else {
+                        let charid=char.get('_id');
+                        char.get("gmnotes",function(gmnotes) {
+                            let time=String(gmnotes);
+                            if (time=="") {
+                                sendChat("Downtime","/w "+msg.who+" You do not have available Downtime!");
+                            } else {
+                                sendChat("Downtime","/w " + speakingName + " <div "+ divstyle + ">" + //--
+                                    '<div ' + headstyle + '>Downtime</div>' + //--
+                                    '<div ' + substyle + '>Menu</div>' + //--
+                                    '<div ' + arrowstyle + '></div>' + //--
+                                    '<table>' + //--
+                                    'Downtime: ' + time + //--
+                                    '</table>' + //--
+                                    '<br>' + //--
+                                    '<div style="text-align:center;">Available Downtime Activities</div>' + //--
+                                    '<br>' + //--
+                                    '<div style="text-align:center;"><a ' + astyle2 + '" href="!brewmenu --charid ' + charid + ' --rarity ?{Type?|Common|Uncommon|Rare|Very Rare|Legendary} --amount ?{Amount?|1}">Brew Potion</a></div>' + //--
+                                    '<div style="text-align:center;"><a ' + astyle2 + '" href="!craftmenu --charid ' + charid + ' --type ?{Type?|Weapon|Armor|Accessoires|Scroll} --rarity ?{Rarity?|Common|Uncommon|Rare|Very Rare|Legendary} --time ?{Time?|1}">Craft Items</a></div>' + //--
+                                    '<div style="text-align:center;"><a ' + astyle2 + '" href="!work --charid ' + charid + '--skill ?{Skill?|Acrobatics|Animal Handling|Arcana|Athletics|Deception|History|Insight|Intimidation|Investigation|Medicine|Nature|Perception|Performance|Persuasion|Religion|Sleight of Hand|Stealth|Survival} --time ?{Time?|1}">Work</a></div>' + //--
+                                    '<div style="text-align:center;"><a ' + astyle2 + '" href="!trainmenu --charid ' + charid + ' --type ?{Type?|Tool|Language}">Train</a></div>' + //--
+                                    '<div style="text-align:center;"><a ' + astyle2 + '" href="!crimemenu --charid ' + charid + ' --type ?{Type?|Stealth|Thieves\' Tools|Investigation|Perception|Deception}">Commit Crime</a></div>' + //--
+                                    '<div style="text-align:center;"><a ' + astyle2 + '" href="!research --charid ' + charid + ' --time ?{Time?|7}">Research</a></div>' + //--
+                                    '</div>'
+                                );
+                            }
+                        });
+                    }
+                }
+            } else if (option.includes('charid')) {
+                option.replace("charid ","");
+                char=findObjs({
+                    _type: 'character',
+                    _id: option
+                }, {caseInsensitive: true})[0];
+                if (char) {
+                    if (playerIsGM(msg.playerid)) {
+                        let name = char.get('name');
+                        char.get('gmnotes',function(gmnotes) {
+                            sendChat("Downtime","/w gm <div "+ divstyle + ">" + //--
+                                '<div ' + headstyle + '>Downtime</div>' + //--
+                                '<div ' + substyle + '>Menu</div>' + //--
+                                '<div ' + arrowstyle + '></div>' + //--
+                                '<table>' + //--
+                                '<tr><td>Downtime: </td><td><a ' + astyle1 + '" href="!setdown --type ?{Player?|All|' + name + '} --amount ?{Amount?|1} --type ?{Type?|Day|Week|Month|Year}">' + gmnotes + '</a></td></tr>' + //--
+                                '</table>' + //--
+                                '</div>'
+                            );
+                        });
+                    } else {
+                        let charid=char.get('_id');
+                        char.get("gmnotes",function(gmnotes) {
+                            let time=String(gmnotes);
+                            if (time=="") {
+                                sendChat("Downtime","/w "+msg.who+" You do not have available Downtime!");
+                            } else {
+                                sendChat("Downtime","/w " + speakingName + " <div "+ divstyle + ">" + //--
+                                    '<div ' + headstyle + '>Downtime</div>' + //--
+                                    '<div ' + substyle + '>Menu</div>' + //--
+                                    '<div ' + arrowstyle + '></div>' + //--
+                                    '<table>' + //--
+                                    'Downtime: ' + time + //--
+                                    '</table>' + //--
+                                    '<br>' + //--
+                                    '<div style="text-align:center;">Available Downtime Activities</div>' + //--
+                                    '<br>' + //--
+                                    '<div style="text-align:center;"><a ' + astyle2 + '" href="!brewmenu --charid ' + charid + ' --rarity ?{Type?|Common|Uncommon|Rare|Very Rare|Legendary} --amount ?{Amount?|1}">Brew Potion</a></div>' + //--
+                                    '<div style="text-align:center;"><a ' + astyle2 + '" href="!craftmenu --charid ' + charid + ' --type ?{Type?|Weapon|Armor|Accessoires|Scroll} --rarity ?{Rarity?|Common|Uncommon|Rare|Very Rare|Legendary} --time ?{Time?|1}">Craft Items</a></div>' + //--
+                                    '<div style="text-align:center;"><a ' + astyle2 + '" href="!work --charid ' + charid + '--skill ?{Skill?|Acrobatics|Animal Handling|Arcana|Athletics|Deception|History|Insight|Intimidation|Investigation|Medicine|Nature|Perception|Performance|Persuasion|Religion|Sleight of Hand|Stealth|Survival} --time ?{Time?|1}">Work</a></div>' + //--
+                                    '<div style="text-align:center;"><a ' + astyle2 + '" href="!trainmenu --charid ' + charid + ' --type ?{Type?|Tool|Language}">Train</a></div>' + //--
+                                    '<div style="text-align:center;"><a ' + astyle2 + '" href="!crimemenu --charid ' + charid + ' --type ?{Type?|Stealth|Thieves\' Tools|Investigation|Perception|Deception}">Commit Crime</a></div>' + //--
+                                    '<div style="text-align:center;"><a ' + astyle2 + '" href="!research --charid ' + charid + ' --time ?{Time?|7}">Research</a></div>' + //--
+                                    '</div>'
+                                );
+                            }
+                        });
+                    }
+                } else {
+                    sendChat("Downtime","/w "+msg.who+" No Characters with the given ID exist!");
+                }
+            }
+            if (option.includes("type")) {
+                option=option.replace("type ","");
+                if (option=="All") {
+                    sendChat("Downtime","/w gm <div "+ divstyle + ">" + //--
+                        '<div ' + headstyle + '>Downtime</div>' + //--
+                        '<div ' + substyle + '>Menu</div>' + //--
+                        '<div ' + arrowstyle + '></div>' + //--
+                        '<table>' + //--
+                        '<tr><td>Downtime: </td><td><a ' + astyle1 + '" href="!setdown --type All --amount ?{Amount?|1} --type ?{Type?|Day|Week|Month|Year}">' + gmnotes + '</a></td></tr>' + //--
+                        '</table>' + //--
+                        '</div>'
+                    );
+                } else {
+                    option=option.replace("type ","");
+                    let char=findObjs({
+                        _type: 'character',
+                        name: option
+                    }, {caseInsensitive: true})[0];
+                    if (char) {
+                        if (playerIsGM(msg.playerid)) {
+                            let name=option;
+                            char.get('gmnotes',function(gmnotes) {
+                                sendChat("Downtime","/w gm <div "+ divstyle + ">" + //--
+                                    '<div ' + headstyle + '>Downtime</div>' + //--
+                                    '<div ' + substyle + '>Menu</div>' + //--
+                                    '<div ' + arrowstyle + '></div>' + //--
+                                    '<table>' + //--
+                                    '<tr><td>Downtime: </td><td><a ' + astyle1 + '" href="!setdown --type ?{Player?|All|' + name + '} --amount ?{Amount?|1} --type ?{Type?|Day|Week|Month|Year}">' + gmnotes + '</a></td></tr>' + //--
+                                    '</table>' + //--
+                                    '</div>'
+                                );
+                            });
+                        }
                     }
                 }
             }
         } else {
             if (playerIsGM(msg.playerid)) {
-                sendChat("Downtime","/w gm <div "+ divstyle + ">" + //--
-                    '<div ' + headstyle + '>Downtime</div>' + //--
-                    '<div ' + substyle + '>Menu</div>' + //--
-                    '<div ' + arrowstyle + '></div>' + //--
-                    '<table>' + //--
-                    '<tr><td>Downtime: </td><td><a ' + astyle1 + '" href="!setdown --type All --amount ?{Amount?|1} --type ?{Type?|Day|Week|Month|Year}">' + state.down.now.time + " " + state.down.now.type + '</a></td></tr>' + //--
-                    '</table>' + //--
-                    '</div>'
-                );
+                let char=findObjs({
+                    _type: 'character',
+                    name: msg.who
+                }, {caseInsensitive: true})[0];
+                if (char) {
+                    let name = char.get('name');
+                    char.get('gmnotes',function(gmnotes) {
+                        sendChat("Downtime","/w gm <div "+ divstyle + ">" + //--
+                            '<div ' + headstyle + '>Downtime</div>' + //--
+                            '<div ' + substyle + '>Menu</div>' + //--
+                            '<div ' + arrowstyle + '></div>' + //--
+                            '<table>' + //--
+                            '<tr><td>Downtime: </td><td><a ' + astyle1 + '" href="!setdown --type ?{Player?|All|' + name + '} --amount ?{Amount?|1} --type ?{Type?|Day|Week|Month|Year}">' + gmnotes + '</a></td></tr>' + //--
+                            '</table>' + //--
+                            '</div>'
+                        );
+                    });
+                } else {
+                    sendChat("Downtime","/w gm <div "+ divstyle + ">" + //--
+                        '<div ' + headstyle + '>Downtime</div>' + //--
+                        '<div ' + substyle + '>Menu</div>' + //--
+                        '<div ' + arrowstyle + '></div>' + //--
+                        '<table>' + //--
+                        '<tr><td>Downtime: </td><td><a ' + astyle1 + '" href="!setdown --type All --amount ?{Amount?|1} --type ?{Type?|Day|Week|Month|Year}">' + state.down.now.time + " " + state.down.now.type + '</a></td></tr>' + //--
+                        '</table>' + //--
+                        '</div>'
+                    );
+                }
             } else {
                 let char = findObjs({
                     _type: 'character',
                     name: msg.who
                 }, {caseInsensitive: true})[0];
-                let charid=char.get('_id');
                 if (char) {
+                    let charid=char.get('_id');
                     char.get("gmnotes",function(gmnotes) {
                         let time=String(gmnotes);
                         if (time=="") {
@@ -219,6 +340,87 @@ var Downtime = Downtime || (function(){
                 }
             }
         }
+    },
+    
+    createHandout = function(charid,msg) {
+        let char=findObjs({
+            _type: 'character',
+            _id: charid
+        }, {caseInsensitive: true})[0];
+        if (char) {
+            let playerid = char.get('controlledby');
+            let existing=findObjs({
+                _type: 'handout',
+            });
+            let count=0;
+            let multiple=false;
+            let handid;
+            _.each(existing,function(handout) {
+                let name=handout.get('name');
+                if (name.includes("Downtime Activities") && name.includes(char.get('name'))) {
+                    count+=1;
+                    if (name.includes(String(count))) {
+                        handid=handout.get('_id');
+                    }
+                }
+            })
+            if (count==0) {
+                count=1;
+            }
+            char.get('gmnotes',function(gmnotes) {
+                let notes=gmnotes;
+                let handout=createObj('handout',{
+                    name: 'Downtime Activities of '+char.get('name')+" #"+count,
+                    inplayerjournals: playerid,
+                    controlledby: msg.playerid,
+                });
+                handout.set('notes',"Total Downtime: "+notes);
+            });
+        }
+    },
+    
+    setHandoutDesc = function(playerid,num,description) {
+        num=Number(num);
+        let handout=findObjs({
+            _type: 'handout',
+            inplayerjournals: playerid
+        });
+        _.each(handout,function(object) {
+            let name=object.get('name');
+            if (name.includes("Downtime Activities")) {
+                if (name.includes(String(num))) {
+                    object.get("notes",function(notes) {
+                        if (notes!=="") {
+                            notes=notes.replace("</p>","")+description+"</p>";
+                        } else {
+                            notes="<p>"+description+"</p>";
+                        }
+                        handout.set("notes",notes);
+                    });
+                } else {
+                    sendChat("Downtime","/w gm A Handout with that Number does not exist!");
+                }
+            }
+        })
+    },
+    
+    getHandoutNum = function(playerid,charid) {
+        let handout=findObjs({
+            _type: handout,
+            inplayerjournals: playerid
+        });
+        let char=findObjs({
+            _type: 'character',
+            _id: charid
+        })[0];
+        let num;
+        _.each(handout,function(object) {
+            let name=object.get('name');
+            if (name.includes("Downtime Activities") && name.includes(char.get('name'))) {
+                num=Number(name.replace("Downtime Activities of "+char.get('name')+" #",""));
+            }
+        });
+        return num;
     },
     
     getIDsFromTokens = function (selected) {
@@ -254,12 +456,16 @@ var Downtime = Downtime || (function(){
                     break;
             }
             _.each(characters,function(attr) {
-                if (realamount>1) {
-                    attr.set('gmnotes',realamount+" Days");
-                } else if (realamount==1) {
-                    attr.set('gmnotes',realamount+" Day");
-                } else {
-                    attr.set('gmnotes',"");
+                if (attr.get('inplayerjournals')!=="") {
+                    let id=attr.get('_id');
+                    createHandout(id,msg);
+                    if (realamount>1) {
+                        attr.set('gmnotes',realamount+" Days");
+                    } else if (realamount==1) {
+                        attr.set('gmnotes',realamount+" Day");
+                    } else {
+                        attr.set('gmnotes',"");
+                    }
                 }
             });
         } else {
@@ -267,6 +473,7 @@ var Downtime = Downtime || (function(){
                 _type: 'character',
                 name: player
             }, {caseInsensitive: true})[0];
+            let id=char.get('_id');
             var realamount=0;
             switch (type) {
                 case 'Week':
@@ -289,6 +496,7 @@ var Downtime = Downtime || (function(){
             } else {
                 char.set('gmnotes',"");
             }
+            createHandout(id,msg);
         }
     },
     
@@ -680,6 +888,10 @@ var Downtime = Downtime || (function(){
                 sendChat("Downtime","!setattr --charid "+charid+" --repeating_attack_-CREATE_atkname|Detect Thoughts --repeating_attack_-CREATE_atkflag|0 --repeating_attack_-CREATE_saveattr|Wisdom --repeating_attack_-CREATE_saveflat|13 --repeating_attack_-CREATE_saveeffect|No effect");
             }
         }
+        let handnum=getHandoutNum(msg.playerid,charid);
+        let name = char.get("name");
+        let desc="<br><br>"+name+" spends "+time+" Days and "+price+" GP crafting "+amount+"x "+potion
+        setHandoutDesc(msg.playerid,handnum,desc);
     },
     
     craftmenu = function(charid,type,rarity,amount,msg) {
@@ -785,6 +997,7 @@ var Downtime = Downtime || (function(){
     },
     
     work = function(charid,type,amount,msg) {
+        let skill=type;
         type=type.replace("skill ","");
         type=type.replace(" ","_");
         type=type.replace(" ","_");
@@ -822,8 +1035,13 @@ var Downtime = Downtime || (function(){
             }, {caseInsensitive: true})[0];
             var cur=Number(gold.get('current'));
             sendChat("Downtime","/w "+msg.who+" You worked for "+amount+" Days and gained "+gp+" GP!");
+            let mun=gp;
             gp+=cur;
             gold.set('current',gp);
+            let handnum=getHandoutNum(msg.playerid,charid);
+            let name = char.get("name");
+            let desc="<br><br>"+name+" spends "+amount+" Days working, using their "+skill+", earning "+gp+" GP.";
+            setHandoutDesc(msg.playerid,handnum,desc);
         }
     },
     
@@ -892,6 +1110,8 @@ var Downtime = Downtime || (function(){
             _characterid: charid,
             _name: "gp"
         }, {caseInsensitive: true})[0];
+        let handnum=getHandoutNum(msg.playerid,charid);
+        let name = char.get("name");
         var cur=Number(gold.get('current'));
         char.get("gmnotes",function(gmnotes){
             let ntime=Number(gmnotes.replace(" Days",""));
@@ -929,6 +1149,8 @@ var Downtime = Downtime || (function(){
                     if (passnum==0) {
                         var weeknum=Math.floor(state.down.now.crimeval/25);
                         sendChat("Downtime","/w "+msg.who+" The Heist fails and you are caught, forced to pay a fine of " + state.down.now.crimeval + " GP and are locked into Jail for "+weeknum+" Weeks");
+                        let desc="<br><br>"+name+" spends 7 Days and 25 GP setting up a Heist, but they fail and are caught. They pay a fine of "+state.down.now.crimeval+" GP and are locked into Jail for "+weeknum+" Weeks.";
+                        setHandoutDesc(msg.playerid,handnum,desc);
                         if ((cur-Number(state.down.now.crimeval))<0) {
                             cur=0;
                             gold.set('current',0);
@@ -958,17 +1180,24 @@ var Downtime = Downtime || (function(){
                             char.set("gmnotes",notes);
                         });
                     } else if (passnum==1) {
+                        let crimeval=Number(state.down.now.crimeval)
                         sendChat("Downtime","/w "+msg.who+" You fail the Heist but manage to get away.");
+                        let desc="<br><br>"+name+" spends 7 Days and 25 GP trying to pull off a Heist, targeting "+crimeval+" GP, but fail. They manage to get away before they could get caught.";
+                        setHandoutDesc(msg.playerid,handnum,desc);
                     } else if (passnum==2) {
                         let crimeval=Number(state.down.now.crimeval)/2;
                         sendChat("Downtime","/w "+msg.who+" You manage to pull off the Heist but could only get away with "+crimeval+" GP.");
                         cur+=crimeval;
                         gold.set('current',cur);
+                        let desc="<br><br>"+name+" spends 7 Days and 25 GP setting up a Heist. They pull it off but only manage to get away with "+crimeval+" GP.";
+                        setHandoutDesc(msg.playerid,handnum,desc);
                     } else if (passnum==3) {
                         let crimeval=Number(state.down.now.crimeval);
                         sendChat("Downtime","/w "+msg.who+" You pull off the Heist successfully and gain "+crimeval+" GP.");
                         cur+=crimeval;
                         gold.set('current',cur);
+                        let desc="<br><br>"+name+" spends 7 Days and 25 GP setting up a Heist. They pull it off and gain "+crimeval+" GP.";
+                        setHandoutDesc(msg.playerid,handnum,desc);
                     }
                 }
             }
@@ -1055,7 +1284,6 @@ var Downtime = Downtime || (function(){
             list=list.split(',');
         }
         let mintime=50;
-        let cost=25*5;
         list=String(list);
         for (let i=0;i<37;i++) {
             list=list.replace(',','|');
@@ -1122,37 +1350,58 @@ var Downtime = Downtime || (function(){
             _type: 'character',
             _id: charid
         }, {caseInsensitive: true})[0];
-        type=type.replace(" ","");
-        if (type=="Tool") {
-            let attributes = findObjs({
-                _type: 'attribute',
-                _characterid: charid
-            });
-            let count=0;
-            _.each(attributes,function(attr) {
-                let attrname = attr.get('_name');
-                if (attrname.includes('repeating_tool') && attrname.includes('_toolname')) {
-                    count+=1;
-                }
-            });
-            char.get('gmnotes',function(gmnotes) {
-                let num=Number(gmnotes.replace(' Days',''));
-                num-=50;
-                let notes=String(num)+" Days";
-                char.set('gmnotes',notes);
-            });
-            sendChat("Downtime",'!setattr --charid '+charid+' --repeating_tool_-CREATE_toolname|'+name);
-            sendChat("Downtime",'!setattr --charid '+charid+' --repeating_tool_$'+count+'_toolattr|QUERY');
+        let handnum=getHandoutNum(msg.playerid,charid);
+        let pname = char.get("name");
+        let cost=25*5;
+        let gold=findObjs({
+            _type: 'attribute',
+            _characterid: charid,
+            _name: 'gp'
+        }, {caseInsensitive: true})[0];
+        let cur=gold.get('current');
+        if (cur<cost) {
+            sendChat("Downtime","/w "+msg.who+" You do not have enough money to do that!");
         } else {
-            char.get('gmnotes',function(gmnotes) {
-                let num=Number(gmnotes.replace(' Days',''));
-                num-=50;
-                let notes=String(num)+" Days";
-                char.set('gmnotes',notes);
-            });
-            sendChat("Downtime",'!setattr --charid '+charid+' --repeating_proficiencies_-CREATE_name|'+name);
+            cur-=cost;
+            gold.set('current',cur);
+            type=type.replace(" ","");
+            if (type=="Tool") {
+                let attributes = findObjs({
+                    _type: 'attribute',
+                    _characterid: charid
+                });
+                let count=0;
+                _.each(attributes,function(attr) {
+                    let attrname = attr.get('_name');
+                    if (attrname.includes('repeating_tool') && attrname.includes('_toolname')) {
+                        count+=1;
+                    }
+                });
+                char.get('gmnotes',function(gmnotes) {
+                    let num=Number(gmnotes.replace(' Days',''));
+                    num-=50;
+                    let notes=String(num)+" Days";
+                    char.set('gmnotes',notes);
+                });
+                sendChat("Downtime",'!setattr --charid '+charid+' --repeating_tool_-CREATE_toolname|'+name);
+                sendChat("Downtime",'!setattr --charid '+charid+' --repeating_tool_$'+count+'_toolattr|QUERY');
+            } else {
+                char.get('gmnotes',function(gmnotes) {
+                    let num=Number(gmnotes.replace(' Days',''));
+                    num-=50;
+                    let notes=String(num)+" Days";
+                    char.set('gmnotes',notes);
+                });
+                sendChat("Downtime",'!setattr --charid '+charid+' --repeating_proficiencies_-CREATE_name|'+name);
+            }
         }
-    }, 
+        let desc="<br><br>"+pname+" spends 50 Days and "+cost+" GP training with "+name+".";
+        setHandoutDesc(msg.playerid,handnum,desc);
+    },
+    
+    research = function(charid,time) {
+        time=Number(time.replace("time ",""));
+    },
     
     checkInstall = function() {
         if (!state.down) {
