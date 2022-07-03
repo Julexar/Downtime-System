@@ -12,7 +12,7 @@
 var Downtime = Downtime || (function(){
     'use strict';
     
-    var version='0.9b',
+    var version='0.9c',
     
     setDefaults = function() {
         state.down = {
@@ -100,6 +100,10 @@ var Downtime = Downtime || (function(){
             case '!work':
                 work(args[1],args[2],args[3],msg);
                 return;
+            case '!settrain':
+                state.down.now.train=args[3];
+                trainmenu(args[1],args[2],msg);
+                return;
         }
     },
     
@@ -154,7 +158,7 @@ var Downtime = Downtime || (function(){
                                     '<div style="text-align:center;">Available Downtime Activities</div>' + //--
                                     '<br>' + //--
                                     '<div style="text-align:center;"><a ' + astyle2 + '" href="!brewmenu --charid ' + charid + ' --rarity ?{Type?|Common|Uncommon|Rare|Very Rare|Legendary} --amount ?{Amount?|1}">Brew Potion</a></div>' + //--
-                                    '<div style="text-align:center;"><a ' + astyle2 + '" href="!craftmenu --charid ' + charid + ' --type ?{Type?|Weapon|Armor|Accessoires|Scroll} --rarity ?{Rarity?|Common|Uncommon|Rare|Very Rare|Legendary} --time ?{Time?|1}">Craft Items</a></div>' + //--
+                                    '<div style="text-align:center;"><a ' + astyle2 + '" href="!craftmenu --charid ' + charid + ' --type ?{Type?|Weapon|Armor|Accessoires|Scroll|Misc} --rarity ?{Rarity?|Common|Uncommon|Rare|Very Rare|Legendary} --time ?{Time?|1}">Craft Items</a></div>' + //--
                                     '<div style="text-align:center;"><a ' + astyle2 + '" href="!work --charid ' + charid + ' --skill ?{Skill?|Acrobatics|Animal Handling|Arcana|Athletics|Deception|History|Insight|Intimidation|Investigation|Medicine|Nature|Perception|Performance|Persuasion|Religion|Sleight of Hand|Stealth|Survival} --time ?{Time?|1}">Work</a></div>' + //--
                                     '<div style="text-align:center;"><a ' + astyle2 + '" href="!trainmenu --charid ' + charid + ' --type ?{Type?|Tool|Language}">Train</a></div>' + //--
                                     '<div style="text-align:center;"><a ' + astyle2 + '" href="!crimemenu --charid ' + charid + ' --type ?{Type?|Stealth|Thieves\' Tools|Investigation|Perception|Deception}">Commit Crime</a></div>' + //--
@@ -211,7 +215,7 @@ var Downtime = Downtime || (function(){
                                     '<div style="text-align:center;">Available Downtime Activities</div>' + //--
                                     '<br>' + //--
                                     '<div style="text-align:center;"><a ' + astyle2 + '" href="!brewmenu --charid ' + charid + ' --rarity ?{Type?|Common|Uncommon|Rare|Very Rare|Legendary} --amount ?{Amount?|1}">Brew Potion</a></div>' + //--
-                                    '<div style="text-align:center;"><a ' + astyle2 + '" href="!craftmenu --charid ' + charid + ' --type ?{Type?|Weapon|Armor|Accessoires|Scroll} --rarity ?{Rarity?|Common|Uncommon|Rare|Very Rare|Legendary} --time ?{Time?|1}">Craft Items</a></div>' + //--
+                                    '<div style="text-align:center;"><a ' + astyle2 + '" href="!craftmenu --charid ' + charid + ' --type ?{Type?|Weapon|Armor|Accessoires|Scroll|Misc} --rarity ?{Rarity?|Common|Uncommon|Rare|Very Rare|Legendary} --time ?{Time?|1}">Craft Items</a></div>' + //--
                                     '<div style="text-align:center;"><a ' + astyle2 + '" href="!work --charid ' + charid + ' --skill ?{Skill?|Acrobatics|Animal Handling|Arcana|Athletics|Deception|History|Insight|Intimidation|Investigation|Medicine|Nature|Perception|Performance|Persuasion|Religion|Sleight of Hand|Stealth|Survival} --time ?{Time?|1}">Work</a></div>' + //--
                                     '<div style="text-align:center;"><a ' + astyle2 + '" href="!trainmenu --charid ' + charid + ' --type ?{Type?|Tool|Language}">Train</a></div>' + //--
                                     '<div style="text-align:center;"><a ' + astyle2 + '" href="!crimemenu --charid ' + charid + ' --type ?{Type?|Stealth|Thieves\' Tools|Investigation|Perception|Deception}">Commit Crime</a></div>' + //--
@@ -263,7 +267,7 @@ var Downtime = Downtime || (function(){
                                     '<div style="text-align:center;">Available Downtime Activities</div>' + //--
                                     '<br>' + //--
                                     '<div style="text-align:center;"><a ' + astyle2 + '" href="!brewmenu --charid ' + charid + ' --rarity ?{Type?|Common|Uncommon|Rare|Very Rare|Legendary} --amount ?{Amount?|1}">Brew Potion</a></div>' + //--
-                                    '<div style="text-align:center;"><a ' + astyle2 + '" href="!craftmenu --charid ' + charid + ' --type ?{Type?|Weapon|Armor|Accessoires|Scroll} --rarity ?{Rarity?|Common|Uncommon|Rare|Very Rare|Legendary} --time ?{Time?|1}">Craft Items</a></div>' + //--
+                                    '<div style="text-align:center;"><a ' + astyle2 + '" href="!craftmenu --charid ' + charid + ' --type ?{Type?|Weapon|Armor|Accessoires|Scroll|Misc} --rarity ?{Rarity?|Common|Uncommon|Rare|Very Rare|Legendary} --time ?{Time?|1}">Craft Items</a></div>' + //--
                                     '<div style="text-align:center;"><a ' + astyle2 + '" href="!work --charid ' + charid + ' --skill ?{Skill?|Acrobatics|Animal Handling|Arcana|Athletics|Deception|History|Insight|Intimidation|Investigation|Medicine|Nature|Perception|Performance|Persuasion|Religion|Sleight of Hand|Stealth|Survival} --time ?{Time?|1}">Work</a></div>' + //--
                                     '<div style="text-align:center;"><a ' + astyle2 + '" href="!trainmenu --charid ' + charid + ' --type ?{Type?|Tool|Language}">Train</a></div>' + //--
                                     '<div style="text-align:center;"><a ' + astyle2 + '" href="!crimemenu --charid ' + charid + ' --type ?{Type?|Stealth|Thieves\' Tools|Investigation|Perception|Deception}">Commit Crime</a></div>' + //--
@@ -429,7 +433,7 @@ var Downtime = Downtime || (function(){
                                 '<div style="text-align:center;">Available Downtime Activities</div>' + //--
                                 '<br>' + //--
                                 '<div style="text-align:center;"><a ' + astyle2 + '" href="!brewmenu --charid ' + charid + ' --rarity ?{Type?|Common|Uncommon|Rare|Very Rare|Legendary} --amount ?{Amount?|1}">Brew Potion</a></div>' + //--
-                                '<div style="text-align:center;"><a ' + astyle2 + '" href="!craftmenu --charid ' + charid + ' --type ?{Type?|Weapon|Armor|Accessoires|Scroll} --rarity ?{Rarity?|Common|Uncommon|Rare|Very Rare|Legendary} --time ?{Time?|1}">Craft Items</a></div>' + //--
+                                '<div style="text-align:center;"><a ' + astyle2 + '" href="!craftmenu --charid ' + charid + ' --type ?{Type?|Weapon|Armor|Accessoires|Scroll|Misc} --rarity ?{Rarity?|Common|Uncommon|Rare|Very Rare|Legendary} --time ?{Time?|1}">Craft Items</a></div>' + //--
                                 '<div style="text-align:center;"><a ' + astyle2 + '" href="!work --charid ' + charid + ' --skill ?{Skill?|Acrobatics|Animal Handling|Arcana|Athletics|Deception|History|Insight|Intimidation|Investigation|Medicine|Nature|Perception|Performance|Persuasion|Religion|Sleight of Hand|Stealth|Survival} --time ?{Time?|1}">Work</a></div>' + //--
                                 '<div style="text-align:center;"><a ' + astyle2 + '" href="!trainmenu --charid ' + charid + ' --type ?{Type?|Tool|Language}">Train</a></div>' + //--
                                 '<div style="text-align:center;"><a ' + astyle2 + '" href="!crimemenu --charid ' + charid + ' --type ?{Type?|Stealth|Thieves\' Tools|Investigation|Perception|Deception}">Commit Crime</a></div>' + //--
@@ -462,7 +466,7 @@ var Downtime = Downtime || (function(){
             _.each(existing,function(handout) {
                 let name=handout.get('name');
                 if (name.includes("Downtime Activities") && name.includes(char.get('name'))) {
-                    count+=1;
+                    count=Number(name.replace("Downtime Activities of "+char.get('name')+" #",""));
                     if (name.includes(String(count))) {
                         handid=handout.get('_id');
                     }
@@ -536,6 +540,7 @@ var Downtime = Downtime || (function(){
                 num=Number(name.replace("Downtime Activities of "+char.get('name')+" #",""));
             }
         });
+        log(num);
         return num;
     },
     
@@ -1008,10 +1013,12 @@ var Downtime = Downtime || (function(){
         let name = char.get("name");
         let desc="<br><br>"+name+" spends "+time+" Days and "+price+" GP crafting "+amount+"x "+potion
         setHandoutDesc(msg.playerid,handnum,desc);
+        sendChat("Downtime","/w "+msg.who+" You craft "+amount+" "+potion);
     },
     
     craftmenu = function(charid,type,rarity,amount,msg) {
         let itemlist;
+        let attunementlist;
         var divstyle = 'style="width: 220px; border: 1px solid black; background-color: #ffffff; padding: 5px;"';
         var astyle1 = 'style="text-align:center; border: 1px solid black; margin: 1px; background-color: #7E2D40; border-radius: 4px;  box-shadow: 1px 1px 1px #707070; width: 100px;';
         var astyle2 = 'style="text-align:center; border: 1px solid black; margin: 1px; background-color: #7E2D40; border-radius: 4px;  box-shadow: 1px 1px 1px #707070; width: 150px;';
@@ -1029,32 +1036,108 @@ var Downtime = Downtime || (function(){
             case 'Common':
                 price=50;
                 neededtime=5;
+                if (type=="Weapon") {
+                    itemlist=["Moon-Touched Sword","Veteran\'s Cane","Staff of Flowers","Staff of Birdcalls","Staff of Adornment"];
+                    attunementlist=["Armblade","Warforged"];
+                } else if (type=="Armor") {
+                    itemlist=["Shield of Expression", "Smoldering Armor", "Cast-Off Armor", "Armor of Gleaming"];
+                    attunementlist=[];
+                } else if (type=="Accessoires") {
+                    itemlist=["Breathing Bubble","Boots of False Tracks","Clothes of Mending","Clockwork Amulet","Cloak of Many Fashions","Cloak of Billowing","Common Glamerweave","Dread Helm","Feather Token","Prosthetic Limb","Shiftweave","Hat of Vermin","Wand of Smiles","Wand of Scowls","Wand of Pyrotechnics","Wand of Conducting","Spellwrought Tattoo(Cantrip)","Spellwrought Tattoo(1st Level)"];
+                    attunementlist=["Masquerade Tattoo","","Instrument of Scribing","","Instrument of Illusions","","Wand Sheath","Warforged","Ruby of the War Mage","Spellcaster","Hat of Wizardry","Wizard","Dark Shard Amulet","Warlock","Orb of Shielding","","Imbued Wood Focus","","Illuminator\'s Tattoo","","Ersatz Eye",""];
+                } else if (type=="Scroll") {
+                    price=Math.floor(price/2);
+                    neededtime=Math.floor(price/2);
+                    itemlist=["Cantrip Scroll","1st Level Scroll"];
+                } else if (type=="Misc") {
+                    itemlist=["Cleansing Stone","Candle of the Deep","Bead of Nourishment","Bead of Refreshment","Coin of Delving","Ear Horn of Hearing","Everbright Lantern","Enduring Spellbook","Heward\'s Handy Spice Pouch","Moodmark Paint","Lock of Trickery","Horn of Silent Alarm","Mystery Key","Orb of Time","Orb of Direction","Pole of Angling","Pipe of Smoke Monsters","Pot of Awakening","Pole of Collapsing","Rope of Mending","Walloping Ammunition","Vox Seeker","Unbreakable Arrow","Tankard of Sobriety","Spellshard"];
+                    attunementlist=["Scribe\'s Pen","creature with the Mark of Scribing","Charlatan\'s Die","","Talking Doll","","Keycharm",""];
+                }
                 return;
             case 'Uncommon':
                 price=200;
                 neededtime=10;
+                if (type=="Weapon") {
+                    itemlist=["+1 Ammunition","+1 Weapon","Javelin of Lightning"];
+                    attunementlist=["Dragon\'s Wrath Weapon","","+1 Moon Sickle","Druid or Ranger","Sword of Vengeance","","Trident of Fish Command","","Weapon of Warning",""];
+                } else if (type=="Armor") {
+                    itemlist=[];
+                    attunementlist=[];
+                } else if (type=="Accessoires") {
+                    itemlist=[];
+                    attunementlist=[];
+                } else if (type=="Scroll") {
+                    price=Math.floor(price/2);
+                    neededtime=Math.floor(price/2);
+                    itemlist=[];
+                } else if (type=="Misc") {
+                    itemlist=[];
+                    attunementlist=[];
+                }
                 return;
             case 'Rare':
                 price=2000;
                 neededtime=50;
+                if (type=="Weapon") {
+                    itemlist=["+2 Ammunition","+2 Weapon","Dagger of Venom","Dragon Slayer","Flame Tongue","Giant Slayer","Mace of Smiting","Two-Birds Sling","Vicious Weapon","Weapon of Certain Death","Woodcutter\'s Axe"];
+                    attunementlist=["Acheron Blade","","Berserker Axe","","Corpse Slayer","","Crystal Blade","","Devotee\'s Censer","Cleric or Paladin","Dragon Wing Bow","","+1 Dragon\'s Wrath Weapon","","Mace of Disruption","","Mace of Terror","","Mind Blade","specific individual","Mind Lash","mind flayer","+2 Moon Sickle","Druid or Ranger","Needle of Mending","","Sun Blade","","Sunforger","","Sword of Life Stealing","","Sword of Wounding",""];
+                } else if (type=="Armor") {
+                    itemlist=[];
+                    attunementlist=[];
+                } else if (type=="Accessoires") {
+                    itemlist=[];
+                    attunementlist=[];
+                } else if (type=="Scroll") {
+                    price=Math.floor(price/2);
+                    neededtime=Math.floor(price/2);
+                    itemlist=[];
+                } else if (type=="Misc") {
+                    itemlist=[];
+                    attunementlist=[];
+                }
                 return;
             case 'Very Rare':
                 price=20000;
                 neededtime=125;
+                if (type=="Weapon") {
+                    itemlist=["+3 Ammunition","+3 Weapon","Arrow of Slaying","Sling Bullets of Althemone",""];
+                    attunementlist=["Bloodaxe","","Dancing Sword","","+2 Dragon\'s Wrath Weapon","","Duskcrusher","","Dwarven Thrower","Dwarf","Dyrrn\'s Tentacle Whip","","Frost Band","","+3 Moon Sickle","Druid or Ranger","Nine Lives Stealer","","Oathbow","","Scimitar of Speed","","Steel","Good-aligned Creature","Sword of Sharpness","","Sword of the Paruns",""];
+                } else if (type=="Armor") {
+                    itemlist=[];
+                    attunementlist=[];
+                } else if (type=="Accessoires") {
+                    itemlist=[];
+                    attunementlist=[];
+                } else if (type=="Scroll") {
+                    price=Math.floor(price/2);
+                    neededtime=Math.floor(price/2);
+                    itemlist=[];
+                } else if (type=="Misc") {
+                    itemlist=[];
+                    attunementlist=[];
+                }
                 return;
             case 'Legendary':
                 price=100000;
+                neededtime=250;
+                if (type=="Weapon") {
+                    itemlist=["Hammer of Thunderbolts"];
+                    attunementlist=["Blackrazor","creature of non-lawful alignment","Defender","","Dragonlance","","+3 Dragon\'s Wrath Weapon","","Flail of Tiamat","","Holy Avenger","Paladin","Luck Blade","","Moonblade","elf or half-elf of neutral good alignment","Nepenthe","Paladin","Rakdos Riteknife","","Snicker-Snack","Non-evil Creature","Sword of Answering","creature with the same alignment as the sword","Topaz Annihilator","","Vorpal Sword","","Wave","creature that worships a god of the sea","Whelm","Dwarf"];
+                } else if (type=="Armor") {
+                    itemlist=[];
+                    attunementlist=[];
+                } else if (type=="Accessoires") {
+                    itemlist=[];
+                    attunementlist=[];
+                } else if (type=="Scroll") {
+                    price=Math.floor(price/2);
+                    neededtime=Math.floor(price/2);
+                    itemlist=[];
+                } else if (type=="Misc") {
+                    itemlist=[];
+                    attunementlist=[];
+                }
                 return;
-        }
-        if (type=="Weapon") {
-            itemlist=[];
-        } else if (type=="Armor") {
-            itemlist=[];
-        } else if (type=="Accessoires") {
-            itemlist=[];
-        } else if (type=="Scroll") {
-            price=Math.floor(price/2);
-            neededtime=Math.floor(price/2);
         }
         let list=String(itemlist);
         for (let i=0;i<itemlist.length;i++) {
@@ -1338,7 +1421,7 @@ var Downtime = Downtime || (function(){
         let char = findObjs({
             _type: 'character',
             _id: charid
-        }, {caseInsensitive: true})[0];
+        })[0];
         type=type.replace("type ","");
         let list;
         switch (type) {
@@ -1375,6 +1458,15 @@ var Downtime = Downtime || (function(){
                     }
                 }
             }
+            let test=false;
+            for (let i=0;i<list.length;i++) {
+                if (list[i].includes(state.down.now.train)) {
+                    test=true;
+                }
+            }
+            if (test==false) {
+                state.down.now.train="";
+            }
             list=String(list);
             for (let i=0;i<37;i++) {
                 list=list.replace(",,",",");
@@ -1399,18 +1491,26 @@ var Downtime = Downtime || (function(){
                     }
                 }
             }
+            let test=false;
+            for (let i=0;i<list.length;i++) {
+                if (list[i].includes(state.down.now.train)) {
+                    test=true;
+                }
+            }
+            if (test==false) {
+                state.down.now.train="";
+            }
             list=String(list);
-            for (let i=0;i<37;i++) {
+            for (let i=0;i<38;i++) {
                 list=list.replace(",,",",");
             }
             list=list.split(',');
         }
         let mintime=50;
         list=String(list);
-        for (let i=0;i<37;i++) {
+        for (let i=0;i<38;i++) {
             list=list.replace(',','|');
         }
-        log(list);
         let player = findObjs({
             _type: 'player',
             _id: msg.playerid
@@ -1431,21 +1531,12 @@ var Downtime = Downtime || (function(){
                         '<tr><td>Available Downtime: </td><td>' + gmnotes + '</td></tr>' + //--
                         '<tr><td>Needed Downtime: </td><td>' + mintime + ' Days</td></tr>' + //--
                         '</table>' + //--
-                        '<td><tr>Current Tool: </td><td><a ' + astyle1 + '" href="!settrain --?{Tool?|' + list + '}">' + state.down.now.train + '</a></td></tr>' + //--
+                        '<td><tr>Current Tool: </td><td><a ' + astyle1 + '" href="!settrain --charid '+charid+' --type Tool --?{Tool?|' + list + '}">' + state.down.now.train + '</a></td></tr>' + //--
                         '<br><br>' + //--
-                        '<div style="text-align:center;"><a ' + astyle2 + '" href="!train --' + type + ' --' + state.down.now.train + '">Train now</a></div>' + //--
+                        '<div style="text-align:center;"><a ' + astyle2 + '" href="!train --charid '+charid+' --' + type + ' --' + state.down.now.train + '">Train now</a></div>' + //--
                         '</div>'
                     );
                 } else {
-                    let test=false;
-                    _.each(list, function(item) {
-                        if (String(state.down.now.train).includes(item)) {
-                            test=true;
-                        }
-                    });
-                    if (test==false) {
-                        state.down.now.train="";
-                    }
                     sendChat("Downtime","/w " + playerName + " <div " + divstyle + ">" + //--
                         '<div ' + headstyle + '>Training</div>' + //--
                         '<div ' + substyle + '>Menu</div>' + //--
@@ -1455,10 +1546,10 @@ var Downtime = Downtime || (function(){
                         '<table>' + //--
                         '<tr><td>Available Downtime: </td><td>' + gmnotes + '</td></tr>' + //--
                         '<tr><td>Needed Downtime: </td><td>' + mintime + ' Days</td></tr>' + //--
-                        '<td><tr>Current Tool: </td><td><a ' + astyle1 + '" href="!settrain --?{Language?|' + list + '}">' + state.down.now.train + '</a></td></tr>' + //--
+                        '<td><tr>Current Tool: </td><td><a ' + astyle1 + '" href="!settrain --charid '+charid+' --type Language --?{Language?|' + list + '}">' + state.down.now.train + '</a></td></tr>' + //--
                         '</table>' + //--
                         '<br>' + //--
-                        '<div style="text-align:center;"><a ' + astyle2 + '" href="!train --' + type + ' --' + state.down.now.train + '">Train now</a></div>' + //--
+                        '<div style="text-align:center;"><a ' + astyle2 + '" href="!train --charid '+charid+' --' + type + ' --' + state.down.now.train + '">Train now</a></div>' + //--
                         '</div>'
                     );
                 }
@@ -1468,10 +1559,12 @@ var Downtime = Downtime || (function(){
     
     train = function(charid,type,name,msg) {
         charid=charid.replace("charid ","");
+        type=type.replace("type ","");
         let char = findObjs({
             _type: 'character',
             _id: charid
         }, {caseInsensitive: true})[0];
+        log(charid)
         let handnum=getHandoutNum(msg.playerid,charid);
         let pname = char.get("name");
         let cost=25*5;
@@ -1519,6 +1612,7 @@ var Downtime = Downtime || (function(){
         }
         let desc="<br><br>"+pname+" spends 50 Days and "+cost+" GP training with "+name+".";
         setHandoutDesc(msg.playerid,handnum,desc);
+        sendChat("Downtime","/w "+msg.who+" You successfully gained proficiency with "+name);
     },
     
     researchmenu = function(charid,price,msg) {
