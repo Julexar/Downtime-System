@@ -67,7 +67,7 @@ var Downtime = Downtime || (function(){
                 craftmenu(args[1],args[2],args[3],args[4],msg);
                 return;
             case '!craft':
-                craft(args[1],args[2],args[3],msg);
+                craft(args[1],args[2],args[3],args[4],msg);
                 return;
             case '!trainmenu':
                 trainmenu(args[1],args[2],msg);
@@ -1018,7 +1018,6 @@ var Downtime = Downtime || (function(){
     
     craftmenu = function(charid,type,rarity,amount,msg) {
         let itemlist;
-        let attunementlist;
         var divstyle = 'style="width: 220px; border: 1px solid black; background-color: #ffffff; padding: 5px;"';
         var astyle1 = 'style="text-align:center; border: 1px solid black; margin: 1px; background-color: #7E2D40; border-radius: 4px;  box-shadow: 1px 1px 1px #707070; width: 100px;';
         var astyle2 = 'style="text-align:center; border: 1px solid black; margin: 1px; background-color: #7E2D40; border-radius: 4px;  box-shadow: 1px 1px 1px #707070; width: 150px;';
@@ -1037,35 +1036,28 @@ var Downtime = Downtime || (function(){
                 price=50;
                 neededtime=5;
                 if (type=="Weapon") {
-                    itemlist=["Moon-Touched Sword","Veteran\'s Cane","Staff of Flowers","Staff of Birdcalls","Staff of Adornment"];
-                    attunementlist=["Armblade","Warforged"];
+                    itemlist=["Armblade","Moon-Touched Sword","Unbreakable Arrow","Walloping Ammunition"];
                 } else if (type=="Armor") {
-                    itemlist=["Shield of Expression", "Smoldering Armor", "Cast-Off Armor", "Armor of Gleaming"];
-                    attunementlist=[];
+                    itemlist=[];
                 } else if (type=="Accessoires") {
-                    itemlist=["Breathing Bubble","Boots of False Tracks","Clothes of Mending","Clockwork Amulet","Cloak of Many Fashions","Cloak of Billowing","Common Glamerweave","Dread Helm","Feather Token","Prosthetic Limb","Shiftweave","Hat of Vermin","Wand of Smiles","Wand of Scowls","Wand of Pyrotechnics","Wand of Conducting","Spellwrought Tattoo(Cantrip)","Spellwrought Tattoo(1st Level)"];
-                    attunementlist=["Masquerade Tattoo","","Instrument of Scribing","","Instrument of Illusions","","Wand Sheath","Warforged","Ruby of the War Mage","Spellcaster","Hat of Wizardry","Wizard","Dark Shard Amulet","Warlock","Orb of Shielding","","Imbued Wood Focus","","Illuminator\'s Tattoo","","Ersatz Eye",""];
+                    itemlist=[];
                 } else if (type=="Scroll") {
                     price=Math.floor(price/2);
                     neededtime=Math.floor(price/2);
-                    itemlist=["Cantrip Scroll","1st Level Scroll"];
+                    itemlist=[];
                 } else if (type=="Misc") {
-                    itemlist=["Cleansing Stone","Candle of the Deep","Bead of Nourishment","Bead of Refreshment","Coin of Delving","Ear Horn of Hearing","Everbright Lantern","Enduring Spellbook","Heward\'s Handy Spice Pouch","Moodmark Paint","Lock of Trickery","Horn of Silent Alarm","Mystery Key","Orb of Time","Orb of Direction","Pole of Angling","Pipe of Smoke Monsters","Pot of Awakening","Pole of Collapsing","Rope of Mending","Walloping Ammunition","Vox Seeker","Unbreakable Arrow","Tankard of Sobriety","Spellshard"];
-                    attunementlist=["Scribe\'s Pen","creature with the Mark of Scribing","Charlatan\'s Die","","Talking Doll","","Keycharm",""];
+                    itemlist=[];
                 }
                 return;
             case 'Uncommon':
                 price=200;
                 neededtime=10;
                 if (type=="Weapon") {
-                    itemlist=["+1 Ammunition","+1 Weapon","Javelin of Lightning"];
-                    attunementlist=["Dragon\'s Wrath Weapon","","+1 Moon Sickle","Druid or Ranger","Sword of Vengeance","","Trident of Fish Command","","Weapon of Warning",""];
+                    itemlist=["+1 Ammunition","Slumbering Dragon\'s Wrath Weapon","Javelin of Lightning","+1 Moon Sickle","Sword of Vengeance","Trident of Fish Command","+1 Weapon","Weapon of Warning"];
                 } else if (type=="Armor") {
                     itemlist=[];
-                    attunementlist=[];
                 } else if (type=="Accessoires") {
                     itemlist=[];
-                    attunementlist=[];
                 } else if (type=="Scroll") {
                     price=Math.floor(price/2);
                     neededtime=Math.floor(price/2);
@@ -1079,8 +1071,8 @@ var Downtime = Downtime || (function(){
                 price=2000;
                 neededtime=50;
                 if (type=="Weapon") {
-                    itemlist=["+2 Ammunition","+2 Weapon","Dagger of Venom","Dragon Slayer","Flame Tongue","Giant Slayer","Mace of Smiting","Two-Birds Sling","Vicious Weapon","Weapon of Certain Death","Woodcutter\'s Axe"];
-                    attunementlist=["Acheron Blade","","Berserker Axe","","Corpse Slayer","","Crystal Blade","","Devotee\'s Censer","Cleric or Paladin","Dragon Wing Bow","","+1 Dragon\'s Wrath Weapon","","Mace of Disruption","","Mace of Terror","","Mind Blade","specific individual","Mind Lash","mind flayer","+2 Moon Sickle","Druid or Ranger","Needle of Mending","","Sun Blade","","Sunforger","","Sword of Life Stealing","","Sword of Wounding",""];
+                    itemlist=["Acheron Blade","+2 Ammunition","Berserker Axe","Corpse Slayer","Crystal Blade","Dagger of Venom","Devotee\'s Censer",];
+                    attunementlist=[];
                 } else if (type=="Armor") {
                     itemlist=[];
                     attunementlist=[];
@@ -1093,49 +1085,40 @@ var Downtime = Downtime || (function(){
                     itemlist=[];
                 } else if (type=="Misc") {
                     itemlist=[];
-                    attunementlist=[];
                 }
                 return;
             case 'Very Rare':
                 price=20000;
                 neededtime=125;
                 if (type=="Weapon") {
-                    itemlist=["+3 Ammunition","+3 Weapon","Arrow of Slaying","Sling Bullets of Althemone",""];
-                    attunementlist=["Bloodaxe","","Dancing Sword","","+2 Dragon\'s Wrath Weapon","","Duskcrusher","","Dwarven Thrower","Dwarf","Dyrrn\'s Tentacle Whip","","Frost Band","","+3 Moon Sickle","Druid or Ranger","Nine Lives Stealer","","Oathbow","","Scimitar of Speed","","Steel","Good-aligned Creature","Sword of Sharpness","","Sword of the Paruns",""];
+                    itemlist=[];
                 } else if (type=="Armor") {
                     itemlist=[];
-                    attunementlist=[];
                 } else if (type=="Accessoires") {
                     itemlist=[];
-                    attunementlist=[];
                 } else if (type=="Scroll") {
                     price=Math.floor(price/2);
                     neededtime=Math.floor(price/2);
                     itemlist=[];
                 } else if (type=="Misc") {
                     itemlist=[];
-                    attunementlist=[];
                 }
                 return;
             case 'Legendary':
                 price=100000;
                 neededtime=250;
                 if (type=="Weapon") {
-                    itemlist=["Hammer of Thunderbolts"];
-                    attunementlist=["Blackrazor","creature of non-lawful alignment","Defender","","Dragonlance","","+3 Dragon\'s Wrath Weapon","","Flail of Tiamat","","Holy Avenger","Paladin","Luck Blade","","Moonblade","elf or half-elf of neutral good alignment","Nepenthe","Paladin","Rakdos Riteknife","","Snicker-Snack","Non-evil Creature","Sword of Answering","creature with the same alignment as the sword","Topaz Annihilator","","Vorpal Sword","","Wave","creature that worships a god of the sea","Whelm","Dwarf"];
+                    itemlist=[];
                 } else if (type=="Armor") {
                     itemlist=[];
-                    attunementlist=[];
                 } else if (type=="Accessoires") {
                     itemlist=[];
-                    attunementlist=[];
                 } else if (type=="Scroll") {
                     price=Math.floor(price/2);
                     neededtime=Math.floor(price/2);
                     itemlist=[];
                 } else if (type=="Misc") {
                     itemlist=[];
-                    attunementlist=[];
                 }
                 return;
         }
@@ -1176,12 +1159,14 @@ var Downtime = Downtime || (function(){
                         '<div ' + arrowstyle + '></div>' + //--
                         '<div style="text-align:center;">' + "Available " + type + "s" + //--
                         '<table>' + //--
+                        '<tr><td>Needed Time: </td><td>' + neededtime + ' Days</td></tr>' + //--
+                        '<tr><td>Price: </td><td>' + price + ' GP</td></tr>' + //--
                         '<tr><td>Rarity: </td><td><a ' + astyle1 + '" href="!craftmenu --charid ' + charid + ' --type ' + type + ' --rarity ?{Rarity?|Common|Uncommon|Rare|Very Rare|Legendary}' + ' --amount ' + amount + '">' + rarity + '</a></td></tr>' + //--
                         '<tr><td>Item Type: </td><td><a ' + astyle1 + '" href="!craftmenu --charid ' + charid + ' --type ?{Type?|Weapon|Armor|Accessoires|Scroll} --rarity ' + rarity + ' --amount ' + amount + '">' + type + '</a></td></tr>' + //--
                         '<tr><td>Amount: </td><td><a ' + astyle1 + '" href="!craftmenu --charid ' + charid + ' --type ' + type + ' --rarity ' + rarity + ' --amount ?{Amount?|1}">' + amount + '</a></td></tr>' + //--
                         '<tr><td>Item: </td><td><a ' + astyle1 + '" href="!setitem --item ?{Item?|' + list + '} --charid ' + charid + '--type ' + type + ' --rarity ' + rarity + ' --amount ' + amount + '">' + state.down.now.item + '</a></td></tr>' + //--
                         '</table>' + //--
-                        '<div style="text-align:center;"><a ' + astyle2 + '" href="!craft --charid ' + charid + ' --item ' + state.down.now.item + ' --amount ' + amount + '">Craft Item</a></div>' + //--
+                        '<div style="text-align:center;"><a ' + astyle2 + '" href="!craft --charid ' + charid + ' --type '+type+' --item ' + state.down.now.item + ' --amount ' + amount + ' --price ' + price + ' --time ' + neededtime + '">Craft Item</a></div>' + //--
                         '</div>'
                     );
                 }
@@ -1189,10 +1174,48 @@ var Downtime = Downtime || (function(){
         })
     },
     
-    craft = function(charid,item,amount,msg) {
+    craft = function(charid,type,item,amount,price,time,msg) {
         charid=charid.replace("charid ","");
         item=item.replace("item ","");
         amount=Number(amount.replace("amount ",""));
+        type=type.replace("type ","");
+        price=Number(price.replace("price ",""));
+        time=Number(time.replace("time ",""));
+        let itemlist=[];
+        let attunementlist=[];
+        let descriptionlist=[];
+        let modifierlist=[];
+        switch (type) {
+            case 'Weapon':
+                itemlist=[];
+                attunementlist=[];
+                descriptionlist=[];
+                modifierlist=[];
+                return;
+            case 'Armor':
+                itemlist=[];
+                attunementlist=[];
+                descriptionlist=[];
+                modifierlist=[];
+                return;
+            case 'Accessoires':
+                itemlist=[];
+                attunementlist=[];
+                descriptionlist=[];
+                modifierlist=[];
+                return;
+            case 'Scroll':
+                itemlist=[];
+                descriptionlist=[];
+                modifierlist=[];
+                return;
+            case 'Misc':
+                itemlist=[];
+                attunementlist=[];
+                descriptionlist=[];
+                modifierlist=[];
+                return;
+        }
     },
     
     work = function(charid,type,amount,msg) {
