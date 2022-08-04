@@ -251,7 +251,7 @@ var Downtime = Downtime || (function(){
                 }
             }
         }
-    }
+    },
     
     handleInput = function(msg) {
         log(completeItemList.common.weapon);
