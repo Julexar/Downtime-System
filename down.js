@@ -12,7 +12,7 @@
 var Downtime = Downtime || (function(){
     'use strict';
     
-    var version='1.0',
+    var version='0.9d',
     
     setDefaults = function() {
         state.down = {
@@ -30,8 +30,231 @@ var Downtime = Downtime || (function(){
             }
         };
     },
+
+    setItemList = function() {
+        completeItemList = {
+            common: {
+                weapon: {
+                    "Armblade": {
+                        "description": "An Armblade is a magic weapon that attaches to your arm, becoming inseperable from you as long as you're attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.<br><br>As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can't use that hand for other purposes.",
+                        "attunement": true,
+                        "attune-requirement": "warforged",
+                        "specifics": "any one-handed sword",
+                        "name": "Armblade"
+                    },
+                    "Moon-Touched Sword": {
+                        "description": "In darkness, the unsheathed blade of this sword sheds moonlight, creating bright light in a 15-foot radius and dim light for an additional 15 feet.",
+                        "attunement": false,
+                        "specifics": "any sword",
+                        "name": "Moon-Touched Sword"
+                    },
+                    "Unbreakable Arrow": {
+                        "description": "This arrow can't be broken, except when it is within an Antimagic Field.",
+                        "attunement": false,
+                        "specifics": "arrow",
+                        "name": "Unbreakable Arrow"
+                    },
+                    "Walloping Ammunition": {
+                        "description": "This ammunition packs a wallop. A creature hit by the ammunition must succeed on a DC 10 Strength saving throw or be knocked prone.",
+                        "attunement": false,
+                        "specifics": "any ammunition",
+                        "name": "Walloping Ammunition"
+                    }
+                },
+                armor: {
+                    "Armor of Gleaming": {
+                        "description": "This armor never gets dirty.",
+                        "attunement": false,
+                        "specifics": "any medium or heavy",
+                        "name": "Armor of Gleaming"
+                    },
+                    "Cast-Off Armor": {
+                        "description": "You can doff this armor as an action",
+                        "attunement": false,
+                        "specifics": "any",
+                        "name": "Cast-Off Armor"
+                    },
+                    "Shield of Expression": {
+                        "description": "The front of this shield is shaped in the likeness of a face. While bearing the shield, you can use a bonus action to alter the face's expression.",
+                        "attunement": false,
+                        "specifics": "shield",
+                        "name": "Shield of Expression"
+                    },
+                    "Smoldering Armor": {
+                        "description": "Wisps of harmless, odorless smoke rise from this armor while it is worn.",
+                        "attunement": false,
+                        "specifics": "any",
+                        "name": "Smoldering Armor"
+                    }
+                },
+                accessoires: {
+                    "Staff of Adornment": {
+                        "description": "If you place an object weighing no more than 1 pound (such as a shard of crystal, an egg, or a stone) above the tip of the staff while holding it, the object floats an inch from the staff's tip and remains there until it is removed or until the staff is no longer in your possession. The staff can have up to three such objects floating over its tip at any given time. While holding the staff, you can make one or more of the objects slowly spin or turn in place.",
+                        "attunement": false,
+                        "specifics": "staff",
+                        "name": "Staff of Adornment"
+                    },
+                    "Staff of Birdcalls": {
+                        "description": "This wooden staff is decorated with bird carvings. It has 10 charges. While holding it, you can use an action to expend 1 charge from the staff and cause it to create one of the following sounds out to a range of 60 feet: a finch's chirp, a raven's caw, a duck's quack, a chicken's cluck, a goose's honk, a loon's call, a turkey's gobble, a seagull's cry, an owl's hoot, or an eagle's shriek.<br><br>The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff explodes in a harmless cloud of bird feathers and is lost forever.",
+                        "attunement": false,
+                        "specifics": "staff",
+                        "name": "Staff of Birdcalls"
+                    },
+                    "Staff of Flowers": {
+                        "description": "This wooden staff has 10 charges. While holding it, you can use an action to expend 1 charge from the staff and cause a flower to sprout from a patch of earth or soil within 5 feet of you, or from the staff itself. Unless you choose a specific kind of flower, the staff creates a mild-scented daisy. The flower is harmless and nonmagical, and it grows or withers as a normal flower would.<br><br>The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff turns into flower petals and is lost forever.",
+                        "attunement": false,
+                        "specifics": "staff",
+                        "name": "Staff of Flowers"
+                    },
+                    "Boots of False Tracks": {
+                        "description": "Only humanoids can wear these boots. While wearing the boots, you can choose to have them leave tracks like those of another kind of humanoid of your size.",
+                        "attunement": false,
+                        "name": "Boots of False Tracks"
+                    },
+                    "Cloak of Billowing": {
+                        "description": "While wearing this cloak, you can use a bonus action to make it billow dramatically.",
+                        "attunement": false,
+                        "name": "Cloak of Billowing"
+                    },
+                    "Cloak of Many Fashions": {
+                        "description": "While wearing this cloak, you can use a bonus action to change the style, color, and apparent quality of the garment. The cloak's weight doesn't change. Regardless of its appearance, the cloak can't be anything but a cloak. Although it can duplicate the appearance of other magic cloaks, it doesn't gain their magical properties.",
+                        "attunement": false,
+                        "name": "Cloak of Many Fashions"
+                    },
+                    "Clockwork Amulet": {
+                        "description": "This copper amulet contains tiny interlocking gears and is powered by magic from Mechanus, a plane of clockwork predictability. A creature that puts an ear to the amulet can hear faint ticking and whirring noises coming from within.<br><br>When you make an attack roll while wearing the amulet, you can forgo rolling the d20 to get a 10 on the die. Once used, this property can't be used again until the next dawn.",
+                        "attunement": false,
+                        "name": "Clockwork Amulet"
+                    },
+                    "Clothes of Mending": {
+                        "description": "This elegant outfit of traveler's clothes magically mends itself to counteract daily wear and tear. Pieces of the outfit that are destroyed can't be repaired in this way.",
+                        "attunement": false,
+                        "name": "Clothes of Mending"
+                    },
+                    "Dark Shard Amulet": {
+                        "description": "This amulet is fashioned from a single shard of resilient extraplanar material originating from the realm of your warlock patron. While you are wearing it, you gain the following benefits:<br><br>- You can use the amulet as a spellcasting focus for your warlock spells.<br><br>- You can try to cast a cantrip that you don't know. The cantrip must be on the Warlock spell list, and you must make a DC 10 Intelligence (Arcana) check. If the check succeeds, you cast the spell. If the check fails, so does the spell, and the action used to cast the spell is wasted. In either case, you can't use this property again until you finish a long rest.",
+                        "attunement": true,
+                        "attune-requirement": "warlock",
+                        "name": "Dark Shard Amulet"
+                    },
+                    "Dread Helm": {
+                        "description": "This fearsome steel helm makes your eyes glow red while you wear it.",
+                        "attunement": false,
+                        "name": "Dread Helm"
+                    },
+                    "Ear Horn of Hearing": {
+                        "description": "While held up to your ear, this horn suppresses the effects of the deafened condition on you, allowing you to hear normally.",
+                        "attunement": false,
+                        "name": "Ear Horn of Hearing"
+                    },
+                    "Ersatz Eye": {
+                        "description": "This artificial eye replaces a real one that was lost or removed. While the ersatz eye is embedded in your eye socket, it can't be removed by anyone other than you, and you can see through the tiny orb as though it were a normal eye.",
+                        "attunement": true,
+                        "attune-requirement": "",
+                        "name": "Ersatz Eye"
+                    },
+                    "Everbright Lantern": {
+                        "description": "This bullseye lantern contains an Eberron dragonshard that sheds light comparable to that produced by a Continual Flame spell. An everbright lantern sheds light in a 120-foot cone; the closest 60 feet is bright light, and the farthest 60 feet is dim light.",
+                        "attunement": false,
+                        "name": "Everbright Lantern"
+                    },
+                    "Hat of Vermin": {
+                        "description": "This hat has 3 charges. While holding the hat, you can use an action to expend 1 of its charges and speak a command word that summons your choice of a bat, a frog, or a rat (see the Player's Handbook or the Monster Manual for statistics). The summoned creature magically appears in the hat and tries to get away from you as quickly as possible. The creature is neither friendly nor hostile, and it isn't under your control. It behaves as an ordinary creature of its kind and disappears after 1 hour or when it drops to 0 hit points. The hat regains all expended charges daily at dawn.",
+                        "attunement": false,
+                        "name": "Hat of Vermin"
+                    },
+                    "Hat of Wizardry": {
+                        "description": "This antiquated, cone-shaped hat is adorned with gold crescent moons and stars. While you are wearing it, you gain the following benefits:<br><br>- You can use the hat as a spellcasting focus for your wizard spells.<br><br>You can try to cast a cantrip that you don't know. The cantrip must be on the Wizard spell list, and you must make a DC 10 Intelligence (Arcana) check. If the check succeeds, you cast the spell. If the check fails, so does the spell, and the action used to cast the spell is wasted. In either case, you can't use this property again until you finish a long rest.",
+                        "attunement": true,
+                        "attune-requirement": "wizard",
+                        "name": "Hat of Wizardry"
+                    },
+                    "Heward's Handy Spice Pouch": {
+                        "description": "This belt pouch appears empty and has 10 charges. While holding the pouch, you can use an action to expend 1 of its charges, speak the name of any nonmagical food seasoning (such as salt, pepper, saffron, or cilantro), and remove a pinch of the desired seasoning from the pouch. A pinch is enough to season a single meal. The pouch regains 1d6 + 4 expended charges daily at dawn.",
+                        "attunement": false,
+                        "name": "Heward's Handy Spice Pouch"
+                    }
+                },
+                scroll: {
+
+                },
+                misc: {
+
+                }
+            },
+            uncommon: {
+                weapon: {
+
+                },
+                armor: {
+
+                },
+                accessoires: {
+
+                },
+                scroll: {
+
+                },
+                misc: {
+                    
+                }
+            },
+            rare: {
+                weapon: {
+
+                },
+                armor: {
+
+                },
+                accessoires: {
+
+                },
+                scroll: {
+
+                },
+                misc: {
+                    
+                }
+            },
+            very_rare: {
+                weapon: {
+
+                },
+                armor: {
+
+                },
+                accessoires: {
+
+                },
+                scroll: {
+
+                },
+                misc: {
+                    
+                }
+            },
+            legendary: {
+                weapon: {
+
+                },
+                armor: {
+
+                },
+                accessoires: {
+
+                },
+                scroll: {
+
+                },
+                misc: {
+                    
+                }
+            }
+        }
+    }
     
     handleInput = function(msg) {
+        log(completeItemList.common.weapon);
         var args=msg.content.split(/\s+--/);
         if (msg.type!=="api") {
             return;
@@ -1015,18 +1238,6 @@ var Downtime = Downtime || (function(){
         setHandoutDesc(msg.playerid,handnum,desc);
         sendChat("Downtime","/w "+msg.who+" You craft "+amount+" "+potion);
     },
-    
-    readTextFile = function(file, callback) {
-        var rawFile = new XMLHttpRequest();
-        rawFile.overrideMimeType("application/json");
-        rawFile.open("GET", file, true);
-        rawFile.onreadystatechange = function() {
-            if (rawFile.readyState === 4 && rawFile.status == "200") {
-                callback(rawFile.responseText);
-            }
-        }
-        rawFile.send(null);
-    },
 
     craftmenu = function(charid,type,specific,rarity,amount,msg) {
         let itemlist;
@@ -1044,10 +1255,6 @@ var Downtime = Downtime || (function(){
         rarity=rarity.replace("rarity ","");
         amount=Number(amount.replace("amount ",""));
         specific=specific.replace("specific ","");
-        readTextFile("./items.json", function(text) {
-            var data = JSON.parse(text);
-            log(data);
-        });
         let list=String(itemlist);
         for (let i=0;i<itemlist.length;i++) {
             list=list.replace(",","|");
@@ -1814,6 +2021,9 @@ var Downtime = Downtime || (function(){
     checkInstall = function() {
         if (!state.down) {
             setDefaults();
+        }
+        if (!completeItemList) {
+            setItemList();
         }
     },
     
