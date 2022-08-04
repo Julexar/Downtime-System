@@ -15,7 +15,7 @@ I am not liable for any issues that you might experience with unsupported Versio
 | 0.9a   | :x: |
 | 0.9b   | :x: |
 | 0.9c   | :x: |
-| 1.0    | :white_check_mark: |
+| 0.9d   | :white_check_mark: |
 
 ## Reporting an Issue
 
