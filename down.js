@@ -12,7 +12,7 @@
 var Downtime = Downtime || (function(){
     'use strict';
     
-    var version='0.9d',
+    var version='0.9e',
     
     setDefaults = function() {
         state.down = {
@@ -37,76 +37,563 @@ var Downtime = Downtime || (function(){
                 weapon: [
                     //Common Weapons
                     {
-                        description: "An Armblade is a magic weapon that attaches to your arm, becoming inseperable from you as long as you\'re attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.<br><br>As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can\'t use that hand for other purposes.",
-                        attunement: true,
-                        attune_requirement: "Warforged",
-                        name: "Armblade",
-                        specifics: "one-handed melee",
-                        magicbonus: 0,
-                        modifiers: "Item Type: Melee Weapon",
-                        properties: "One-Handed"
+                        description: "Club (common), requires attunement by a Warforged<br><br>An Armblade is a magic weapon that attaches to your arm, becoming inseperable from you as long as you\'re attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.<br><br>As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can\'t use that hand for other purposes.",
+                        name: "Armblade (Club)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Range: 5 ft.",
+                        properties: "Light",
+                        price: 0.1,
+                        weight: 2,
+                        amount: 1
                     },
                     {
-                        description: "In darkness, the unsheathed blade of this sword sheds moonlight, creating bright light in a 15-foot radius and dim light for an additional 15 feet.",
-                        attunement: false,
-                        specifics: "sword",
-                        name: "Moon-Touched Sword",
-                        magicbonus: 0,
-                        modifiers: "Item Type: Melee Weapon",
-                        properties: ""
+                        description: "Dagger (common), requires attunement by a Warforged<br><br>An Armblade is a magic weapon that attaches to your arm, becoming inseperable from you as long as you\'re attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.<br><br>As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can\'t use that hand for other purposes.",
+                        name: "Armblade (Dagger)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: piercing, Range: 5 ft.",
+                        properties: "Finesse, Light",
+                        price: 2,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Handaxe (common), requires attunement by a Warforged<br><br>An Armblade is a magic weapon that attaches to your arm, becoming inseperable from you as long as you\'re attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.<br><br>As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can\'t use that hand for other purposes.",
+                        name: "Armblade (Handaxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Range: 5 ft.",
+                        properties: "Light",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Javelin (common), requires attunement by a Warforged<br><br>An Armblade is a magic weapon that attaches to your arm, becoming inseperable from you as long as you\'re attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.<br><br>As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can\'t use that hand for other purposes.",
+                        name: "Armblade (Javelin)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Range: 5 ft.",
+                        properties: "",
+                        price: 0.5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Light Hammer (common), requires attunement by a Warforged<br><br>An Armblade is a magic weapon that attaches to your arm, becoming inseperable from you as long as you\'re attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.<br><br>As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can\'t use that hand for other purposes.",
+                        name: "Armblade (Light Hammer)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Range: 5 ft.",
+                        properties: "Light",
+                        price: 2,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Mace (common), requires attunement by a Warforged<br><br>An Armblade is a magic weapon that attaches to your arm, becoming inseperable from you as long as you\'re attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.<br><br>As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can\'t use that hand for other purposes.",
+                        name: "Armblade (Mace)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Range: 5 ft.",
+                        properties: "",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Sickle (common), requires attunement by a Warforged<br><br>An Armblade is a magic weapon that attaches to your arm, becoming inseperable from you as long as you\'re attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.<br><br>As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can\'t use that hand for other purposes.",
+                        name: "Armblade (Sickle)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Range: 5 ft.",
+                        properties: "Light",
+                        price: 1,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Spear (common), requires attunement by a Warforged<br><br>An Armblade is a magic weapon that attaches to your arm, becoming inseperable from you as long as you\'re attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.<br><br>As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can\'t use that hand for other purposes.",
+                        name: "Armblade (Spear)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Range: 5 ft.",
+                        properties: "Versatile",
+                        price: 1,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Battleaxe (common), requires attunement by a Warforged<br><br>An Armblade is a magic weapon that attaches to your arm, becoming inseperable from you as long as you\'re attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.<br><br>As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can\'t use that hand for other purposes.",
+                        name: "Armblade (Battleaxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Range: 5 ft.",
+                        properties: "Versatile",
+                        price: 10,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Flail (common), requires attunement by a Warforged<br><br>An Armblade is a magic weapon that attaches to your arm, becoming inseperable from you as long as you\'re attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.<br><br>As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can\'t use that hand for other purposes.",
+                        name: "Armblade (Flail)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Range: 5 ft.",
+                        properties: "",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (common), requires attunement by a Warforged<br><br>An Armblade is a magic weapon that attaches to your arm, becoming inseperable from you as long as you\'re attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.<br><br>As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can\'t use that hand for other purposes.",
+                        name: "Armblade (Longsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Range: 5 ft.",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Morningstar (common), requires attunement by a Warforged<br><br>An Armblade is a magic weapon that attaches to your arm, becoming inseperable from you as long as you\'re attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.<br><br>As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can\'t use that hand for other purposes.",
+                        name: "Armblade (Morningstar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Range: 5 ft.",
+                        properties: "",
+                        price: 15,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Rapier (common), requires attunement by a Warforged<br><br>An Armblade is a magic weapon that attaches to your arm, becoming inseperable from you as long as you\'re attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.<br><br>As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can\'t use that hand for other purposes.",
+                        name: "Armblade (Rapier)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Range: 5 ft.",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Scimitar (common), requires attunement by a Warforged<br><br>An Armblade is a magic weapon that attaches to your arm, becoming inseperable from you as long as you\'re attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.<br><br>As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can\'t use that hand for other purposes.",
+                        name: "Armblade (Scimitar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Range: 5 ft.",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortsword (common), requires attunement by a Warforged<br><br>An Armblade is a magic weapon that attaches to your arm, becoming inseperable from you as long as you\'re attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.<br><br>As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can\'t use that hand for other purposes.",
+                        name: "Armblade (Shortsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Range: 5 ft.",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Trident (common), requires attunement by a Warforged<br><br>An Armblade is a magic weapon that attaches to your arm, becoming inseperable from you as long as you\'re attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.<br><br>As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can\'t use that hand for other purposes.",
+                        name: "Armblade (Trident)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Range: 5 ft.",
+                        properties: "Versatile",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "War Pick (common), requires attunement by a Warforged<br><br>An Armblade is a magic weapon that attaches to your arm, becoming inseperable from you as long as you\'re attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.<br><br>As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can\'t use that hand for other purposes.",
+                        name: "Armblade (War Pick)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Range: 5 ft.",
+                        properties: "",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Warhammer (common), requires attunement by a Warforged<br><br>An Armblade is a magic weapon that attaches to your arm, becoming inseperable from you as long as you\'re attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.<br><br>As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can\'t use that hand for other purposes.",
+                        name: "Armblade (Warhammer)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Range: 5 ft.",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Whip (common), requires attunement by a Warforged<br><br>An Armblade is a magic weapon that attaches to your arm, becoming inseperable from you as long as you\'re attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.<br><br>As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can\'t use that hand for other purposes.",
+                        name: "Armblade (Whip)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Range: 10 ft.",
+                        properties: "Finesse, Reach",
+                        price: 2,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortsword (common)<br><br>In darkness, the unsheathed blade of this sword sheds moonlight, creating bright light in a 15-foot radius and dim light for an additional 15 feet.",
+                        name: "Moon-Touched Shortsword",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Range: 5 ft.",
+                        properties: "Finesse, Light",
+                        amount: 1,
+                        price: 10,
+                        weight: 2
+                    },
+                    {
+                        description: "Scimitar (common)<br><br>In darkness, the unsheathed blade of this sword sheds moonlight, creating bright light in a 15-foot radius and dim light for an additional 15 feet.",
+                        name: "Moon-Touched Scimitar",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Range: 5 ft.",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (common)<br><br>In darkness, the unsheathed blade of this sword sheds moonlight, creating bright light in a 15-foot radius and dim light for an additional 15 feet.",
+                        name: "Moon-Touched Longsword",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Range: 5 ft.",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatsword (common)<br><br>In darkness, the unsheathed blade of this sword sheds moonlight, creating bright light in a 15-foot radius and dim light for an additional 15 feet.",
+                        name: "Moon-Touched Greatsword",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Range: 5 ft.",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
                     },
                     {
                         description: "This arrow can\'t be broken, except when it is within an Antimagic Field.",
-                        attunement: false,
-                        specifics: "arrow",
                         name: "Unbreakable Arrow",
-                        magicbonus: 0,
                         modifiers: "Item Type: Ammunition",
-                        properties: ""
+                        properties: "",
+                        price: 1,
+                        amount: 20,
+                        weight: 1
                     },
                     {
-                        description: "This ammunition packs a wallop. A creature hit by the ammunition must succeed on a DC 10 Strength saving throw or be knocked prone.",
-                        attunement: false,
-                        specifics: "ammunition",
-                        name: "Walloping Ammunition",
-                        magicbonus: 0,
+                        description: "Arrows (common)<br><br>This ammunition packs a wallop. A creature hit by the ammunition must succeed on a DC 10 Strength saving throw or be knocked prone.",
+                        name: "Walloping Arrows",
                         modifiers: "Item Type: Ammunition",
-                        properties: ""
+                        properties: "",
+                        price: 1,
+                        amount: 20,
+                        weight: 1
+                    },
+                    {
+                        description: "Crossbow bolts (common)<br><br>This ammunition packs a wallop. A creature hit by the ammunition must succeed on a DC 10 Strength saving throw or be knocked prone.",
+                        name: "Walloping Crossbow bolts",
+                        modifiers: "Item Type: Ammunition",
+                        properties: "",
+                        price: 1,
+                        amount: 20,
+                        weight: 1.5
+                    },
+                    {
+                        description: "Blowgun needles (common)<br><br>This ammunition packs a wallop. A creature hit by the ammunition must succeed on a DC 10 Strength saving throw or be knocked prone.",
+                        name: "Walloping Blowgun needles",
+                        modifiers: "Item Type: Ammunition",
+                        properties: "",
+                        price: 1,
+                        amount: 50,
+                        weight: 1
+                    },
+                    {
+                        description: "Sling bullets (common)<br><br>This ammunition packs a wallop. A creature hit by the ammunition must succeed on a DC 10 Strength saving throw or be knocked prone.",
+                        name: "Walloping Sling bullets",
+                        modifiers: "Item Type: Ammunition",
+                        properties: "",
+                        price: 0.04,
+                        amount: 20,
+                        weight: 1.5
                     }
                 ],
                 armor: [
                     //Common Armor
                     {
-                        description: "This armor never gets dirty.",
-                        attunement: false,
-                        specifics: "medium or heavy",
-                        name: "Armor of Gleaming",
-                        modifiers: "Item Type: Armor",
-                        properties: ""
+                        description: "Hide Armor (common)<br><br>This armor never gets dirty.",
+                        name: "Armor of Gleaming (Hide)",
+                        modifiers: "Item Type: Medium Armor, AC: 12",
+                        properties: "",
+                        price: 10,
+                        amount: 1,
+                        weight: 12
                     },
                     {
-                        description: "You can doff this armor as an action",
-                        attunement: false,
-                        specifics: "any armor",
-                        name: "Cast-Off Armor",
-                        modifiers: "Item Type: Armor",
-                        properties: ""
+                        description: "Chain Shirt (common)<br><br>This armor never gets dirty.",
+                        name: "Armor of Gleaming (Chain Shirt)",
+                        modifiers: "Item Type: Medium Armor, AC: 13",
+                        properties: "",
+                        price: 50,
+                        weight: 20,
+                        amount: 1
                     },
                     {
-                        description: "The front of this shield is shaped in the likeness of a face. While bearing the shield, you can use a bonus action to alter the face\'s expression.",
-                        attunement: false,
-                        specifics: "shield",
+                        description: "Scale Mail (common)<br><br>This armor never gets dirty.",
+                        name: "Armor of Gleaming (Scale Mail)",
+                        modifiers: "Item Type: Medium Armor, AC: 14, Stealth:Disadvantage",
+                        properties: "",
+                        price: 50,
+                        weight: 45,
+                        amount: 1
+                    },
+                    {
+                        description: "Breastplate (common)<br><br>This armor never gets dirty.",
+                        name: "Armor of Gleaming (Breastplate)",
+                        modifiers: "Item Type: Medium Armor, AC: 14",
+                        properties: "",
+                        price: 400,
+                        weight: 20,
+                        amount: 1
+                    },
+                    {
+                        description: "Half Plate (common)<br><br>This armor never gets dirty.",
+                        name: "Armor of Gleaming (Half Plate)",
+                        modifiers: "Item Type: Medium Armor, AC: 15, Stealth:Disadvantage",
+                        properties: "",
+                        price: 750,
+                        weight: 40,
+                        amount: 1
+                    },
+                    {
+                        description: "Ring Mail (common)<br><br>This armor never gets dirty.",
+                        name: "Armor of Gleaming (Ring Mail)",
+                        modifiers: "Item Type: Heavy Armor, AC: 14, Stealth:Disadvantage",
+                        properties: "",
+                        price: 30,
+                        weight: 40,
+                        amount: 1
+                    },
+                    {
+                        description: "Chain Mail (common)<br><br>This armor never gets dirty.",
+                        name: "Armor of Gleaming (Chain Mail)",
+                        modifiers: "Item Type: Heavy Armor, AC: 16, Stealth:Disadvantage",
+                        properties: "Strength score 13 or higher required, if below, Speed -10",
+                        price: 75,
+                        weight: 55,
+                        amount: 1
+                    },
+                    {
+                        description: "Splint Mail (common)<br><br>This armor never gets dirty.",
+                        name: "Armor of Gleaming (Splint Mail)",
+                        modifiers: "Item Type: Heavy Armor, AC: 17, Stealth:Disadvantage",
+                        price: 200,
+                        weight: 60,
+                        amount: 1
+                    },
+                    {
+                        description: "Plate (common)<br><br>This armor never gets dirty.",
+                        name: "Armor of Gleaming (Plate)",
+                        modifiers: "Item Type: Heavy Armor, AC: 18, Stealth:Disadvantage",
+                        price: 1500,
+                        weight: 65,
+                        amount: 1
+                    },
+                    {
+                        description: "Padded Armor (common)<br><br>You can doff this armor as an action",
+                        name: "Cast-Off Armor (Padded)",
+                        modifiers: "Item Type: Light Armor, AC: 11, Stealth:Disadvantage",
+                        properties: "",
+                        price: 5,
+                        amount: 1,
+                        weight: 8
+                    },
+                    {
+                        description: "Leather Armor (common)<br><br>You can doff this armor as an action",
+                        name: "Cast-Off Armor (Leather)",
+                        modifiers: "Item Type: Light Armor, AC: 11",
+                        properties: "",
+                        price: 10,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Studded Leather (common)<br><br>You can doff this armor as an action",
+                        name: "Cast-Off Armor (Studded Leather)",
+                        modifiers: "Item Type: Light Armor, AC: 12",
+                        properties: "",
+                        price: 45,
+                        weight: 13,
+                        amount: 1
+                    },
+                    {
+                        description: "Hide Armor (common)<br><br>You can doff this armor as an action",
+                        name: "Cast-Off Armor (Hide)",
+                        modifiers: "Item Type: Medium Armor, AC: 12",
+                        properties: "",
+                        price: 10,
+                        weight: 12,
+                        amount: 1
+                    },
+                    {
+                        description: "Chain Shirt (common)<br><br>You can doff this armor as an action",
+                        name: "Cast-Off Armor (Chain Shirt)",
+                        modifiers: "Item Type: Medium Armor, AC: 13",
+                        properties: "",
+                        price: 50,
+                        weight: 20,
+                        amount: 1
+                    },
+                    {
+                        description: "Scale Mail (common)<br><br>You can doff this armor as an action",
+                        name: "Cast-Off Armor (Scale Mail)",
+                        modifiers: "Item Type: Medium Armor, AC: 14, Stealth:Disadvantage",
+                        properties: "",
+                        price: 50,
+                        weight: 45,
+                        amount: 1
+                    },
+                    {
+                        description: "Breastplate (common)<br><br>You can doff this armor as an action",
+                        name: "Cast-Off Armor (Breastplate)",
+                        modifiers: "Item Type: Medium Armor, AC: 14",
+                        properties: "",
+                        price: 400,
+                        weight: 20,
+                        amount: 1
+                    },
+                    {
+                        description: "Half Plate (common)<br><br>You can doff this armor as an action",
+                        name: "Cast-Off Armor (Half Plate)",
+                        modifiers: "Item Type: Medium Armor, AC: 15, Stealth:Disadvantage",
+                        properties: "",
+                        price: 750,
+                        weight: 40,
+                        amount: 1
+                    },
+                    {
+                        description: "Ring Mail (common)<br><br>You can doff this armor as an action",
+                        name: "Cast-Off Armor (Ring Mail)",
+                        modifiers: "Item Type: Heavy Armor, AC: 14, Stealth:Disadvantage",
+                        properties: "",
+                        price: 30,
+                        weight: 40,
+                        amount: 1
+                    },
+                    {
+                        description: "Chain Mail (common)<br><br>You can doff this armor as an action",
+                        name: "Cast-Off Armor (Chain Mail)",
+                        modifiers: "Item Type: Heavy Armor, AC: 16, Stealth:Disadvantage",
+                        properties: "",
+                        price: 75,
+                        weight: 55,
+                        amount: 1
+                    },
+                    {
+                        description: "Splint Mail (common)<br><br>You can doff this armor as an action",
+                        name: "Cast-Off Armor (Splint Mail)",
+                        modifiers: "Item Type: Heavy Armor, AC: 17, Stealth:Disadvantage",
+                        properties: "",
+                        price: 200,
+                        weight: 60,
+                        amount: 1
+                    },
+                    {
+                        description: "Plate (common)<br><br>You can doff this armor as an action",
+                        name: "Cast-Off Armor (Plate)",
+                        modifiers: "Item Type: Heavy Armor, AC: 18, Stealth:Disadvantage",
+                        properties: "",
+                        price: 1500,
+                        weight: 65,
+                        amount: 1
+                    },
+                    {
+                        description: "Shield (common)<br><br>The front of this shield is shaped in the likeness of a face. While bearing the shield, you can use a bonus action to alter the face\'s expression.",
                         name: "Shield of Expression",
-                        modifiers: "Item Type: Shield, AC: 2",
-                        properties: ""
+                        modifiers: "Item Type: Shield, AC +2",
+                        properties: "",
+                        weight: 6,
+                        price: 10,
+                        amount: 1,
                     },
                     {
-                        description: "Wisps of harmless, odorless smoke rise from this armor while it is worn.",
-                        attunement: false,
-                        specifics: "any armor",
-                        name: "Smoldering Armor",
-                        modifiers: "Item Type: Armor",
-                        properties: ""
+                        description: "Padded Armor (common)<br><br>Wisps of harmless, odorless smoke rise from this armor while it is worn.",
+                        name: "Smoldering Armor (Padded)",
+                        modifiers: "Item Type: Light Armor, AC: 11, Stealth:Disadvantage",
+                        properties: "",
+                        price: 5,
+                        amount: 1,
+                        weight: 8
+                    },
+                    {
+                        description: "Leather Armor (common)<br><br>Wisps of harmless, odorless smoke rise from this armor while it is worn.",
+                        name: "Smoldering Armor (Leather)",
+                        modifiers: "Item Type: Light Armor, AC: 11",
+                        properties: "",
+                        price: 10,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Studded Leather (common)<br><br>Wisps of harmless, odorless smoke rise from this armor while it is worn.",
+                        name: "Smoldering Armor (Studded Leather)",
+                        modifiers: "Item Type: Light Armor, AC: 12",
+                        properties: "",
+                        price: 45,
+                        weight: 13,
+                        amount: 1
+                    },
+                    {
+                        description: "Hide Armor (common)<br><br>Wisps of harmless, odorless smoke rise from this armor while it is worn.",
+                        name: "Smoldering Armor (Hide)",
+                        modifiers: "Item Type: Medium Armor, AC: 12",
+                        properties: "",
+                        price: 10,
+                        weight: 12,
+                        amount: 1
+                    },
+                    {
+                        description: "Chain Shirt (common)<br><br>Wisps of harmless, odorless smoke rise from this armor while it is worn.",
+                        name: "Smoldering Armor (Chain Shirt)",
+                        modifiers: "Item Type: Medium Armor, AC: 13",
+                        properties: "",
+                        price: 50,
+                        weight: 20,
+                        amount: 1
+                    },
+                    {
+                        description: "Scale Mail (common)<br><br>Wisps of harmless, odorless smoke rise from this armor while it is worn.",
+                        name: "Smoldering Armor (Scale Mail)",
+                        modifiers: "Item Type: Medium Armor, AC: 14, Stealth:Disadvantage",
+                        properties: "",
+                        price: 50,
+                        weight: 45,
+                        amount: 1
+                    },
+                    {
+                        description: "Breastplate (common)<br><br>Wisps of harmless, odorless smoke rise from this armor while it is worn.",
+                        name: "Smoldering Armor (Breastplate)",
+                        modifiers: "Item Type: Medium Armor, AC: 14",
+                        properties: "",
+                        price: 400,
+                        weight: 20,
+                        amount: 1
+                    },
+                    {
+                        description: "Half Plate (common)<br><br>Wisps of harmless, odorless smoke rise from this armor while it is worn.",
+                        name: "Smoldering Armor (Half Plate)",
+                        modifiers: "Item Type: Medium Armor, AC: 15, Stealth:Disadvantage",
+                        properties: "",
+                        price: 750,
+                        weight: 40,
+                        amount: 1
+                    },
+                    {
+                        description: "Ring Mail (common)<br><br>Wisps of harmless, odorless smoke rise from this armor while it is worn.",
+                        name: "Smoldering Armor (Ring Mail)",
+                        modifiers: "Item Type: Heavy Armor, AC: 14, Stealth:Disadvantage",
+                        properties: "",
+                        price: 30,
+                        weight: 40,
+                        amount: 1
+                    },
+                    {
+                        description: "Chain Mail (common)<br><br>Wisps of harmless, odorless smoke rise from this armor while it is worn.",
+                        name: "Smoldering Armor (Chain Mail)",
+                        modifiers: "Item Type: Heavy Armor, AC: 16, Stealth:Disadvantage",
+                        properties: "",
+                        price: 75,
+                        weight: 55,
+                        amount: 1
+                    },
+                    {
+                        description: "Splint Mail (common)<br><br>Wisps of harmless, odorless smoke rise from this armor while it is worn.",
+                        name: "Smoldering Armor (Splint Mail)",
+                        modifiers: "Item Type: Heavy Armor, AC 17, Stealth:Disadvantage",
+                        properties: "",
+                        price: 200,
+                        weight: 60,
+                        amount: 1
+                    },
+                    {
+                        description: "Plate (common)<br><br>Wisps of harmless, odorless smoke rise from this armor while it is worn.",
+                        name: "Smoldering Armor (Plate)",
+                        modifiers: "Item Type: Heavy Armor, AC: 18, Stealth:Disadvantage",
+                        properties: "",
+                        price: 1500,
+                        weight: 65,
+                        amount: 1
                     }
                 ],
                 accessoires: [
@@ -122,6 +609,455 @@ var Downtime = Downtime || (function(){
             uncommon: {
                 weapon: [
                     //Uncommon Weapons
+                    {
+                        description: "Arrows (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this piece of magic ammunition. Once it hits a target, the ammunition is no longer magical.",
+                        name: "Arrows +1",
+                        modifiers: "Item Type: Ammunition, Ranged Attacks +1, Ranged Damage +1",
+                        properties: "",
+                        price: 1,
+                        amount: 20,
+                        weight: 1
+                    },
+                    {
+                        description: "Crossbow bolts (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this piece of magic ammunition. Once it hits a target, the ammunition is no longer magical.",
+                        name: "Crossbow bolts +1",
+                        modifiers: "Item Type: Ammunition, Ranged Attacks +1, Ranged Damage +1",
+                        properties: "",
+                        price: 1,
+                        weight: 1.5,
+                        amount: 20
+                    },
+                    {
+                        description: "Blowgun needles (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this piece of magic ammunition. Once it hits a target, the ammunition is no longer magical.",
+                        name: "Blowgun needles +1",
+                        modifiers: "Item Type: Ammunition, Ranged Attacks +1, Ranged Damage +1",
+                        properties: "",
+                        price: 1,
+                        weight: 1,
+                        amount: 50
+                    },
+                    {
+                        description: "Sling bullets (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this piece of magic ammunition. Once it hits a target, the ammunition is no longer magical.",
+                        name: "Sling bullets +1",
+                        modifiers: "Item Type: Ammunition, Ranged Attacks +1, Ranged Damage +1",
+                        properties: "",
+                        price: 0.04,
+                        weight: 1.5,
+                        amount: 20
+                    },
+                    {
+                        description: "Club (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Club)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 5 ft.",
+                        properties: "Light",
+                        price: 0.1,
+                        amount: 1,
+                        weight: 2
+                    },
+                    {
+                        description: "Dagger (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Dagger)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: piercing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 20/60",
+                        properties: "Finesse, Light, Thrown",
+                        price: 2,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatclub (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Greatclub)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 5 ft.",
+                        properties: "Two-Handed",
+                        price: 0.2,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Handaxe (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Handaxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Javelin (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Javelin)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 30/120",
+                        properties: "Thrown",
+                        price: 0.5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Light Hammer (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Light Hammer)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 2,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Mace (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Mace)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 5 ft.",
+                        properties: "",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Quarterstaff (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Quarterstaff)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Alternate Damage: 1d8, Alternate Damage Type: bludgeoning, Alternate Secondary Damage: 5, Alternate Secondary Damage Type: dragon\'s breath, Range: 5 ft, Alternate Range: 5 ft.",
+                        properties: "Versatile",
+                        price: 0.2,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Sickle (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Sickle)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 5 ft.",
+                        properties: "Light",
+                        price: 1,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Spear (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Spear)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Alternate Damage: 1d8, Alternate Damage Type: piercing, Alternate Secondary Damage: 5, Alternate Secondary Damage Type: dragon\'s breath, Range: 20/60, Alternate Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 1,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Light Crossbow (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Light Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 80/320",
+                        properties: "Ammunition, Loading, Two-Handed",
+                        price: 25,
+                        weight: 5,
+                        amount: 1
+                    },
+                    {
+                        description: "Dart (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Dart)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d4, Damage Type: piercing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 20/60",
+                        properties: "Finesse, Thrown",
+                        price: 0.05,
+                        weight: 0.25,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortbow (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Shortbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 80/320",
+                        properties: "Ammunition, Two-Handed",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Sling (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Sling)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d4, Damage Type: bludgeoning, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 30/120",
+                        properties: "Ammunition",
+                        price: 0.1,
+                        weight: 0,
+                        amount: 1
+                    },
+                    {
+                        description: "Battleaxe (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Battleaxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Secondary Damage: 5, Secondary Damage Type: dragon\'s brath, Range: 5 ft., Alternate Damage: 1d10, Alternate Damage Type: slashing, Alternate Secondary Damage: 5, Alternate Secondary Damage Type: dragon\'s breath, Alternate Range: 5 ft.",
+                        properties: "Versatile",
+                        price: 10,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Flail (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Flail)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 5 ft.",
+                        properties: "",
+                        price: 10,
+                        weight: 2,
+                        ammount: 1
+                    },
+                    {
+                        description: "Glaive (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Glaive)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 10 ft.",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Greataxe (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Greataxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: slashing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 5 ft.",
+                        properties: "Heavy, Two-Handed",
+                        price: 30,
+                        weight: 7,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatsword (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Greatsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 5 ft.",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Halberd (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Halberd)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 10 ft.",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Lance (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Lance)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: piercing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 10 ft.",
+                        properties: "Reach, Special",
+                        price: 10,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Longsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 5 ft, Alternate Damage: 1d10, Alternate Damage Type: slashing, Alternate Secondary Damage: 5, Alternate Secondary Damage Type: dragon\'s breath, Alternate Reach: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Maul (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Maul)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: bludgeoning, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 10,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Morningstar (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Morningstar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 5 ft",
+                        properties: "",
+                        price: 15,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Pike (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Pike)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: piercing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 5,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        description: "Rapier (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Rapier)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 5 ft",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Scimitar (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Scimitar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortsword (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Shortsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage 5, Secondary Damage Type: dragon\'s breath, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Trident (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Trident)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 20/60, Alternate Damage: 1d8, Alternate Damage Type: piercing, Alternate Secondary Damage: 5, Alternate Secondary Damage Type: dragon\'s breath, Alternate Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "War Pick (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (War Pick)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Warhammer (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Warhammer)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 5 ft, Alternate Damage: 1d10, Alternate Damage Type: bludgeoning, Alternate Secondary Damage: 5, Alternate Secondary Damage Type: dragon\'s breath, Alternate Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Whip (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Whip)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 10 ft",
+                        properties: "Finesse, Reach",
+                        price: 2,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Blowgun (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Blowgun)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1, Damage Type: piercing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 25/100",
+                        properties: "Ammunition, Loading",
+                        price: 10,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Hand Crossbow (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Hand Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 30/120",
+                        properties: "Ammunition, Light, Loading",
+                        price: 75,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Heavy Crossbow (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Heavy Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d10, Damage Type: piercing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 100/400",
+                        properties: "Ammunition, Heavy, Loading, Two-Handed",
+                        price: 50,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        description: "Longbow (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Longbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 150/600",
+                        properties: "Ammunition, Heavy, Two-Handed",
+                        price: 50,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Net (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Slumbering Dragon\'s Wrath Weapon (Net)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 0, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 5/15",
+                        properties: "Thrown, Special",
+                        price: 1,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "This javelin is a magic weapon. When you hurl it and speak its command word, it transforms into a bolt of lightning, forming a line 5 feet wide that extends out from you to a target within 120 feet. Each creature in the line excluding you and the target must make a DC 13 Dexterity saving throw, taking 4d6 lightning damage on a failed save, and half as much damage on a successful one. The lightning bolt turns back into a javelin when it reaches the target. Make a ranged weapon attack against the target. On a hit, the target takes damage from the javelin plus 4d6 lightning damage.<br><br>The javelin\'s property can\'t be used again until the next dawn. In the meantime, the javelin can still be used as a magic weapon.",
+                        name: "Javelin of Lightning",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 4d6, Secondary Damage Type: lightning, Range: 30/120",
+                        price: 0.5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Sickle (uncommon), requires attunement by a Druid or Ranger<br><br>This silver-bladed sickle glimmers softly with moonlight. While holding this magic weapon, you gain a bonus to attack and damage rolls made with it, and you gain a bonus to spell attack rolls and the saving throw DCs of your druid and ranger spells. The bonus is determined by the weapon\'s rarity. In addition, you can use the sickle as a spellcasting focus for your druid and ranger spells.<br><br>When you cast a spell that restores hit points, you can roll a d4 and add the number rolled to the amount of hit points restored, provided you are holding the sickle.",
+                        name: "Moon Sickle +1",
+                        modifiers: "Item Type: Weapon (sickle), Damage: 1d4, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Spell Attack +1, Spell DC +1",
+                        properties: "Light",
+                        weight: 2,
+                        price: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortsword (uncommon), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>Curse. This sword is cursed and possessed by a vengeful spirit. Becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the sword, keeping it on your person at all times. While attuned to this weapon, you have disadvantage on attack rolls made with weapons other than this one.<br><br>In addition, while the sword is on your person, you must succeed on a DC 15 Wisdom saving throw whenever you take damage in combat. On a failed save, you must attack the creature that damaged you until you drop to 0 hit points or it does, or until you can't reach the creature to make a melee attack against it.<br><br>You can break the curse in the usual ways. Alternatively, casting Banishment on the sword forces the vengeful spirit to leave it. The sword then becomes a +1 weapon with no other properties.",
+                        name: "Sword of Vengeance (Shortsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Range: 5 ft, Melee Attacks +1, Melee Damage +1",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        amount: 1,
+                        weight: 2
+                    },
+                    {
+                        description: "Scimitar (uncommon), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>Curse. This sword is cursed and possessed by a vengeful spirit. Becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the sword, keeping it on your person at all times. While attuned to this weapon, you have disadvantage on attack rolls made with weapons other than this one.<br><br>In addition, while the sword is on your person, you must succeed on a DC 15 Wisdom saving throw whenever you take damage in combat. On a failed save, you must attack the creature that damaged you until you drop to 0 hit points or it does, or until you can't reach the creature to make a melee attack against it.<br><br>You can break the curse in the usual ways. Alternatively, casting Banishment on the sword forces the vengeful spirit to leave it. The sword then becomes a +1 weapon with no other properties.",
+                        name: "Sword of Vengeance (Scimitar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Range: 5 ft, Melee Attacks +1, Melee Damage +1",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Rapier (uncommon), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>Curse. This sword is cursed and possessed by a vengeful spirit. Becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the sword, keeping it on your person at all times. While attuned to this weapon, you have disadvantage on attack rolls made with weapons other than this one.<br><br>In addition, while the sword is on your person, you must succeed on a DC 15 Wisdom saving throw whenever you take damage in combat. On a failed save, you must attack the creature that damaged you until you drop to 0 hit points or it does, or until you can't reach the creature to make a melee attack against it.<br><br>You can break the curse in the usual ways. Alternatively, casting Banishment on the sword forces the vengeful spirit to leave it. The sword then becomes a +1 weapon with no other properties.",
+                        name: "Sword of Vengeance (Rapier)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Range: 5 ft, Melee Attacks +1, Melee Damage +1",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (uncommon), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>Curse. This sword is cursed and possessed by a vengeful spirit. Becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the sword, keeping it on your person at all times. While attuned to this weapon, you have disadvantage on attack rolls made with weapons other than this one.<br><br>In addition, while the sword is on your person, you must succeed on a DC 15 Wisdom saving throw whenever you take damage in combat. On a failed save, you must attack the creature that damaged you until you drop to 0 hit points or it does, or until you can't reach the creature to make a melee attack against it.<br><br>You can break the curse in the usual ways. Alternatively, casting Banishment on the sword forces the vengeful spirit to leave it. The sword then becomes a +1 weapon with no other properties.",
+                        name: "Sword of Vengeance (Longsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Range 5 ft, Melee Attacks +1, Melee Damage +1, Alternate Damage: 1d10, Alternate Damage Type: slashing, Alternate Range: 5 ft, Alternate Melee Attacks +1, Alternate Melee Damage +1",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatsword (uncommon), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>Curse. This sword is cursed and possessed by a vengeful spirit. Becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the sword, keeping it on your person at all times. While attuned to this weapon, you have disadvantage on attack rolls made with weapons other than this one.<br><br>In addition, while the sword is on your person, you must succeed on a DC 15 Wisdom saving throw whenever you take damage in combat. On a failed save, you must attack the creature that damaged you until you drop to 0 hit points or it does, or until you can't reach the creature to make a melee attack against it.<br><br>You can break the curse in the usual ways. Alternatively, casting Banishment on the sword forces the vengeful spirit to leave it. The sword then becomes a +1 weapon with no other properties.",
+                        name: "Sword of Vengeance (Greatsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Range: 5 ft, Melee Attacks +1, Melee Damage +1",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Trident (uncommon), requires attunement<br><br>This trident is a magic weapon. It has 3 charges. While you carry it, you can use an action and expend 1 charge to cast Dominate Beast (save DC 15) from it on a beast that has an innate swimming speed. The trident regains 1d3 expended charges daily at dawn.",
+                        name: "Trident of Fish Command",
+                        modifiers: "Item Type: Weapon, Damage: 1d6, Damage Type: piercing, Alternate Damage: 1d8, Alternate Damage Type: piercing, Range: 20/60",
+                        properties: "Range, Thrown, Versatile",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Battleaxe +1",
+                        modifiers: "Item Type: Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attack +1, Melee Damage +1, Range: 5 ft, Alternate Range: 5 ft",
+                        properties: "Versatile",
+                        price: 10,
+                        weight: 4,
+                        amount: 1
+                    }
                 ],
                 armor: [
                     //Uncommon Armor
@@ -1506,6 +2442,8 @@ var Downtime = Downtime || (function(){
                 let description=trueitem.description;
                 let modifiers=trueitem.modifiers;
                 let itemname=trueitem.name;
+                let properties=trueitem.properties;
+                let itemweight=trueitem.weight;
                 amount=trueitem.amount*amount;
                 let inventory=findObjs({
                     _type: 'attribute',
@@ -1546,18 +2484,30 @@ var Downtime = Downtime || (function(){
                     sendChat("Downtime","!setattr --charid "+charid+" --repeating_inventory_"+itemid+"_itemcount|"+amount);
                 } else {
                     if (type=="Weapon") {
-                        let dmgbase=trueitem.dmgbase;
-                        let dmgtype=trueitem.dmgtype;
+                        let dmgbase=trueitem.primarydmg;
+                        let dmgtype=trueitem.primarydmgtype;
                         let magicbonus=trueitem.magicbonus;
+                        let dmg2base=trueitem.secondarydmg;
+                        let dmg2type=trueitem.secondarydmgtype;
+                        let altdmgbase=trueitem.alternatedmg;
+                        let altdmgtype=trueitem.alternatedmgtype;
+                        let range=trueitem.atkrange;
                         if (!magicbonus) {
                             magicbonus="";
                         }
-                        sendChat("Downtime","!setattr --charid "+charid+" --repeating_inventory_-CREATE_itemname|"+itemname+" --repeating_inventory_-CREATE_itemcount|"+amount+" --repeating_inventory_-CREATE_itemcontent|"+description+" --repeating_inventory_-CREATE_itemmodifiers|"+modifiers+" --repeating_inventory_-CREATE_itemweight|"+itemweight);
+                        sendChat("Downtime","!setattr --charid "+charid+" --repeating_inventory_-CREATE_itemname|"+itemname+" --repeating_inventory_-CREATE_itemcount|"+amount+" --repeating_inventory_-CREATE_itemcontent|"+description+" --repeating_inventory_-CREATE_itemmodifiers|"+modifiers+" --repeating_inventory_-CREATE_itemweight|"+itemweight+" --repeating_inventory_-CREATE_itemproperties|"+properties);
+                        let secondary="";
                         if (dmgbase) {
-                            sendChat("Downtime","!setattr --charid "+charid+" --repeating_attack_-CREATE_atkname|"+itemname+" --repeating_attack_-CREATE_dmgbase|"+dmgbase+" --repeating_attack_-CREATE_dmgtype|"+dmgtype+" --repeating_attack_-CREATE_atkmagic|"+magicbonus);
+                            if (dmg2base) {
+                                secondary=" --repeating_attack_-CREATE_dmg2base|"+dmg2base+" --repeating_attack_-CREATE_dmg2type|"+dmg2type;
+                            }
+                            sendChat("Downtime","!setattr --charid "+charid+" --repeating_attack_-CREATE_atkname|"+itemname+" --repeating_attack_-CREATE_dmgbase|"+dmgbase+" --repeating_attack_-CREATE_dmgtype|"+dmgtype+" --repeating_attack_-CREATE_atkmagic|"+magicbonus+" --repeating_attack_-CREATE_atkrange|"+range+secondary);
+                        }
+                        if (altdmgbase) {
+                            sendChat("Downtime","!setattr --charid "+charid+" --repeating_attack_-CREATE_atkname|"+itemname+" --repeating_attack_-CREATE_dmgbase|"+altdmgbase+" --repeating_attack_-CREATE_dmgtype|"+altdmgtype+" --repeating_attack_-CREATE_atkmagic|"+magicbonus+" --repeating_attack_-CREATE_atkrange|"+range+secondary);
                         }
                     } else {
-                        sendChat("Downtime","!setattr --charid "+charid+" --repeating_inventory_-CREATE_itemname|"+itemname+" --repeating_inventory_-CREATE_itemcount|"+amount+" --repeating_inventory_-CREATE_itemcontent|"+description+" --repeating_inventory_-CREATE_itemmodifiers|"+modifiers+" --repeating_inventory_-CREATE_itemweight|"+itemweight);
+                        sendChat("Downtime","!setattr --charid "+charid+" --repeating_inventory_-CREATE_itemname|"+itemname+" --repeating_inventory_-CREATE_itemcount|"+amount+" --repeating_inventory_-CREATE_itemcontent|"+description+" --repeating_inventory_-CREATE_itemmodifiers|"+modifiers+" --repeating_inventory_-CREATE_itemweight|"+itemweight+" --repeating_inventory_-CREATE_itemproperties|"+properties);
                     }
                 }
             }
