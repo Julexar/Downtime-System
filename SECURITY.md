@@ -16,9 +16,10 @@ I am not liable for any issues that you might experience with unsupported Versio
 | 0.9b   | :x: |
 | 0.9c   | :x: |
 | 0.9d   | :x: |
-| 0.9e    | :white_check_mark: |
+| 0.9e   | :x: |
+| 1.0    | :white_check_mark: |
 
 ## Reporting an Issue
 
 If you discover an Issue/Bug or if you have a suggestion for new Features, make sure to open a new Issue in the Issues tab on GitHub.
-Issues and Feature requests for unsupported Versions will NOT be worked on!
+Issues and Feature requests for unsupported Versions will NOT be worked on as those have likely already been fixed or implemented.

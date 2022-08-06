@@ -1043,19 +1043,676 @@ var Downtime = Downtime || (function(){
                     {
                         description: "Trident (uncommon), requires attunement<br><br>This trident is a magic weapon. It has 3 charges. While you carry it, you can use an action and expend 1 charge to cast Dominate Beast (save DC 15) from it on a beast that has an innate swimming speed. The trident regains 1d3 expended charges daily at dawn.",
                         name: "Trident of Fish Command",
-                        modifiers: "Item Type: Weapon, Damage: 1d6, Damage Type: piercing, Alternate Damage: 1d8, Alternate Damage Type: piercing, Range: 20/60",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Alternate Damage: 1d8, Alternate Damage Type: piercing, Range: 20/60",
                         properties: "Range, Thrown, Versatile",
                         price: 5,
                         weight: 4,
                         amount: 1
                     },
                     {
-                        description: "You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        description: "Club (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Club +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Melee Attack +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Light",
+                        price: 0.1,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Dagger (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Dagger +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Finesse, Light, Thrown",
+                        price: 2,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatclub (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Greatclub +1",
+                        modifiers: "Item Tpye: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Two-Handed",
+                        price: 0.2,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Handaxe (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Handaxe +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Javelin (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Javelin +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 30/120",
+                        properties: "Thrown",
+                        price: 0.5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Light Hammer (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Light Hammer +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 2,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Mace (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Mace +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Quarterstaff (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Quarterstaff +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Melee Attacks +1, Melee Damage +1, Range: 5 ft, Alternate Damage: 1d8, Alternate Damage Type: bludgeoning",
+                        properties: "Versatile",
+                        price: 0.2,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Sickle (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Sickle +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Light",
+                        price: 1,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Spear (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Spear +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Alternate Damage: 1d8, Alternate Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 20/60, Alternate Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 1,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Light Crossbow (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Light Crossbow +1",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Ranged Attacks +1, Ranged Damage +1, Range: 80/320",
+                        properties: "Ammunition, Loading, Two-Handed",
+                        price: 25,
+                        weight: 5,
+                        amount: 1
+                    },
+                    {
+                        description: "Dart (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Dart +1",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Ranged Attacks +1, Ranged Damage +1, Range: 20/60",
+                        properties: "Finesse, Thrown",
+                        price: 0.05,
+                        weight: 0.25,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortbow (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Shortbow +1",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Ranged Attacks +1, Ranged Damage +1, Range: 80/320",
+                        properties: "Ammunition, Two-Handed",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Sling (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Sling +1",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d4, Damage Type: bludgeoning, Ranged Attacks +1, Ranged Damage +1, Range: 30/120",
+                        properties: "Ammunition",
+                        price: 0.1,
+                        weight: 0,
+                        amount: 1
+                    },
+                    {
+                        description: "Battleaxe (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
                         name: "Battleaxe +1",
-                        modifiers: "Item Type: Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attack +1, Melee Damage +1, Range: 5 ft, Alternate Range: 5 ft",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
                         properties: "Versatile",
                         price: 10,
                         weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Flail (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Flail +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Glaive (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Glaive +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Greataxe (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Greataxe +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 30,
+                        weight: 7,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatsword (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Greatsword +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Halberd (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Halberd +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Lance (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Lance +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 10 ft",
+                        properties: "Reach, Special",
+                        price: 10,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Longsword +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Maul (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Maul +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: bludgeoning, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 10,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Morningstar (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Morningstar +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "",
+                        price: 15,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Pike (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Pike +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 5,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        description: "Rapier (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Rapier +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Scimitar (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Scimitar +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortsword (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Shortsword +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Trident (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Trident +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Alternate Damage: 1d8, Alternate Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "War Pick (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "War Pick +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Warhammer (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Warhammer +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Alternate Damage: 1d10, Alternate Damage Type: bludgeoning, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Whip (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Whip +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 10 ft",
+                        properties: "Finesse, Reach",
+                        price: 2,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Blowgun (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Blowgun +1",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1, Damage Type: piercing, Ranged Attacks +1, Ranged Damage +1, Range: 25/100",
+                        properties: "Ammunition, Loading",
+                        price: 10,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Hand Crossbow (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Hand Crossbow +1",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Ranged Attacks +1, Ranged Damage +1, Range: 30/120",
+                        properties: "Ammunition, Light, Loading",
+                        price: 75,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Heavy Crossbow (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Heavy Crossbow +1",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d10, Damage Type: piercing, Ranged Attacks +1, Ranged Damage +1, Range: 100/400",
+                        properties: "Ammunition, Heavy, Loading, Two-Handed",
+                        price: 50,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        description: "Longbow (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Longbow +1",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Ranged Attacks +1, Ranged Damage +1, Range: 150/600",
+                        properties: "Ammunition, Heavy, Two-Handed",
+                        price: 50,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Net (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Net +1",
+                        modifiers: "Item Type: Ranged Weapon, Range: 5/15",
+                        properties: "Thrown, Special",
+                        price: 1,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Club (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Club)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "Light",
+                        price: 0.1,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Dagger (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Dagger)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: piercing, Range: 20/60",
+                        properties: "Finesse, Light, Thrown",
+                        price: 2,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatclub (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Greatclub)",
+                        modifiers: "Item Tpye: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "Two-Handed",
+                        price: 0.2,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Handaxe (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Handaxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Javelin (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Warning of Warning (Javelin)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Range: 30/120",
+                        properties: "Thrown",
+                        price: 0.5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Light Hammer (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Warning of Warning (Light Hammer)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 2,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Mace (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Mace)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Quarterstaff (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Quarterstaff)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Range: 5 ft, Alternate Damage: 1d8, Alternate Damage Type: bludgeoning",
+                        properties: "Versatile",
+                        price: 0.2,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Sickle (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Sickle)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Range: 5 ft",
+                        properties: "Light",
+                        price: 1,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Spear (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Spear)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Alternate Damage: 1d8, Alternate Damage Type: piercing, Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 1,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Light Crossbow (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Light Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Range: 80/320",
+                        properties: "Ammunition, Loading, Two-Handed",
+                        price: 25,
+                        weight: 5,
+                        amount: 1
+                    },
+                    {
+                        description: "Dart (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Dart)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Range: 20/60",
+                        properties: "Finesse, Thrown",
+                        price: 0.05,
+                        weight: 0.25,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortbow (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Shortbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Range: 80/320",
+                        properties: "Ammunition, Two-Handed",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Sling (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Sling)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d4, Damage Type: bludgeoning, Range: 30/120",
+                        properties: "Ammunition",
+                        price: 0.1,
+                        weight: 0,
+                        amount: 1
+                    },
+                    {
+                        description: "Battleaxe (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Battleaxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 10,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Flail (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Flail)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Glaive (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Glaive)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Greataxe (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Greataxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: slashing, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 30,
+                        weight: 7,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatsword (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Greatsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Halberd (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Halberd)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Lance (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Lance)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: piercing, Range: 10 ft",
+                        properties: "Reach, Special",
+                        price: 10,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Longsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Maul (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Maul)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 10,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Morningstar (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Morningstar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Range: 5 ft",
+                        properties: "",
+                        price: 15,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Pike (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Pike)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: piercing, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 5,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        description: "Rapier (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Rapier)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Range: 5 ft",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Scimitar (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Scimitar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortsword (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Shortsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Trident (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Trident)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Alternate Damage: 1d8, Alternate Damage Type: piercing, Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "War Pick (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (War Pick)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Warhammer (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Warhammer)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Alternate Damage: 1d10, Alternate Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Whip (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Whip)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Range: 10 ft",
+                        properties: "Finesse, Reach",
+                        price: 2,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Blowgun (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Blowgun)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1, Damage Type: piercing, Range: 25/100",
+                        properties: "Ammunition, Loading",
+                        price: 10,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Hand Crossbow (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Hand Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Range: 30/120",
+                        properties: "Ammunition, Light, Loading",
+                        price: 75,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Heavy Crossbow (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Heavy Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d10, Damage Type: piercing, Range: 100/400",
+                        properties: "Ammunition, Heavy, Loading, Two-Handed",
+                        price: 50,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        description: "Longbow (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Longbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Range: 150/600",
+                        properties: "Ammunition, Heavy, Two-Handed",
+                        price: 50,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Net (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Net)",
+                        modifiers: "Item Type: Ranged Weapon, Range: 5/15",
+                        properties: "Thrown, Special",
+                        price: 1,
+                        weight: 3,
                         amount: 1
                     }
                 ],
