@@ -1043,24 +1043,994 @@ var Downtime = Downtime || (function(){
                     {
                         description: "Trident (uncommon), requires attunement<br><br>This trident is a magic weapon. It has 3 charges. While you carry it, you can use an action and expend 1 charge to cast Dominate Beast (save DC 15) from it on a beast that has an innate swimming speed. The trident regains 1d3 expended charges daily at dawn.",
                         name: "Trident of Fish Command",
-                        modifiers: "Item Type: Weapon, Damage: 1d6, Damage Type: piercing, Alternate Damage: 1d8, Alternate Damage Type: piercing, Range: 20/60",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Alternate Damage: 1d8, Alternate Damage Type: piercing, Range: 20/60",
                         properties: "Range, Thrown, Versatile",
                         price: 5,
                         weight: 4,
                         amount: 1
                     },
                     {
-                        description: "You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        description: "Club (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Club +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Light",
+                        price: 0.1,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Dagger (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Dagger +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Finesse, Light, Thrown",
+                        price: 2,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatclub (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Greatclub +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Two-Handed",
+                        price: 0.2,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Handaxe (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Handaxe +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Jevelin (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Javelin +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 30/120",
+                        properties: "Thrown",
+                        price: 0.5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Light Hammer (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Light Hammer +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 2,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Mace (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Mace +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Quarterstaff (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Quarterstaff +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Alternate Damage: 1d8, Alternate Damage Type: bludgeoning, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 0.2,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Sickle (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Sickle +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Light",
+                        price: 1,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Spear (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Spear +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Alternate Damage: 1d8, Alternate Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 1,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Light Crossbow (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Light Crossbow +1",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Ranged Attacks +1, Ranged Damage +1, Range: 80/320",
+                        properties: "Ammunition, Loading, Two-Handed",
+                        price: 25,
+                        weight: 5,
+                        amount: 1
+                    },
+                    {
+                        description: "Dart (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Dart +1",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d4, Damage Type: piercing, Ranged Attacks +1, Ranged Damage +1, Range: 20/60",
+                        properties: "Finesse, Thrown",
+                        price: 0.05,
+                        weight: 0.25,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortbow (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Shortbow +1",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Ranged Attacks +1, Ranged Damage +1, Range: 80/320",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Sling (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Sling +1",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d4, Damage Type: bludgeoning, Ranged Attacks +1, Ranged Damage +1, Range: 30/120",
+                        properties: "Ammunition",
+                        price: 0.1,
+                        weight: 0,
+                        amount: 1
+                    },
+                    {
+                        description: "Battleaxe (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
                         name: "Battleaxe +1",
-                        modifiers: "Item Type: Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attack +1, Melee Damage +1, Range: 5 ft, Alternate Range: 5 ft",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
                         properties: "Versatile",
                         price: 10,
                         weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Flail (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Flail +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Glaive (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Glaive +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Greataxe (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Greataxe +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 30,
+                        weight: 7,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatsword (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Greatsword +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Halberd (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Halberd +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Lance (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Lance +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 10 ft",
+                        properties: "Reach, Special",
+                        price: 10,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Longsword +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Maul (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Maul +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: bludgeoning, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 10,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Morningstar (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Morningstar +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "",
+                        price: 15,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Pike (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Pike +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 5,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        description: "Rapier (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Rapier +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Scimitar (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Scimitar +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortsword (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Shortsword +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Trident (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Trident +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Alternate Damage: 1d8, Alternate Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "War Pick (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "War Pick +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Warhammer (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Warhammer +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Alternate Damage: 1d10, Alternate Damage Type: bludgeoning, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Whip (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Whip +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 10 ft",
+                        properites: "Finesse, Reach",
+                        price: 2,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Blowgun (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Blowgun +1",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1, Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 25/100",
+                        properties: "Ammunition, Loading",
+                        price: 10,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Hand Crossbow (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Hand Crossbow +1",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Ranged Attacks +1, Ranged Damage +1, Range: 30/120",
+                        properties: "Ammunition, Light, Loading",
+                        price: 75,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Heavy Crossbow (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Heavy Crossbow +1",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d10, Damage Type: piercing, Ranged Attacks +1, Ranged Damage +1, Range: 100/400",
+                        properties: "Ammunition, Heavy, Loading, Two-Handed",
+                        price: 50,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        description: "Longbow (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Longbow +1",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Ranged Attacks +1, Ranged Damage +1, Range: 150/600",
+                        properties: "Ammunition, Heavy, Two-Handed",
+                        price: 50,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Net (uncommon)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Net +1",
+                        modifiers: "Item Type: Ranged Weapon, Ranged Attacks +1, Ranged Damage +1, Range: 5/15",
+                        properties: "Thrown, Special",
+                        price: 1,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Club (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Club)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "Light",
+                        price: 0.1,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Dagger (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Dagger)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: piercing, Range: 20/60",
+                        properties: "Finesse, Light, Thrown",
+                        price: 2,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatclub (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Greatclub)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "Two-Handed",
+                        price: 0.2,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Handaxe (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Handaxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Jevelin (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Javelin)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Range: 30/120",
+                        properties: "Thrown",
+                        price: 0.5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Light Hammer (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Light Hammer)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 2,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Mace (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Mace)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Quarterstaff (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Quarterstaff)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Alternate Damage: 1d8, Alternate Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 0.2,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Sickle (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Sickle)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Range: 5 ft",
+                        properties: "Light",
+                        price: 1,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Spear (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Spear)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Alternate Damage: 1d8, Alternate Damage Type: piercing, Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 1,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Light Crossbow (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Light Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Range: 80/320",
+                        properties: "Ammunition, Loading, Two-Handed",
+                        price: 25,
+                        weight: 5,
+                        amount: 1
+                    },
+                    {
+                        description: "Dart (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Dart)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d4, Damage Type: piercing, Range: 20/60",
+                        properties: "Finesse, Thrown",
+                        price: 0.05,
+                        weight: 0.25,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortbow (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Shortbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Range: 80/320",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Sling (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Sling)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d4, Damage Type: bludgeoning, Range: 30/120",
+                        properties: "Ammunition",
+                        price: 0.1,
+                        weight: 0,
+                        amount: 1
+                    },
+                    {
+                        description: "Battleaxe (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Battleaxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 10,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Flail (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Flail)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Glaive (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Glaive)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Greataxe (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Greataxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: slashing, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 30,
+                        weight: 7,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatsword (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Greatsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Halberd (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Halberd)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Lance (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Lance)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: piercing, Range: 10 ft",
+                        properties: "Reach, Special",
+                        price: 10,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Longsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Maul (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Maul)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 10,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Morningstar (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Morningstar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Range: 5 ft",
+                        properties: "",
+                        price: 15,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Pike (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Pike)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: piercing, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 5,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        description: "Rapier (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Rapier)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Range: 5 ft",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Scimitar (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Scimitar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortsword (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Shortsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Trident (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Trident)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Alternate Damage: 1d8, Alternate Damage Type: piercing, Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "War Pick (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (War Pick)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Warhammer (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Warhammer)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Alternate Damage: 1d10, Alternate Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Whip (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Whip)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Range: 10 ft",
+                        properites: "Finesse, Reach",
+                        price: 2,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Blowgun (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Blowgun)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1, Damage Type: piercing, Range: 25/100",
+                        properties: "Ammunition, Loading",
+                        price: 10,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Hand Crossbow (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Hand Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Range: 30/120",
+                        properties: "Ammunition, Light, Loading",
+                        price: 75,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Heavy Crossbow (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Heavy Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d10, Damage Type: piercing, Range: 100/400",
+                        properties: "Ammunition, Heavy, Loading, Two-Handed",
+                        price: 50,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        description: "Longbow (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Longbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Range: 150/600",
+                        properties: "Ammunition, Heavy, Two-Handed",
+                        price: 50,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Net (uncommon)<br><br>This magic weapon warns you of danger. While the weapon is on your person, you have advantage on initiative rolls. In addition, you and any of your companions within 30 feet of you can\'t be surprised, except when incapacitated by something other than nonmagical sleep. The weapon magically awakens you and your companions within range if any of you are sleeping naturally when combat begins.",
+                        name: "Weapon of Warning (Net)",
+                        modifiers: "Item Type: Ranged Weapon, Range: 5/15",
+                        properties: "Thrown, Special",
+                        price: 1,
+                        weight: 3,
                         amount: 1
                     }
                 ],
                 armor: [
                     //Uncommon Armor
+                    {
+						description: "Chain Shirt (uncommon)<br><br>This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you\'re wearing it, any critical hit against you becomes a normal hit.",
+						name: "Adamantine Armor (Chain Shirt)",
+						modifiers: "Item Type: Medium Armor, AC: 13",
+						properties: "",
+						price: 50,
+						weight: 20,
+						amount: 1
+					},
+					{
+						description: "Scale Mail (uncommon)<br><br>This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you\'re wearing it, any critical hit against you becomes a normal hit.",
+						name: "Adamantine Armor (Scale Mail)",
+						modifiers: "Item Type: Medium Armor, AC: 14, Stealth:Disadvantage",
+						properties: "",
+						price: 50,
+						weight: 45,
+						amount: 1
+					},
+					{
+						description: "Breastplate (uncommon)<br><br>This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you\'re wearing it, any critical hit against you becomes a normal hit.",
+						name: "Adamantine Armor (Breastplate)",
+						modifiers: "Item Type: Medium Armor, AC: 14",
+						properties: "",
+						price: 400,
+						weight: 20,
+						amount: 1
+					},
+					{
+						description: "Half Plate (uncommon)<br><br>This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you\'re wearing it, any critical hit against you becomes a normal hit.",
+						name: "Adamantine Armor (Half Plate)",
+						modifiers: "Item Type: Medium Armor, AC: 15, Stealth:Disadvantage",
+						properties: "",
+						price: 750,
+						weight: 40,
+						amount: 1
+					},
+                    {
+						description: "Ring Mail (uncommon)<br><br>This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you\'re wearing it, any critical hit against you becomes a normal hit.",
+						name: "Adamantine Armor (Ring Mail)",
+						modifiers: "Item Type: Heavy Armor, AC: 14, Stealth:Disadvantage",
+						properties: "",
+						price: 30,
+						weight: 40,
+						amount: 1
+					},
+					{
+						description: "Chain Mail (uncommon)<br><br>This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you\'re wearing it, any critical hit against you becomes a normal hit.",
+						name: "Adamantine Armor (Chain Mail)",
+						modifiers: "Item Type: Heavy Armor, AC: 16, Stealth:Disadvantage",
+						properties: "",
+						price: 75,
+						weight: 55,
+						amount: 1
+					},
+					{
+						description: "Splint Mail (uncommon)<br><br>This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you\'re wearing it, any critical hit against you becomes a normal hit.",
+						name: "Adamantine Armor (Splint Mail)",
+						modifiers: "Item Type: Heavy Armor, AC: 17, Stealth:Disadvantage",
+						properties: "",
+						price: 200,
+						weight: 60,
+						amount: 1
+					},
+					{
+						description: "Plate (uncommon)<br><br>This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you\'re wearing it, any critical hit against you becomes a normal hit.",
+						name: "Adamantine Armor (Plate)",
+						modifiers: "Item Type: Heavy Armor, AC: 18, Stealth:Disadvantage",
+						properties: "",
+						price: 1500,
+						weight: 65,
+						amount: 1
+					},
+                    {
+						description: "Padded Armor (uncommon)<br><br>While wearing this armor, you have a swimming speed equal to your walking speed. In addition, whenever you start your turn underwater with 0 hit points, the armor causes you to rise 60 feet toward the surface. The armor is decorated with fish and shell motifs.",
+						name: "Mariner\'s Armor (Padded)",
+						modifiers: "Item Type: Light Armor, AC: 11, Stealth:Disadvantage",
+						properties: "",
+						price: 5,
+						weight: 8,
+						amount: 1
+					},
+					{
+						description: "Leather Armor (uncommon)<br><br>While wearing this armor, you have a swimming speed equal to your walking speed. In addition, whenever you start your turn underwater with 0 hit points, the armor causes you to rise 60 feet toward the surface. The armor is decorated with fish and shell motifs.",
+						name: "Mariner\'s Armor (Leather)",
+						modifiers: "Item Type: Light Armor, AC: 11",
+						properties: "",
+						price: 10,
+						weight: 10,
+						amount: 1
+					},
+					{
+						description: "Studded Leather (uncommon)<br><br>While wearing this armor, you have a swimming speed equal to your walking speed. In addition, whenever you start your turn underwater with 0 hit points, the armor causes you to rise 60 feet toward the surface. The armor is decorated with fish and shell motifs.",
+						name: "Mariner\'s Armor (Studded Leather)",
+						modifiers: "Item Type: Light Armor, AC: 12",
+						properties: "",
+						price: 45,
+						weight: 13,
+						amount: 1
+					},
+                    {
+						description: "Hide Armor (uncommon)<br><br>While wearing this armor, you have a swimming speed equal to your walking speed. In addition, whenever you start your turn underwater with 0 hit points, the armor causes you to rise 60 feet toward the surface. The armor is decorated with fish and shell motifs.",
+						name: "Mariner\'s Armor (Hide)",
+						modifiers: "Item Type: Medium Armor, AC: 12",
+						properties: "",
+						price: 10,
+						weight: 12,
+						amount: 1
+					},
+					{
+						description: "Chain Shirt (uncommon)<br><br>While wearing this armor, you have a swimming speed equal to your walking speed. In addition, whenever you start your turn underwater with 0 hit points, the armor causes you to rise 60 feet toward the surface. The armor is decorated with fish and shell motifs.",
+						name: "Mariner\'s Armor (Chain Shirt)",
+						modifiers: "Item Type: Medium Armor, AC: 13",
+						properties: "",
+						price: 50,
+						weight: 20,
+						amount: 1
+					},
+					{
+						description: "Scale Mail (uncommon)<br><br>While wearing this armor, you have a swimming speed equal to your walking speed. In addition, whenever you start your turn underwater with 0 hit points, the armor causes you to rise 60 feet toward the surface. The armor is decorated with fish and shell motifs.",
+						name: "Mariner\'s Armor (Scale Mail)",
+						modifiers: "Item Type: Medium Armor, AC: 14, Stealth:Disadvantage",
+						properties: "",
+						price: 50,
+						weight: 45,
+						amount: 1
+					},
+					{
+						description: "Breastplate (uncommon)<br><br>While wearing this armor, you have a swimming speed equal to your walking speed. In addition, whenever you start your turn underwater with 0 hit points, the armor causes you to rise 60 feet toward the surface. The armor is decorated with fish and shell motifs.",
+						name: "Mariner\'s Armor (Breastplate)",
+						modifiers: "Item Type: Medium Armor, AC: 14",
+						properties: "",
+						price: 400,
+						weight: 20,
+						amount: 1
+					},
+					{
+						description: "Half Plate (uncommon)<br><br>While wearing this armor, you have a swimming speed equal to your walking speed. In addition, whenever you start your turn underwater with 0 hit points, the armor causes you to rise 60 feet toward the surface. The armor is decorated with fish and shell motifs.",
+						name: "Mariner\'s Armor (Half Plate)",
+						modifiers: "Item Type: Medium Armor, AC: 15, Stealth:Disadvantage",
+						properties: "",
+						price: 750,
+						weight: 40,
+						amount: 1
+					},
+                    {
+						description: "Ring Mail (uncommon)<br><br>While wearing this armor, you have a swimming speed equal to your walking speed. In addition, whenever you start your turn underwater with 0 hit points, the armor causes you to rise 60 feet toward the surface. The armor is decorated with fish and shell motifs.",
+						name: "Mariner\'s Armor (Ring Mail)",
+						modifiers: "Item Type: Heavy Armor, AC: 14, Stealth:Disadvantage",
+						properties: "",
+						price: 30,
+						weight: 40,
+						amount: 1
+					},
+					{
+						description: "Chain Mail (uncommon)<br><br>While wearing this armor, you have a swimming speed equal to your walking speed. In addition, whenever you start your turn underwater with 0 hit points, the armor causes you to rise 60 feet toward the surface. The armor is decorated with fish and shell motifs.",
+						name: "Mariner\'s Armor (Chain Mail)",
+						modifiers: "Item Type: Heavy Armor, AC: 16, Stealth:Disadvantage",
+						properties: "",
+						price: 75,
+						weight: 55,
+						amount: 1
+					},
+					{
+						description: "Splint Mail (uncommon)<br><br>While wearing this armor, you have a swimming speed equal to your walking speed. In addition, whenever you start your turn underwater with 0 hit points, the armor causes you to rise 60 feet toward the surface. The armor is decorated with fish and shell motifs.",
+						name: "Mariner\'s Armor (Splint Mail)",
+						modifiers: "Item Type: Heavy Armor, AC: 17, Stealth:Disadvantage",
+						properties: "",
+						price: 200,
+						weight: 60,
+						amount: 1
+					},
+					{
+						description: "Plate (uncommon)<br><br>While wearing this armor, you have a swimming speed equal to your walking speed. In addition, whenever you start your turn underwater with 0 hit points, the armor causes you to rise 60 feet toward the surface. The armor is decorated with fish and shell motifs.",
+						name: "Mariner\'s Armor (Plate)",
+						modifiers: "Item Type: Heavy Armor, AC: 18, Stealth:Disadvantage",
+						properties: "",
+						price: 1500,
+						weight: 65,
+						amount: 1
+					},
+                    {
+						description: "Ring Mail (uncommon), requires attunement by a specific individual<br><br>Any nonmagical suit of heavy armor can be turned by mind flayers into mind carapace armor. Only one creature can attune to it: either a specific mind flayer or one of its thralls. While worn by any other creature, the mind carapace armor functions as normal armor of its kind. To its intended wearer, the armor grants advantage on Intelligence, Wisdom, and Charisma saving throws and makes its wearer immune to the frightened condition.",
+						name: "Mind Carapace Armor (Ring Mail)",
+						modifiers: "Item Type: Heavy Armor, AC: 14, Stealth:Disadvantage",
+						properties: "",
+						price: 30,
+						weight: 40,
+						amount: 1
+					},
+					{
+						description: "Chain Mail (uncommon), requires attunement by a specific individual<br><br>Any nonmagical suit of heavy armor can be turned by mind flayers into mind carapace armor. Only one creature can attune to it: either a specific mind flayer or one of its thralls. While worn by any other creature, the mind carapace armor functions as normal armor of its kind. To its intended wearer, the armor grants advantage on Intelligence, Wisdom, and Charisma saving throws and makes its wearer immune to the frightened condition.",
+						name: "Mind Carapace Armor (Chain Mail)",
+						modifiers: "Item Type: Heavy Armor, AC: 16, Stealth:Disadvantage",
+						properties: "",
+						price: 75,
+						weight: 55,
+						amount: 1
+					},
+					{
+						description: "Splint Mail (uncommon), requires attunement by a specific individual<br><br>Any nonmagical suit of heavy armor can be turned by mind flayers into mind carapace armor. Only one creature can attune to it: either a specific mind flayer or one of its thralls. While worn by any other creature, the mind carapace armor functions as normal armor of its kind. To its intended wearer, the armor grants advantage on Intelligence, Wisdom, and Charisma saving throws and makes its wearer immune to the frightened condition.",
+						name: "Mind Carapace Armor (Splint Mail)",
+						modifiers: "Item Type: Heavy Armor, AC: 17, Stealth:Disadvantage",
+						properties: "",
+						price: 200,
+						weight: 60,
+						amount: 1
+					},
+					{
+						description: "Plate (uncommon), requires attunement by a specific individual<br><br>Any nonmagical suit of heavy armor can be turned by mind flayers into mind carapace armor. Only one creature can attune to it: either a specific mind flayer or one of its thralls. While worn by any other creature, the mind carapace armor functions as normal armor of its kind. To its intended wearer, the armor grants advantage on Intelligence, Wisdom, and Charisma saving throws and makes its wearer immune to the frightened condition.",
+						name: "Mind Carapace Armor (Plate)",
+						modifiers: "Item Type: Heavy Armor, AC: 18, Stealth:Disadvantage",
+						properties: "",
+						price: 1500,
+						weight: 65,
+						amount: 1
+					},
+                    {
+						description: "Hide Armor (uncommon)<br><br>Mithral is a light, flexible metal. A mithral chain shirt or breastplate can be worn under normal clothes. If the armor normally imposes disadvantage on Dexterity (Stealth) checks or has a Strength requirement, the mithral version of the armor doesn\'t.",
+						name: "Mithral Armor (Hide)",
+						modifiers: "Item Type: Medium Armor, AC: 12",
+						properties: "",
+						price: 10,
+						weight: 6,
+						amount: 1
+					},
+					{
+						description: "Chain Shirt (uncommon)<br><br>Mithral is a light, flexible metal. A mithral chain shirt or breastplate can be worn under normal clothes. If the armor normally imposes disadvantage on Dexterity (Stealth) checks or has a Strength requirement, the mithral version of the armor doesn\'t.",
+						name: "Mithral Armor (Chain Shirt)",
+						modifiers: "Item Type: Medium Armor, AC: 13",
+						properties: "",
+						price: 50,
+						weight: 10,
+						amount: 1
+					},
+					{
+						description: "Scale Mail (uncommon)<br><br>Mithral is a light, flexible metal. A mithral chain shirt or breastplate can be worn under normal clothes. If the armor normally imposes disadvantage on Dexterity (Stealth) checks or has a Strength requirement, the mithral version of the armor doesn\'t.",
+						name: "Mithral Armor (Scale Mail)",
+						modifiers: "Item Type: Medium Armor, AC: 14",
+						properties: "",
+						price: 50,
+						weight: 22.5,
+						amount: 1
+					},
+					{
+						description: "Breastplate (uncommon)<br><br>Mithral is a light, flexible metal. A mithral chain shirt or breastplate can be worn under normal clothes. If the armor normally imposes disadvantage on Dexterity (Stealth) checks or has a Strength requirement, the mithral version of the armor doesn\'t.",
+						name: "Mithral Armor (Breastplate)",
+						modifiers: "Item Type: Medium Armor, AC: 14",
+						properties: "",
+						price: 400,
+						weight: 10,
+						amount: 1
+					},
+					{
+						description: "Half Plate (uncommon)<br><br>Mithral is a light, flexible metal. A mithral chain shirt or breastplate can be worn under normal clothes. If the armor normally imposes disadvantage on Dexterity (Stealth) checks or has a Strength requirement, the mithral version of the armor doesn\'t.",
+						name: "Mithral Armor (Half Plate)",
+						modifiers: "Item Type: Medium Armor, AC: 15",
+						properties: "",
+						price: 750,
+						weight: 20,
+						amount: 1
+					},
+                    {
+						description: "Ring Mail (uncommon)<br><br>Mithral is a light, flexible metal. A mithral chain shirt or breastplate can be worn under normal clothes. If the armor normally imposes disadvantage on Dexterity (Stealth) checks or has a Strength requirement, the mithral version of the armor doesn\'t.",
+						name: "Mithral Armor (Ring Mail)",
+						modifiers: "Item Type: Heavy Armor, AC: 14",
+						properties: "",
+						price: 30,
+						weight: 20,
+						amount: 1
+					},
+					{
+						description: "Chain Mail (uncommon)<br><br>Mithral is a light, flexible metal. A mithral chain shirt or breastplate can be worn under normal clothes. If the armor normally imposes disadvantage on Dexterity (Stealth) checks or has a Strength requirement, the mithral version of the armor doesn\'t.",
+						name: "Mithral Armor (Chain Mail)",
+						modifiers: "Item Type: Heavy Armor, AC: 16",
+						properties: "",
+						price: 75,
+						weight: 27.5,
+						amount: 1
+					},
+					{
+						description: "Splint Mail (uncommon)<br><br>Mithral is a light, flexible metal. A mithral chain shirt or breastplate can be worn under normal clothes. If the armor normally imposes disadvantage on Dexterity (Stealth) checks or has a Strength requirement, the mithral version of the armor doesn\'t.",
+						name: "Mithral Armor(Splint Mail)",
+						modifiers: "Item Type: Heavy Armor, AC: 17",
+						properties: "",
+						price: 200,
+						weight: 30,
+						amount: 1
+					},
+					{
+						description: "Plate (uncommon)<br><br>Mithral is a light, flexible metal. A mithral chain shirt or breastplate can be worn under normal clothes. If the armor normally imposes disadvantage on Dexterity (Stealth) checks or has a Strength requirement, the mithral version of the armor doesn\'t.",
+						name: "Plate",
+						modifiers: "Item Type: Heavy Armor, AC: 18",
+						properties: "",
+						price: 1500,
+						weight: 32.5,
+						amount: 1
+					},
+                    {
+						description: "Shield (uncommon)<br><br>While holding this shield, you have advantage on initiative rolls and Wisdom (Perception) checks. The shield is emblazoned with the symbol of an eye.",
+						name: "Sentinel Shield",
+						modifiers: "Item Type: Shield, AC: 2, Perception:Advantage, Initiative:Advantage",
+						properties: "",
+						price: 10,
+						weight: 6,
+						amount: 1
+					},
+                    {
+						description: "Shield (uncommon)<br><br>While holding this shield, you have +1 bonus to AC. This bonus is in addition to the shield's normal bonus to AC.",
+						name: "Sentinel Shield",
+						modifiers: "Item Type: Shield, AC: 2, AC +1",
+						properties: "",
+						price: 10,
+						weight: 6,
+						amount: 1
+					}
                 ],
                 accessoires: [
                     //Uncommon Accessoires (Rings, Rods, Staffs, Wearables)
@@ -1075,6 +2045,571 @@ var Downtime = Downtime || (function(){
             rare: {
                 weapon: [
                     //Rare Weapons
+                    {
+                        description: "Greatsword (rare), requires attunement<br><br>The black blade of this sword is crafted from a mysterious arcane alloy. You gain a +1 bonus to attack and damage rolls made with this magic weapon. While the sword is on your person, you are immune to effects that turn undead.<br><br>Dark Blessing. While holding the sword, you can use an action to give yourself 1d4 + 4 temporary hit points. This property can\'t be used again until the next dusk.<br><br>Disheartening Strike. When you hit a creature with an attack using this weapon, you can fill the target with unsettling dread: the target has disadvantage on the next saving throw it makes before the end of your next turn. The creature ignores this effect if it\'s immune to the frightened condition. Once you use this property, you can\'t do so again until the next dusk.",
+                        name: "Acheron Blade (Greatsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (rare), requires attunement<br><br>The black blade of this sword is crafted from a mysterious arcane alloy. You gain a +1 bonus to attack and damage rolls made with this magic weapon. While the sword is on your person, you are immune to effects that turn undead.<br><br>Dark Blessing. While holding the sword, you can use an action to give yourself 1d4 + 4 temporary hit points. This property can\'t be used again until the next dusk.<br><br>Disheartening Strike. When you hit a creature with an attack using this weapon, you can fill the target with unsettling dread: the target has disadvantage on the next saving throw it makes before the end of your next turn. The creature ignores this effect if it\'s immune to the frightened condition. Once you use this property, you can\'t do so again until the next dusk.",
+                        name: "Acheron Blade (Longsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Rapier (rare), requires attunement<br><br>The black blade of this sword is crafted from a mysterious arcane alloy. You gain a +1 bonus to attack and damage rolls made with this magic weapon. While the sword is on your person, you are immune to effects that turn undead.<br><br>Dark Blessing. While holding the sword, you can use an action to give yourself 1d4 + 4 temporary hit points. This property can\'t be used again until the next dusk.<br><br>Disheartening Strike. When you hit a creature with an attack using this weapon, you can fill the target with unsettling dread: the target has disadvantage on the next saving throw it makes before the end of your next turn. The creature ignores this effect if it\'s immune to the frightened condition. Once you use this property, you can\'t do so again until the next dusk.",
+                        name: "Acheron Blade (Rapier)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Scimitar (rare), requires attunement<br><br>The black blade of this sword is crafted from a mysterious arcane alloy. You gain a +1 bonus to attack and damage rolls made with this magic weapon. While the sword is on your person, you are immune to effects that turn undead.<br><br>Dark Blessing. While holding the sword, you can use an action to give yourself 1d4 + 4 temporary hit points. This property can\'t be used again until the next dusk.<br><br>Disheartening Strike. When you hit a creature with an attack using this weapon, you can fill the target with unsettling dread: the target has disadvantage on the next saving throw it makes before the end of your next turn. The creature ignores this effect if it\'s immune to the frightened condition. Once you use this property, you can\'t do so again until the next dusk.",
+                        name: "Acheron Blade (Scimitar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortsword (rare), requires attunement<br><br>The black blade of this sword is crafted from a mysterious arcane alloy. You gain a +1 bonus to attack and damage rolls made with this magic weapon. While the sword is on your person, you are immune to effects that turn undead.<br><br>Dark Blessing. While holding the sword, you can use an action to give yourself 1d4 + 4 temporary hit points. This property can\'t be used again until the next dusk.<br><br>Disheartening Strike. When you hit a creature with an attack using this weapon, you can fill the target with unsettling dread: the target has disadvantage on the next saving throw it makes before the end of your next turn. The creature ignores this effect if it\'s immune to the frightened condition. Once you use this property, you can\'t do so again until the next dusk.",
+                        name: "Acheron Blade (Shortsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Arrows (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this piece of magic ammunition. Once it hits a target, the ammunition is no longer magical.",
+                        name: "Arrows +2",
+                        modifiers: "Item Type: Ammunition, Ranged Attacks +2, Ranged Damage +2",
+                        properties: "",
+                        price: 1,
+                        weight: 1,
+                        amount: 20
+                    },
+                    {
+                        description: "Blowgun needles (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this piece of magic ammunition. Once it hits a target, the ammunition is no longer magical.",
+                        name: "Blowgun needles +2",
+                        modifiers: "Item Type: Ammunition, Ranged Attacks +2, Ranged Damage +2",
+                        properties: "",
+                        price: 1,
+                        weight: 1,
+                        amount: 50
+                    },
+                    {
+                        description: "Crossbow bolts (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this piece of magic ammunition. Once it hits a target, the ammunition is no longer magical.",
+                        name: "Crossbow bolts +2",
+                        modifiers: "Item Type: Ammunition, Ranged Attacks +2, Ranged Damage +2",
+                        properties: "",
+                        price: 1,
+                        weight: 1.5,
+                        amount: 20
+                    },
+                    {
+                        description: "Sling bullets (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this piece of magic ammunition. Once it hits a target, the ammunition is no longer magical.",
+                        name: "Sling bullets +2",
+                        modifiers: "Item Type: Ammunition, Ranged Attacks +2, Ranged Damage +2",
+                        properties: "",
+                        price: 0.04,
+                        weight: 1.5,
+                        amount: 20
+                    },
+                    {
+                        description: "Handaxe (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon. In addition, while you are attuned to this weapon, your hit point maximum increases by 1 for each level you have attained.<br><br>Curse. This axe is cursed, and becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the axe, keeping it within reach at all times. You also have disadvantage on attack rolls with weapons other than this one, unless no foe is within 60 feet of you that you can see or hear.<br><br>Whenever a hostile creature damages you while the axe is in your possession, you must succeed on a DC 15 Wisdom saving throw or go berserk. While berserk, you must use your action each round to attack the creature nearest to you with the axe. If you can make extra attacks as part of the Attack action, you use those extra attacks, moving to attack the next nearest creature after you fell your current target. If you have multiple possible targets, you attack one at random. You are berserk until you start your turn with no creatures within 60 feet of you that you can see or hear.",
+                        name: "Berserker Axe (Handaxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Battleaxe (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon. In addition, while you are attuned to this weapon, your hit point maximum increases by 1 for each level you have attained.<br><br>Curse. This axe is cursed, and becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the axe, keeping it within reach at all times. You also have disadvantage on attack rolls with weapons other than this one, unless no foe is within 60 feet of you that you can see or hear.<br><br>Whenever a hostile creature damages you while the axe is in your possession, you must succeed on a DC 15 Wisdom saving throw or go berserk. While berserk, you must use your action each round to attack the creature nearest to you with the axe. If you can make extra attacks as part of the Attack action, you use those extra attacks, moving to attack the next nearest creature after you fell your current target. If you have multiple possible targets, you attack one at random. You are berserk until you start your turn with no creatures within 60 feet of you that you can see or hear.",
+                        name: "Berserker Axe (Battleaxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 10,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Greataxe (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon. In addition, while you are attuned to this weapon, your hit point maximum increases by 1 for each level you have attained.<br><br>Curse. This axe is cursed, and becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the axe, keeping it within reach at all times. You also have disadvantage on attack rolls with weapons other than this one, unless no foe is within 60 feet of you that you can see or hear.<br><br>Whenever a hostile creature damages you while the axe is in your possession, you must succeed on a DC 15 Wisdom saving throw or go berserk. While berserk, you must use your action each round to attack the creature nearest to you with the axe. If you can make extra attacks as part of the Attack action, you use those extra attacks, moving to attack the next nearest creature after you fell your current target. If you have multiple possible targets, you attack one at random. You are berserk until you start your turn with no creatures within 60 feet of you that you can see or hear.",
+                        name: "Berserker Axe (Greataxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 30,
+                        weight: 7,
+                        amount: 1
+                    },
+                    {
+                        description: "Club (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Club)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Secondary Damage: 1d8, Secondary Damage Type: bludgeoning against undead, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Light",
+                        price: 0.1,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Dagger (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Dagger)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: piercing, Secondary Damage: 1d8, Secondary Damage Type: piercing against undead, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Finesse, Light, Thrown",
+                        price: 2,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatclub (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Greatclub)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Secondary Damage: 1d8, Secondary Damage Type: bludgeoning against undead, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Two-Handed",
+                        price: 0.2,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Handaxe (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Handaxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Secondary Damage: 1d8, Secondary Damage Type: slashing against undead, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Jevelin (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Javelin)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 1d8, Secondary Damage Type: piercing against undead, Melee Attacks +1, Melee Damage +1, Range: 30/120",
+                        properties: "Thrown",
+                        price: 0.5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Light Hammer (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Light Hammer)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Secondary Damage: 1d8, Secondary Damage Type: bludgeoning against undead, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 2,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Mace (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Mace)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Secondary Damage: 1d8, Secondary Damage Type: bludgeoning, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Quarterstaff (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Quarterstaff)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Secondary Damage: 1d8, Secondary Damage Type: bludgeoning against undead, Alternate Damage: 1d8, Alternate Damage Type: bludgeoning, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 0.2,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Sickle (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Sickle)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Secondary Damage: 1d8, Secondary Damage Type: slashing against undead, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Light",
+                        price: 1,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Spear (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Spear)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 1d8, Secondary Damage Type: piercing against undead, Alternate Damage: 1d8, Alternate Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 1,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Light Crossbow (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Light Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 1d8, Secondary Damage Type: piercing against undead, Ranged Attacks +1, Ranged Damage +1, Range: 80/320",
+                        properties: "Ammunition, Loading, Two-Handed",
+                        price: 25,
+                        weight: 5,
+                        amount: 1
+                    },
+                    {
+                        description: "Dart (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Dart)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d4, Damage Type: piercing, Secondary Damage: 1d8, Secondary Damage Type: piercing against undead, Ranged Attacks +1, Ranged Damage +1, Range: 20/60",
+                        properties: "Finesse, Thrown",
+                        price: 0.05,
+                        weight: 0.25,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortbow (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Shortbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 1d8, Secondary Damage Type: piercing against undead, Ranged Attacks +1, Ranged Damage +1, Range: 80/320",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Sling (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Sling)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d4, Damage Type: bludgeoning, Secondary Damage: 1d8, Secondary Damage Type: bludgeoning against undead, Ranged Attacks +1, Ranged Damage +1, Range: 30/120",
+                        properties: "Ammunition",
+                        price: 0.1,
+                        weight: 0,
+                        amount: 1
+                    },
+                    {
+                        description: "Battleaxe (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Battleaxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Secondary Damage: 1d8, Secondary Damage Type: slashing against undead, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 10,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Flail (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Flail)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Secondary Damage: 1d8, Secondary Damage Type: bludgeoning against undead, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Glaive (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Glaive)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Secondary Damage: 1d8, Secondary Damage Type: slashing against undead, Melee Attacks +1, Melee Damage +1, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Greataxe (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Greataxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: slashing, Secondary Damage: 1d8, Secondary Damage Type: slashing against undead, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 30,
+                        weight: 7,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatsword (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Greatsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Secondary Damage: 1d8, Secondary Damage Type: slashing against undead, Melee Attacks +1, Melee Damage +1,  Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Halberd (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Halberd)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Secondary Damage: 1d8, Secondary Damage Type: slashing against undead, Melee Attacks +1, Melee Damage +1, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Lance (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Lance)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: piercing, Secondary Damage: 1d8, Secondary Damage Type: piercing against undead, Melee Attacks +1, Melee Damage +1, Range: 10 ft",
+                        properties: "Reach, Special",
+                        price: 10,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Longsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Secondary Damage: 1d8, Secondary Damage Type: slashing against undead, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Maul (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Maul)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: bludgeoning, Secondary Damage: 1d8, Secondary Damage Type: bludgeoning against undead, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 10,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Morningstar (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Morningstar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 1d8, Secondary Damage Type: piercing against undead, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "",
+                        price: 15,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Pike (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Pike)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: piercing, Secondary Damage: 1d8, Secondary Damage Type: piercing against undead, Melee Attacks +1, Melee Damage +1, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 5,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        description: "Rapier (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Rapier)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 1d8, Secondary Damage Type: piercing against undead, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Scimitar (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Scimitar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Secondary Damage: 1d8, Secondary Damage Type: slashing against undead, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortsword (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Shortsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Secondary Damage: 1d8, Secondary Damage Type: slashing against undead, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Trident (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Trident)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 1d8, Secondary Damage Type: piercing against undead, Alternate Damage: 1d8, Alternate Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "War Pick (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (War Pick)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 1d8, Secondary Damage Type: piercing against undead, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Warhammer (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Warhammer)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Secondary Damage: 1d8, Secondary Damage Type: bludgeoning against undead, Melee Attacks +1, Melee Damage +1, Alternate Damage: 1d10, Alternate Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Whip (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Whip)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Secondary Damage: 1d8, Secondary Damage Type: slashing against undead, Melee Attacks +1, Melee Damage +1, Range: 10 ft",
+                        properites: "Finesse, Reach",
+                        price: 2,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Blowgun (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Blowgun)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1, Damage Type: piercing, Secondary Damage: 1d8, Secondary Damage Type: piercing against undead, Ranged Attacks +1, Ranged Damage +1,  Range: 25/100",
+                        properties: "Ammunition, Loading",
+                        price: 10,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Hand Crossbow (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Hand Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 1d8, Secondary Damage Type: piercing against undead, Ranged Attacks +1, Ranged Damage +1, Range: 30/120",
+                        properties: "Ammunition, Light, Loading",
+                        price: 75,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Heavy Crossbow (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Heavy Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d10, Damage Type: piercing, Secondary Damage: 1d8, Secondary Damage Type: piercing against undead, Ranged Attacks +1, Ranged Damage +1, Range: 100/400",
+                        properties: "Ammunition, Heavy, Loading, Two-Handed",
+                        price: 50,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        description: "Longbow (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Longbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 1d8, Secondary Damage Type: piercing against undead, Ranged Attacks +1, Ranged Damage +1, Range: 150/600",
+                        properties: "Ammunition, Heavy, Two-Handed",
+                        price: 50,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Net (rare), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit an undead creature with an attack using this weapon, the attack deals an extra 1d8 damage of the weapon\'s type, and the creature has disadvantage on saving throws against effects that turn undead until the start of your next turn.",
+                        name: "Corpse Slayer (Net)",
+                        modifiers: "Item Type: Ranged Weapon, Secondary Damage: 1d8, Ranged Attacks +1, Ranged Damage +1, Range: 5/15",
+                        properties: "Thrown, Special",
+                        price: 1,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatsword (rare), requires attunement<br><br>This magic sword\'s blade is fashioned from a horn or spine from a crystal dragon. When you hit with an attack roll using this sword, the target takes an extra 1d8 radiant damage.<br><br>The sword has 3 charges and regains 1d3 expended charges daily at dawn. When you hit a creature with an attack roll using the sword, you can expend 1 charge to regain a number of hit points equal to the extra radiant damage the sword dealt.<br><br>While you\'re holding the sword, you can use a bonus action to cause it to shed bright light in a 30-foot radius and dim light for an additional 30 feet, to cause it to shed dim light in a 10-foot radius, or to douse the light.",
+                        name: "Crystal Blade (Greatsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Secondary Damage: 1d8, Secondary Damage Type: radiant, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (rare), requires attunement<br><br>This magic sword\'s blade is fashioned from a horn or spine from a crystal dragon. When you hit with an attack roll using this sword, the target takes an extra 1d8 radiant damage.<br><br>The sword has 3 charges and regains 1d3 expended charges daily at dawn. When you hit a creature with an attack roll using the sword, you can expend 1 charge to regain a number of hit points equal to the extra radiant damage the sword dealt.<br><br>While you\'re holding the sword, you can use a bonus action to cause it to shed bright light in a 30-foot radius and dim light for an additional 30 feet, to cause it to shed dim light in a 10-foot radius, or to douse the light.",
+                        name: "Crystal Blade (Longsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Secondary Damage: 1d8, Secondary Damage Type: radiant, Alternate Damage: 1d10, Alternate Damage Type: slashing, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Rapier (rare), requires attunement<br><br>This magic sword\'s blade is fashioned from a horn or spine from a crystal dragon. When you hit with an attack roll using this sword, the target takes an extra 1d8 radiant damage.<br><br>The sword has 3 charges and regains 1d3 expended charges daily at dawn. When you hit a creature with an attack roll using the sword, you can expend 1 charge to regain a number of hit points equal to the extra radiant damage the sword dealt.<br><br>While you\'re holding the sword, you can use a bonus action to cause it to shed bright light in a 30-foot radius and dim light for an additional 30 feet, to cause it to shed dim light in a 10-foot radius, or to douse the light.",
+                        name: "Crystal Blade (Rapier)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 1d8, Secondary Damage Type: radiant, Range: 5 ft",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Scimitar (rare), requires attunement<br><br>This magic sword\'s blade is fashioned from a horn or spine from a crystal dragon. When you hit with an attack roll using this sword, the target takes an extra 1d8 radiant damage.<br><br>The sword has 3 charges and regains 1d3 expended charges daily at dawn. When you hit a creature with an attack roll using the sword, you can expend 1 charge to regain a number of hit points equal to the extra radiant damage the sword dealt.<br><br>While you\'re holding the sword, you can use a bonus action to cause it to shed bright light in a 30-foot radius and dim light for an additional 30 feet, to cause it to shed dim light in a 10-foot radius, or to douse the light.",
+                        name: "Crystal Blade (Scimitar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Secondary Damage: 1d8, Secondary Damage Type: radiant, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortsword (rare), requires attunement<br><br>This magic sword\'s blade is fashioned from a horn or spine from a crystal dragon. When you hit with an attack roll using this sword, the target takes an extra 1d8 radiant damage.<br><br>The sword has 3 charges and regains 1d3 expended charges daily at dawn. When you hit a creature with an attack roll using the sword, you can expend 1 charge to regain a number of hit points equal to the extra radiant damage the sword dealt.<br><br>While you\'re holding the sword, you can use a bonus action to cause it to shed bright light in a 30-foot radius and dim light for an additional 30 feet, to cause it to shed dim light in a 10-foot radius, or to douse the light.",
+                        name: "Crystal Blade (Shortsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Secondary Damage: 1d8, Secondary Damage Type: radiant, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Dagger (rare)<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>You can use an action to cause thick, black poison to coat the blade. The poison remains for 1 minute or until an attack using this weapon hits a creature. That creature must succeed on a DC 15 Constitution saving throw or take 2d10 poison damage and become poisoned for 1 minute. The dagger can\'t be used this way again until the next dawn.",
+                        name: "Dagger of Venom",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: piercing, Secondary Damage: 2d10, Secondary Damage Type: poison, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Finesse, Light, Thrown",
+                        price: 2,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Flail (rare), requires attunement by a cleric or paladin<br><br>The rounded head of this flail is perforated with tiny holes, arranged in symbols and patterns. The flail counts as a holy symbol for you. When you hit with an attack using this magic flail, the target takes an extra 1d8 radiant damage.<br><br>As a bonus action, you can speak the command word to cause the flail to emanate a thin cloud of incense out to 10 feet for 1 minute. At the start of each of your turns, you and any other creatures in the incense each regain 1d4 hit points. This property can\'t be used again until the next dawn.",
+                        name: "Flail ",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Secondary Damage: 1d8, Secondary Damage Type: radiant, Range: 5 ft",
+                        properties: "",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatsword (rare)<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit a dragon with this weapon, the dragon takes an extra 3d6 damage of the weapon\'s type. For the purpose of this weapon, \'dragon\' refers to any creature with the dragon type, including dragon turtles and wyverns.",
+                        name: "Dragon Slayer (Greatsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Secondary Damage: 3d6, Secondary Damage Type: slashing against dragons, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (rare)<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit a dragon with this weapon, the dragon takes an extra 3d6 damage of the weapon\'s type. For the purpose of this weapon, \'dragon\' refers to any creature with the dragon type, including dragon turtles and wyverns.",
+                        name: "Dragon Slayer (Longsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Secondary Damage: 3d6, Secondary Damage Type: slashing against dragons, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Rapier (rare)<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit a dragon with this weapon, the dragon takes an extra 3d6 damage of the weapon\'s type. For the purpose of this weapon, \'dragon\' refers to any creature with the dragon type, including dragon turtles and wyverns.",
+                        name: "Dragon Slayer (Rapier)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 3d6, Secondary Damage Type: piercing against dragons, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Scimitar (rare)<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit a dragon with this weapon, the dragon takes an extra 3d6 damage of the weapon\'s type. For the purpose of this weapon, \'dragon\' refers to any creature with the dragon type, including dragon turtles and wyverns.",
+                        name: "Dragon Slayer (Scimitar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Secondary Damage: 3d6, Secondary Damage Type: slashing against dragons, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortsword (rare)<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit a dragon with this weapon, the dragon takes an extra 3d6 damage of the weapon\'s type. For the purpose of this weapon, \'dragon\' refers to any creature with the dragon type, including dragon turtles and wyverns.",
+                        name: "Dragon Slayer (Shortsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Secondary Damage: 3d6, Secondary Damage Type: slashing against dragons, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortbow (rare), requires attunement<br><br>The limb tips of this magic bow are shaped like a dragon\'s wings, and the weapon is infused with the essence of a chromatic, gem, or metallic dragon\'s breath. When you hit with an attack roll using this magic bow, the target takes an extra 1d6 damage of the same type as the breath infused in the bow—acid, cold, fire, force, lightning, necrotic, poison, psychic, radiant, or thunder.<br><br>If you load no ammunition in the weapon, it produces its own, automatically creating one piece of magic ammunition when you pull back the string. The ammunition created by the bow vanishes the instant after it hits or misses a target.",
+                        name: "Shortbow ",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing,  Secondary Damage: 1d6, Secondary Damage Type: acid cold fire force lightning necrotic poison psychic radiant or thunder, Range: 80/320",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Longbow (rare), requires attunement<br><br>The limb tips of this magic bow are shaped like a dragon\'s wings, and the weapon is infused with the essence of a chromatic, gem, or metallic dragon\'s breath. When you hit with an attack roll using this magic bow, the target takes an extra 1d6 damage of the same type as the breath infused in the bow—acid, cold, fire, force, lightning, necrotic, poison, psychic, radiant, or thunder.<br><br>If you load no ammunition in the weapon, it produces its own, automatically creating one piece of magic ammunition when you pull back the string. The ammunition created by the bow vanishes the instant after it hits or misses a target.",
+                        name: "Dragon Wing Bow (Longbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 1d6, Secondary Damage Type: acid cold fire force lightning necrotic poison psychic radiant or thunder, Range: 150/600",
+                        properties: "Ammunition, Heavy, Two-Handed",
+                        price: 50,
+                        weight: 2,
+                        amount: 1
+                    }
                 ],
                 armor: [
                     //Rare Armor
