@@ -3607,6 +3607,681 @@ var Downtime = Downtime || (function(){
                         price: 1,
                         weight: 3,
                         amount: 1
+                    },
+                    {
+                        description: "Club (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Club +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Melee Attacks +2, Melee Damage +2, Range: 5 ft",
+                        properties: "Light",
+                        price: 0.1,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Dagger (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Dagger +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: piercing, Melee Attacks +2, Melee Damage +2, Range: 20/60",
+                        properties: "Finesse, Light, Thrown",
+                        price: 2,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatclub (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Greatclub +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Melee Attacks +2, Melee Damage +2, Range: 5 ft",
+                        properties: "Two-Handed",
+                        price: 0.2,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Handaxe (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Handaxe +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Melee Attacks +2, Melee Damage +2, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Jevelin (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Javelin +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Melee Attacks +2, Melee Damage +2, Range: 30/120",
+                        properties: "Thrown",
+                        price: 0.5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Light Hammer (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Light Hammer +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Melee Attacks +2, Melee Damage +2, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 2,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Mace (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Mace +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Melee Attacks +2, Melee Damage +2, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Quarterstaff (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Quarterstaff +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Alternate Damage: 1d8, Alternate Damage Type: bludgeoning, Melee Attacks +2, Melee Damage +2, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 0.2,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Sickle (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Sickle +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Melee Attacks +2, Melee Damage +2, Range: 5 ft",
+                        properties: "Light",
+                        price: 1,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Spear (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Spear +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Alternate Damage: 1d8, Alternate Damage Type: piercing, Melee Attacks +2, Melee Damage +2, Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 1,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Light Crossbow (rare)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Light Crossbow +2",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Ranged Attacks +2, Ranged Damage +2, Range: 80/320",
+                        properties: "Ammunition, Loading, Two-Handed",
+                        price: 25,
+                        weight: 5,
+                        amount: 1
+                    },
+                    {
+                        description: "Dart (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Dart +2",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d4, Damage Type: piercing, Ranged Attacks +2, Ranged Damage +2, Range: 20/60",
+                        properties: "Finesse, Thrown",
+                        price: 0.05,
+                        weight: 0.25,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortbow (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Shortbow +2",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Ranged Attacks +2, Ranged Damage +2, Range: 80/320",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Sling (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Sling +2",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d4, Damage Type: bludgeoning, Ranged Attacks +2, Ranged Damage +2, Range: 30/120",
+                        properties: "Ammunition",
+                        price: 0.1,
+                        weight: 0,
+                        amount: 1
+                    },
+                    {
+                        description: "Battleaxe (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Battleaxe +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +2, Melee Damage +2, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 10,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Flail (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Flail +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Melee Attacks +2, Melee Damage +2, Range: 5 ft",
+                        properties: "",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Glaive (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Glaive +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Melee Attacks +2, Melee Damage +2, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Greataxe (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Greataxe +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: slashing, Melee Attacks +2, Melee Damage +2, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 30,
+                        weight: 7,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatsword (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Greatsword +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Melee Attacks +2, Melee Damage +2, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Halberd (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Halberd +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Melee Attacks +2, Melee Damage +2, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Lance (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Lance +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: piercing, Melee Attacks +2, Melee Damage +2, Range: 10 ft",
+                        properties: "Reach, Special",
+                        price: 10,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Longsword +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +2, Melee Damage +2, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Maul (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Maul +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: bludgeoning, Melee Attacks +2, Melee Damage +2, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 10,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Morningstar (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Morningstar +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Melee Attacks +2, Melee Damage +2, Range: 5 ft",
+                        properties: "",
+                        price: 15,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Pike (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Pike +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: piercing, Melee Attacks +2, Melee Damage +2, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 5,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        description: "Rapier (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Rapier +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Melee Attacks +2, Melee Damage +2, Range: 5 ft",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Scimitar (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Scimitar +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Melee Attacks +2, Melee Damage +2, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortsword (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Shortsword +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Melee Attacks +2, Melee Damage +2, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Trident (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Trident +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Alternate Damage: 1d8, Alternate Damage Type: piercing, Melee Attacks +2, Melee Damage +2, Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "War Pick (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "War Pick +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Melee Attacks +2, Melee Damage +2, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Warhammer (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Warhammer +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Alternate Damage: 1d10, Alternate Damage Type: bludgeoning, Melee Attacks +2, Melee Damage +2, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Whip (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Whip +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Melee Attacks +2, Melee Damage +2, Range: 10 ft",
+                        properites: "Finesse, Reach",
+                        price: 2,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Blowgun (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Blowgun +2",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1, Damage Type: piercing, Melee Attacks +2, Melee Damage +2, Range: 25/100",
+                        properties: "Ammunition, Loading",
+                        price: 10,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Hand Crossbow (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Hand Crossbow +2",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Ranged Attacks +2, Ranged Damage +2, Range: 30/120",
+                        properties: "Ammunition, Light, Loading",
+                        price: 75,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Heavy Crossbow (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Heavy Crossbow +2",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d10, Damage Type: piercing, Ranged Attacks +2, Ranged Damage +2, Range: 100/400",
+                        properties: "Ammunition, Heavy, Loading, Two-Handed",
+                        price: 50,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        description: "Longbow (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Longbow +2",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Ranged Attacks +2, Ranged Damage +2, Range: 150/600",
+                        properties: "Ammunition, Heavy, Two-Handed",
+                        price: 50,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Net (rare)<br><br>You have a +2 bonus to attack and damage rolls made with this magic weapon.",
+                        name: "Net +2",
+                        modifiers: "Item Type: Ranged Weapon, Ranged Attacks +2, Ranged Damage +2, Range: 5/15",
+                        properties: "Thrown, Special",
+                        price: 1,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Club (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Club)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "Light",
+                        price: 0.1,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Dagger (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Dagger)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: piercing, Range: 20/60",
+                        properties: "Finesse, Light, Thrown",
+                        price: 2,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatclub (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Greatclub)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "Two-Handed",
+                        price: 0.2,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Handaxe (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Handaxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Jevelin (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Javelin)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Range: 30/120",
+                        properties: "Thrown",
+                        price: 0.5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Light Hammer (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Light Hammer)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 2,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Mace (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Mace)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Quarterstaff (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Quarterstaff)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Alternate Damage: 1d8, Alternate Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 0.2,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Sickle (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Sickle)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Range: 5 ft",
+                        properties: "Light",
+                        price: 1,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Spear (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Spear)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Alternate Damage: 1d8, Alternate Damage Type: piercing, Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 1,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Light Crossbow (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Light Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Range: 80/320",
+                        properties: "Ammunition, Loading, Two-Handed",
+                        price: 25,
+                        weight: 5,
+                        amount: 1
+                    },
+                    {
+                        description: "Dart (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Dart)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d4, Damage Type: piercing, Range: 20/60",
+                        properties: "Finesse, Thrown",
+                        price: 0.05,
+                        weight: 0.25,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortbow (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Shortbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Range: 80/320",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Sling (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Sling)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d4, Damage Type: bludgeoning, Range: 30/120",
+                        properties: "Ammunition",
+                        price: 0.1,
+                        weight: 0,
+                        amount: 1
+                    },
+					
+					
+                    {
+                        description: "Battleaxe (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Battleaxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 10,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Flail (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Flail)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Glaive (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Glaive)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Greataxe (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Greataxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: slashing, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 30,
+                        weight: 7,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatsword (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Greatsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Halberd (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Halberd)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Lance (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Lance)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: piercing, Range: 10 ft",
+                        properties: "Reach, Special",
+                        price: 10,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Longsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Maul (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Maul)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 10,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Morningstar (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Morningstar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Range: 5 ft",
+                        properties: "",
+                        price: 15,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Pike (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Pike)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: piercing, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 5,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        description: "Rapier (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Rapier)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Range: 5 ft",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Scimitar (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Scimitar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortsword (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Shortsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Trident (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Trident)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Alternate Damage: 1d8, Alternate Damage Type: piercing, Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "War Pick (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (War Pick)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Warhammer (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Warhammer)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Alternate Damage: 1d10, Alternate Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Whip (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Whip)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Range: 10 ft",
+                        properites: "Finesse, Reach",
+                        price: 2,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Blowgun (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Blowgun)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1, Damage Type: piercing, Range: 25/100",
+                        properties: "Ammunition, Loading",
+                        price: 10,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Hand Crossbow (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Hand Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Range: 30/120",
+                        properties: "Ammunition, Light, Loading",
+                        price: 75,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Heavy Crossbow (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Heavy Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d10, Damage Type: piercing, Range: 100/400",
+                        properties: "Ammunition, Heavy, Loading, Two-Handed",
+                        price: 50,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        description: "Longbow (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Longbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Range: 150/600",
+                        properties: "Ammunition, Heavy, Two-Handed",
+                        price: 50,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Net (rare)<br><br>When you damage a creature with an attack using this magic weapon, the target can\'t regain hit points until the start of your next turn.",
+                        name: "Weapon of Certain Death (Net)",
+                        modifiers: "Item Type: Ranged Weapon, Range: 5/15",
+                        properties: "Thrown, Special",
+                        price: 1,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Greataxe (rare)<br><br>You have a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you use this axe to make an attack against a plant (an ordinary plant or a creature with the Plant type) or a wooden object that isn\'t being worn or carried, the attack deals an extra 2d6 slashing damage on a hit.",
+                        name: "Woodcutter\'s Axe",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: slashing, Secondary Damage: 2d6, Secondary Damage Type: slashing against plants/wood, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 30,
+                        weight: 7,
+                        amount: 1
                     }
                 ],
                 armor: [
