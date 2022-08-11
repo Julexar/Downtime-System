@@ -711,7 +711,7 @@ var Downtime = Downtime || (function(){
                     {
                         description: "Quarterstaff (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
                         name: "Slumbering Dragon\'s Wrath Weapon (Quarterstaff)",
-                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Alternate Damage: 1d8, Alternate Damage Type: bludgeoning, Alternate Secondary Damage: 5, Alternate Secondary Damage Type: dragon\'s breath, Range: 5 ft, Alternate Range: 5 ft.",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Alternate Damage: 1d8, Alternate Damage Type: bludgeoning",
                         properties: "Versatile",
                         price: 0.2,
                         weight: 4,
@@ -729,7 +729,7 @@ var Downtime = Downtime || (function(){
                     {
                         description: "Spear (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
                         name: "Slumbering Dragon\'s Wrath Weapon (Spear)",
-                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Alternate Damage: 1d8, Alternate Damage Type: piercing, Alternate Secondary Damage: 5, Alternate Secondary Damage Type: dragon\'s breath, Range: 20/60, Alternate Range: 20/60",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Alternate Damage: 1d8, Alternate Damage Type: piercing",
                         properties: "Thrown, Versatile",
                         price: 1,
                         weight: 3,
@@ -774,7 +774,7 @@ var Downtime = Downtime || (function(){
                     {
                         description: "Battleaxe (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
                         name: "Slumbering Dragon\'s Wrath Weapon (Battleaxe)",
-                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Secondary Damage: 5, Secondary Damage Type: dragon\'s brath, Range: 5 ft., Alternate Damage: 1d10, Alternate Damage Type: slashing, Alternate Secondary Damage: 5, Alternate Secondary Damage Type: dragon\'s breath, Alternate Range: 5 ft.",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Secondary Damage: 5, Secondary Damage Type: dragon\'s brath, Range: 5 ft., Alternate Damage: 1d10, Alternate Damage Type: slashing",
                         properties: "Versatile",
                         price: 10,
                         weight: 4,
@@ -837,7 +837,7 @@ var Downtime = Downtime || (function(){
                     {
                         description: "Longsword (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
                         name: "Slumbering Dragon\'s Wrath Weapon (Longsword)",
-                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 5 ft, Alternate Damage: 1d10, Alternate Damage Type: slashing, Alternate Secondary Damage: 5, Alternate Secondary Damage Type: dragon\'s breath, Alternate Reach: 5 ft",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 5 ft, Alternate Damage: 1d10, Alternate Damage Type: slashing",
                         properties: "Versatile",
                         price: 15,
                         weight: 3,
@@ -891,7 +891,7 @@ var Downtime = Downtime || (function(){
                     {
                         description: "Shortsword (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
                         name: "Slumbering Dragon\'s Wrath Weapon (Shortsword)",
-                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage 5, Secondary Damage Type: dragon\'s breath, Range: 5 ft",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 5 ft",
                         properties: "Finesse, Light",
                         price: 10,
                         weight: 2,
@@ -900,7 +900,7 @@ var Downtime = Downtime || (function(){
                     {
                         description: "Trident (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
                         name: "Slumbering Dragon\'s Wrath Weapon (Trident)",
-                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 20/60, Alternate Damage: 1d8, Alternate Damage Type: piercing, Alternate Secondary Damage: 5, Alternate Secondary Damage Type: dragon\'s breath, Alternate Range: 20/60",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 20/60, Alternate Damage: 1d8, Alternate Damage Type: piercing",
                         properties: "Thrown, Versatile",
                         price: 5,
                         weight: 4,
@@ -918,7 +918,7 @@ var Downtime = Downtime || (function(){
                     {
                         description: "Warhammer (uncommon), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>Whenever you roll a 20 on your attack roll with this weapon, each creature of your choice within 5 feet of the target takes 5 damage of the type dealt by the dragon\'s breath weapon.",
                         name: "Slumbering Dragon\'s Wrath Weapon (Warhammer)",
-                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 5 ft, Alternate Damage: 1d10, Alternate Damage Type: bludgeoning, Alternate Secondary Damage: 5, Alternate Secondary Damage Type: dragon\'s breath, Alternate Range: 5 ft",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Secondary Damage: 5, Secondary Damage Type: dragon\'s breath, Range: 5 ft, Alternate Damage: 1d10, Alternate Damage Type: bludgeoning",
                         properties: "Versatile",
                         price: 15,
                         weight: 2,
@@ -1025,7 +1025,7 @@ var Downtime = Downtime || (function(){
                     {
                         description: "Longsword (uncommon), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>Curse. This sword is cursed and possessed by a vengeful spirit. Becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the sword, keeping it on your person at all times. While attuned to this weapon, you have disadvantage on attack rolls made with weapons other than this one.<br><br>In addition, while the sword is on your person, you must succeed on a DC 15 Wisdom saving throw whenever you take damage in combat. On a failed save, you must attack the creature that damaged you until you drop to 0 hit points or it does, or until you can't reach the creature to make a melee attack against it.<br><br>You can break the curse in the usual ways. Alternatively, casting Banishment on the sword forces the vengeful spirit to leave it. The sword then becomes a +1 weapon with no other properties.",
                         name: "Sword of Vengeance (Longsword)",
-                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Range 5 ft, Melee Attacks +1, Melee Damage +1, Alternate Damage: 1d10, Alternate Damage Type: slashing, Alternate Range: 5 ft, Alternate Melee Attacks +1, Alternate Melee Damage +1",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Range 5 ft, Melee Attacks +1, Melee Damage +1, Alternate Damage: 1d10, Alternate Damage Type: slashing",
                         properties: "Versatile",
                         price: 15,
                         weight: 3,
@@ -2595,7 +2595,7 @@ var Downtime = Downtime || (function(){
                     },
                     {
                         description: "Shortbow (rare), requires attunement<br><br>The limb tips of this magic bow are shaped like a dragon\'s wings, and the weapon is infused with the essence of a chromatic, gem, or metallic dragon\'s breath. When you hit with an attack roll using this magic bow, the target takes an extra 1d6 damage of the same type as the breath infused in the bow—acid, cold, fire, force, lightning, necrotic, poison, psychic, radiant, or thunder.<br><br>If you load no ammunition in the weapon, it produces its own, automatically creating one piece of magic ammunition when you pull back the string. The ammunition created by the bow vanishes the instant after it hits or misses a target.",
-                        name: "Shortbow ",
+                        name: "Dragon Wing Bow(Shortbow)",
                         modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing,  Secondary Damage: 1d6, Secondary Damage Type: acid cold fire force lightning necrotic poison psychic radiant or thunder, Range: 80/320",
                         price: 25,
                         weight: 2,
@@ -2608,6 +2608,1004 @@ var Downtime = Downtime || (function(){
                         properties: "Ammunition, Heavy, Two-Handed",
                         price: 50,
                         weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Club (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Club)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Range: 5 ft.",
+                        properties: "Light",
+                        price: 0.1,
+                        amount: 1,
+                        weight: 2
+                    },
+                    {
+                        description: "Dagger (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Dagger)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: piercing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Finesse, Light, Thrown",
+                        price: 2,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatclub (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Greatclub)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Melee Attacks +1, Melee Damage +1, Range: 5 ft.",
+                        properties: "Two-Handed",
+                        price: 0.2,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Handaxe (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Handaxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Javelin (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Javelin)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Melee Attacks +1, Melee Damage +1, Range: 30/120",
+                        properties: "Thrown",
+                        price: 0.5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Light Hammer (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Light Hammer)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 2,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Mace (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Mace)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Melee Attacks +1, Melee Damage +1, Range: 5 ft.",
+                        properties: "",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Quarterstaff (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Quarterstaff)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Alternate Damage: 1d8, Alternate Damage Type: bludgeoning, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 0.2,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Sickle (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Sickle)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Melee Attacks +1, Melee Damage +1, Range: 5 ft.",
+                        properties: "Light",
+                        price: 1,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Spear (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Spear)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Alternate Damage: 1d8, Alternate Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 1,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Light Crossbow (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Light Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Ranged Attacks +1, Ranged Damage +1, Range: 80/320",
+                        properties: "Ammunition, Loading, Two-Handed",
+                        price: 25,
+                        weight: 5,
+                        amount: 1
+                    },
+                    {
+                        description: "Dart (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Dart)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d4, Damage Type: piercing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Ranged Attacks +1, Ranged Damage +1, Range: 20/60",
+                        properties: "Finesse, Thrown",
+                        price: 0.05,
+                        weight: 0.25,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortbow (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Shortbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Ranged Attacks +1, Ranged Damage +1, Range: 80/320",
+                        properties: "Ammunition, Two-Handed",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Sling (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Sling)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d4, Damage Type: bludgeoning, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Ranged Attacks +1, Ranged Damage +1, Range: 30/120",
+                        properties: "Ammunition",
+                        price: 0.1,
+                        weight: 0,
+                        amount: 1
+                    },
+                    {
+                        description: "Battleaxe (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Battleaxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s brath, Range: 5 ft., Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 10,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Flail (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Flail)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Melee Attacks +1, Melee Damage +1, Range: 5 ft.",
+                        properties: "",
+                        price: 10,
+                        weight: 2,
+                        ammount: 1
+                    },
+                    {
+                        description: "Glaive (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Glaive)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Melee Attacks +1, Melee Damage +1, Range: 10 ft.",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Greataxe (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Greataxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: slashing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Melee Attacks +1, Melee Damage +1, Range: 5 ft.",
+                        properties: "Heavy, Two-Handed",
+                        price: 30,
+                        weight: 7,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatsword (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Greatsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Melee Attacks +1, Melee Damage +1, Range: 5 ft.",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Halberd (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Halberd)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Melee Attacks +1, Melee Damage +1, Range: 10 ft.",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Lance (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Lance)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: piercing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Melee Attacks +1, Melee Damage +1, Range: 10 ft.",
+                        properties: "Reach, Special",
+                        price: 10,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Longsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft, Alternate Damage: 1d10, Alternate Damage Type: slashing, Alternate Secondary Damage: 5, Alternate Secondary Damage Type: dragon\'s breath, Alternate Reach: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Maul (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Maul)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: bludgeoning, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 10,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Morningstar (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Morningstar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "",
+                        price: 15,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Pike (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Pike)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: piercing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Melee Attacks +1, Melee Damage +1, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 5,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        description: "Rapier (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Rapier)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Scimitar (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Scimitar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortsword (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Shortsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Trident (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Trident)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Alternate Damage: 1d8, Alternate Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "War Pick (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (War Pick)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Warhammer (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Warhammer)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Range: 5 ft, Alternate Damage: 1d10, Alternate Damage Type: bludgeoning, Melee Attacks +1, Melee Damage +1",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Whip (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Whip)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Melee Attacks +1, Melee Damage +1, Range: 10 ft",
+                        properties: "Finesse, Reach",
+                        price: 2,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Blowgun (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Blowgun)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1, Damage Type: piercing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Ranged Attacks +1, Ranged Damage +1, Range: 25/100",
+                        properties: "Ammunition, Loading",
+                        price: 10,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Hand Crossbow (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Hand Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Ranged Attacks +1, Ranged Damage +1, Range: 30/120",
+                        properties: "Ammunition, Light, Loading",
+                        price: 75,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Heavy Crossbow (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Heavy Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d10, Damage Type: piercing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Ranged Attacks +1, Ranged Damage +1, Range: 100/400",
+                        properties: "Ammunition, Heavy, Loading, Two-Handed",
+                        price: 50,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        description: "Longbow (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Longbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Ranged Attacks +1, Ranged Damage +1, Range: 150/600",
+                        properties: "Ammunition, Heavy, Two-Handed",
+                        price: 50,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Net (rare), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Stirring weapon has the Slumbering property. In addition, you gain a +1 bonus to attack and damage rolls made using the weapon. On a hit, the weapon deals an extra 1d6 damage of the type dealt by the dragon\'s breath weapon.",
+                        name: "Stirring Dragon\'s Wrath Weapon (Net)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 0, Secondary Damage: 1d6+5, Secondary Damage Type: dragon\'s breath, Ranged Attacks +1, Ranged Damage +1, Range: 5/15",
+                        properties: "Thrown, Special",
+                        price: 1,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatsword (rare), requires attunement<br><br>You can use a bonus action to speak this magic sword\'s command word, causing flames to erupt from the blade. These flames shed bright light in a 40-foot radius and dim light for an additional 40 feet. While the sword is ablaze, it deals an extra 2d6 fire damage to any target it hits. The flames last until you use a bonus action to speak the command word again or until you drop or sheathe the sword.",
+                        name: "Flame Tongue Greatsword",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Secondary Damage: 2d6, Secondary Damage Type: fire, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (rare), requires attunement<br><br>You can use a bonus action to speak this magic sword\'s command word, causing flames to erupt from the blade. These flames shed bright light in a 40-foot radius and dim light for an additional 40 feet. While the sword is ablaze, it deals an extra 2d6 fire damage to any target it hits. The flames last until you use a bonus action to speak the command word again or until you drop or sheathe the sword.",
+                        name: "Flame Tongue Longsword",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Secondary Damage: 2d6, Secondary Damage Type: fire, Alternate Damage: 1d10, Alternate Damage Type: slashing, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Rapier (rare), requires attunement<br><br>You can use a bonus action to speak this magic sword\'s command word, causing flames to erupt from the blade. These flames shed bright light in a 40-foot radius and dim light for an additional 40 feet. While the sword is ablaze, it deals an extra 2d6 fire damage to any target it hits. The flames last until you use a bonus action to speak the command word again or until you drop or sheathe the sword.",
+                        name: "Flame Tongue Rapier",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 2d6, Secondary Damage Type: fire, Range: 5 ft",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Scimitar (rare), requires attunement<br><br>You can use a bonus action to speak this magic sword\'s command word, causing flames to erupt from the blade. These flames shed bright light in a 40-foot radius and dim light for an additional 40 feet. While the sword is ablaze, it deals an extra 2d6 fire damage to any target it hits. The flames last until you use a bonus action to speak the command word again or until you drop or sheathe the sword.",
+                        name: "Flame Tongue Scimitar",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Secondary Damage: 2d6, Secondary Damage Type: fire, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortsword (rare), requires attunement<br><br>You can use a bonus action to speak this magic sword\'s command word, causing flames to erupt from the blade. These flames shed bright light in a 40-foot radius and dim light for an additional 40 feet. While the sword is ablaze, it deals an extra 2d6 fire damage to any target it hits. The flames last until you use a bonus action to speak the command word again or until you drop or sheathe the sword.",
+                        name: "Flame Tongue Shortsword",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Secondary Damage: 2d6, Secondary Damage Type: fire, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Handaxe (rare)<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit a giant with it, the giant takes an extra 2d6 damage of the weapon\'s type and must succeed on a DC 15 Strength saving throw or fall prone. For the purpose of this weapon, \'giant\' refers to any creature with the giant type, including ettins and trolls.",
+                        name: "Giant Slayer Handaxe",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Secondary Damage: 2d6, Secondary Damage Type: slashing against giants, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Battleaxe (rare)<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit a giant with it, the giant takes an extra 2d6 damage of the weapon\'s type and must succeed on a DC 15 Strength saving throw or fall prone. For the purpose of this weapon, \'giant\' refers to any creature with the giant type, including ettins and trolls.",
+                        name: "Giant Slayer Battleaxe",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Secondary Damage: 2d6, Secondary Damage Type: slashing against giants, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 10,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Greataxe (rare)<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit a giant with it, the giant takes an extra 2d6 damage of the weapon\'s type and must succeed on a DC 15 Strength saving throw or fall prone. For the purpose of this weapon, \'giant\' refers to any creature with the giant type, including ettins and trolls.",
+                        name: "Giant Slayer Greataxe",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: slashing, Secondary Damage: 2d6, Secondary Damage Type: slashing against giants, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 30,
+                        weight: 7,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatsword (rare)<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit a giant with it, the giant takes an extra 2d6 damage of the weapon\'s type and must succeed on a DC 15 Strength saving throw or fall prone. For the purpose of this weapon, \'giant\' refers to any creature with the giant type, including ettins and trolls.",
+                        name: "Giant Slayer Greatsword",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Secondary Damage: 2d6, Secondary Damage Type: slashing against giants, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (rare)<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit a giant with it, the giant takes an extra 2d6 damage of the weapon\'s type and must succeed on a DC 15 Strength saving throw or fall prone. For the purpose of this weapon, \'giant\' refers to any creature with the giant type, including ettins and trolls.",
+                        name: "Giant Slayer Longsword",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Secondary Damage: 2d6, Secondary Damage Type: slashing against giants, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Rapier (rare)<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit a giant with it, the giant takes an extra 2d6 damage of the weapon\'s type and must succeed on a DC 15 Strength saving throw or fall prone. For the purpose of this weapon, \'giant\' refers to any creature with the giant type, including ettins and trolls.",
+                        name: "Giant Slayer Rapier",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 2d6, Secondary Damage Type: piercing against giants, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Scimitar (rare)<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit a giant with it, the giant takes an extra 2d6 damage of the weapon\'s type and must succeed on a DC 15 Strength saving throw or fall prone. For the purpose of this weapon, \'giant\' refers to any creature with the giant type, including ettins and trolls.",
+                        name: "Giant Slayer Scimitar",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Secondary Damage: 2d6, Secondary Damage Type: slashing against giants, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortsword (rare)<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit a giant with it, the giant takes an extra 2d6 damage of the weapon\'s type and must succeed on a DC 15 Strength saving throw or fall prone. For the purpose of this weapon, \'giant\' refers to any creature with the giant type, including ettins and trolls.",
+                        name: "Giant Slayer Shortsword",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Secondary Damage: 2d6, Secondary Damage Type: slashing against giants, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Mace (rare), requires attunement<br><br>When you hit a fiend or an undead with this magic weapon, that creature takes an extra 2d6 radiant damage. If the target has 25 hit points or fewer after taking this damage, it must succeed on a DC 15 Wisdom saving throw or be destroyed. On a successful save, the creature becomes frightened of you until the end of your next turn.<br><br>While you hold this weapon, it sheds bright light in a 20-foot radius and dim light for an additional 20 feet.",
+                        name: "Mace of Disruption",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Secondary Damage: 2d6, Secondary Damage Type: radiant against fiends or undead, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Mace (rare)<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon. The bonus increases to +3 when you use this mace to attack a construct.<br><br>When you roll a 20 on an attack roll made with this weapon, the target takes an extra 7 bludgeoning damage, or an extra 14 bludgeoning damage if it\'s a construct. If a construct has 25 hit points or fewer after taking this damage, it is destroyed.",
+                        name: "Mace ",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Mace (rare), requires attunement<br><br>This magic weapon has 3 charges. While holding it, you can use an action and expend 1 charge to release a wave of terror. Each creature of your choice in a 30-foot radius extending from you must succeed on a DC 15 Wisdom saving throw or become frightened of you for 1 minute. While it is frightened in this way, a creature must spend its turns trying to move as far away from you as it can, and it can\'t willingly move to a space within 30 feet of you. It also can\'t take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If it has nowhere it can move, the creature can use the Dodge action. At the end of its turns, a creature can use the Dodge action. At the end of each of its turns, a creature can repeat the saving throw, ending the effect on itself on a success.<br><br>The mace regains 1d3 expended charges daily at dawn.",
+                        name: "Mace of Terror",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatsword (rare), requires attunement by a specific individual<br><br>Mind flayers can turn any nonmagical sword into a mind blade. Only one creature can attune to it: either a specific mind flayer or one of its thralls. In the hands of any other creature, the mind blade functions as a normal sword of its kind. In the hands of its intended wielder, the mind blade is a magic weapon that deals an extra 2d6 psychic damage to any target it hits.",
+                        name: "Mind Blade (Greatsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Secondary Damage: 2d6, Secondary Damage Type: psychic, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (rare), requires attunement by a specific individual<br><br>Mind flayers can turn any nonmagical sword into a mind blade. Only one creature can attune to it: either a specific mind flayer or one of its thralls. In the hands of any other creature, the mind blade functions as a normal sword of its kind. In the hands of its intended wielder, the mind blade is a magic weapon that deals an extra 2d6 psychic damage to any target it hits.",
+                        name: "Mind Blade (Longsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Secondary Damage: 2d6, Secondary Damage Type: psychic, Alternate Damage: 1d10, Alternate Damage Type: slashing, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Rapier (rare), requires attunement by a specific individual<br><br>Mind flayers can turn any nonmagical sword into a mind blade. Only one creature can attune to it: either a specific mind flayer or one of its thralls. In the hands of any other creature, the mind blade functions as a normal sword of its kind. In the hands of its intended wielder, the mind blade is a magic weapon that deals an extra 2d6 psychic damage to any target it hits.",
+                        name: "Mind Blade (Rapier)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 2d6, Secondary Damage Type: psychic, Range: 5 ft",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Scimitar (rare), requires attunement by a specific individual<br><br>Mind flayers can turn any nonmagical sword into a mind blade. Only one creature can attune to it: either a specific mind flayer or one of its thralls. In the hands of any other creature, the mind blade functions as a normal sword of its kind. In the hands of its intended wielder, the mind blade is a magic weapon that deals an extra 2d6 psychic damage to any target it hits.",
+                        name: "Mind Blade (Scimitar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Secondary Damage: 2d6, Secondary Damage Type: psychic, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortsword (rare), requires attunement by a specific individual<br><br>Mind flayers can turn any nonmagical sword into a mind blade. Only one creature can attune to it: either a specific mind flayer or one of its thralls. In the hands of any other creature, the mind blade functions as a normal sword of its kind. In the hands of its intended wielder, the mind blade is a magic weapon that deals an extra 2d6 psychic damage to any target it hits.",
+                        name: "Mind Blade (Shortsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Secondary Damage: 2d6, Secondary Damage Type: psychic, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Whip (rare), requires attunement by a mind flayer<br><br>In the hands of a creature other than a mind flayer, a mind lash functions as a normal whip. In the hands of an illithid, this magic weapon strips away a creature\'s will to survive as it also strips away flesh, dealing an extra 2d4 psychic damage to any target it hits. Any creature that takes psychic damage from the mind lash must also succeed on a DC 15 Wisdom saving throw or have disadvantage on Intelligence, Wisdom, and Charisma saving throws for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+                        name: "Mind Lash",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Secondary Damage: 2d4, Secondary Damage Type: psychic, Range: 10 ft",
+                        properites: "Finesse, Reach",
+                        price: 2,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Sickle (rare), requires attunement by a Druid or Ranger<br><br>This silver-bladed sickle glimmers softly with moonlight. While holding this magic weapon, you gain a +2 bonus to attack and damage rolls made with it, and you gain a +2 bonus to spell attack rolls and the saving throw DCs of your druid and ranger spells. In addition, you can use the sickle as a spellcasting focus for your druid and ranger spells.<br><br>When you cast a spell that restores hit points, you can roll a d4 and add the number rolled to the amount of hit points restored, provided you are holding the sickle.",
+                        name: "Moon Sickle +2",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Melee Attacks +2, Melee Damage +2, Spell Attack +2, Spell DC +2",
+                        properties: "Light",
+                        weight: 2,
+                        price: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Dagger (rare), requires attunement<br><br>This weapon is a magic dagger disguised as a sewing needle. When you hold it and use a bonus action to speak its command word, it transforms into a dagger or back into a needle.<br><br>You gain a +1 bonus to attack and damage rolls made with the dagger. While holding it, you can use an action to cast the Mending cantrip from it.",
+                        name: "Needle of Mending",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 20/60",
+                        properties: "Finesse, Light, Thrown",
+                        price: 2,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (rare), requires attunement<br><br>This item appears to be a longsword hilt. While grasping the hilt, you can use a bonus action to cause a blade of pure radiance to spring into existence, or make the blade disappear. While the blade exists, this magic longsword has the finesse property. If you are proficient with shortswords or longswords, you are proficient with the sun blade.<br><br>You gain a +2 bonus to attack and damage rolls made with this weapon, which deals radiant damage instead of slashing damage. When you hit an undead with it, that target takes an extra 1d8 radiant damage.<br><br>The sword\'s luminous blade emits bright light in a 15-foot radius and dim light for an additional 15 feet. The light is sunlight. While the blade persists, you can use an action to expand or reduce its radius of bright and dim light by 5 feet each, to a maximum of 30 feet each or a minimum of 10 feet each.",
+                        name: "Sun Blade",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: radiant, Secondary Damage: 1d8, Secondary Damage Type: radiant against undead, Alternate Damage: 1d10, Alternate Damage Type: radiant, Melee Attacks +2, Melee Damage +2, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Warhammer (rare), requires attunement<br><br>You gain a +2 bonus to attack and damage rolls made with this magic weapon.<br><br>As an action, you can hurl the weapon up to 120 feet to a point you can see. When it reaches that point, the weapon vanishes in an explosion, and each creature in a 20-foot-radius sphere centered on that point must make a DC 15 Dexterity saving throw, taking 6d6 fire damage on a failed save, or half as much damage on a successful one. Afterward, you can use an action to cause the weapon to reappear in your empty hand. You can\'t cause it to explode again until you finish a short or long rest.<br><br>If you don\'t call the weapon back to your hand, it reappears at the point where it exploded when you are no longer attuned to it or when 24 hours have passed.",
+                        name: "Sunforger",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Alternate Damage: 1d10, Alternate Damage Type: bludgeoning, Alternate Damage: 6d6, Alternate Damage Type: fire, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatsword (rare), requires attunement<br><br>When you attack a creature with this magic weapon and roll a 20 on the attack roll, that target takes an extra 10 necrotic damage if it isn\'t a construct or an undead. You also gain 10 temporary hit points.",
+                        name: "Sword of Life Stealing (Greatsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (rare), requires attunement<br><br>When you attack a creature with this magic weapon and roll a 20 on the attack roll, that target takes an extra 10 necrotic damage if it isn\'t a construct or an undead. You also gain 10 temporary hit points.",
+                        name: "Sword of Life Stealing (Longsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Rapier (rare), requires attunement<br><br>When you attack a creature with this magic weapon and roll a 20 on the attack roll, that target takes an extra 10 necrotic damage if it isn\'t a construct or an undead. You also gain 10 temporary hit points.",
+                        name: "Sword of Life Stealing (Rapier)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Range: 5 ft",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Scimitar (rare), requires attunement<br><br>When you attack a creature with this magic weapon and roll a 20 on the attack roll, that target takes an extra 10 necrotic damage if it isn\'t a construct or an undead. You also gain 10 temporary hit points.",
+                        name: "Sword of Life Stealing (Scimitar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortsword (rare), requires attunement<br><br>When you attack a creature with this magic weapon and roll a 20 on the attack roll, that target takes an extra 10 necrotic damage if it isn\'t a construct or an undead. You also gain 10 temporary hit points.",
+                        name: "Sword of Life Stealing (Shortsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatsword (rare), requires attunement<br><br>Hit points lost to this weapon\'s damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means.<br><br>Once per turn, when you hit a creature with an attack using this magic weapon, you can wound the target. At the start of each of the wounded creature\'s turns, it takes 1d4 necrotic damage for each time you\'ve wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.",
+                        name: "Sword of Wounding (Greatsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (rare), requires attunement<br><br>Hit points lost to this weapon\'s damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means.<br><br>Once per turn, when you hit a creature with an attack using this magic weapon, you can wound the target. At the start of each of the wounded creature\'s turns, it takes 1d4 necrotic damage for each time you\'ve wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.",
+                        name: "Sword of Wounding (Longsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Rapier (rare), requires attunement<br><br>Hit points lost to this weapon\'s damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means.<br><br>Once per turn, when you hit a creature with an attack using this magic weapon, you can wound the target. At the start of each of the wounded creature\'s turns, it takes 1d4 necrotic damage for each time you\'ve wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.",
+                        name: "Sword of Wounding (Rapier)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Range: 5 ft",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Scimitar (rare), requires attunement<br><br>Hit points lost to this weapon\'s damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means.<br><br>Once per turn, when you hit a creature with an attack using this magic weapon, you can wound the target. At the start of each of the wounded creature\'s turns, it takes 1d4 necrotic damage for each time you\'ve wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.",
+                        name: "Sword of Wounding (Scimitar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortsword (rare), requires attunement<br><br>Hit points lost to this weapon\'s damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means.<br><br>Once per turn, when you hit a creature with an attack using this magic weapon, you can wound the target. At the start of each of the wounded creature\'s turns, it takes 1d4 necrotic damage for each time you\'ve wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.",
+                        name: "Sword of Wounding (Shortsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Sling (rare)<br><br>You have a +1 bonus to attack and damage rolls made with this weapon.<br><br>When you make a ranged attack with this sling and hit a target, you can cause the ammunition to ricochet toward a second target within 10 feet of the first, and then make a ranged attack against the second target.",
+                        name: "Two-Birds Sling",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d4, Damage Type: bludgeoning, Ranged Attacks +1, Ranged Damage +1, Range: 30/120",
+                        properties: "Ammunition",
+                        price: 0.1,
+                        weight: 0,
+                        amount: 1
+                    },
+                    {
+                        description: "Club (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Club)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "Light",
+                        price: 0.1,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Dagger (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Dagger)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: piercing, Range: 20/60",
+                        properties: "Finesse, Light, Thrown",
+                        price: 2,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatclub (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Greatclub)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "Two-Handed",
+                        price: 0.2,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Handaxe (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Handaxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Jevelin (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Javelin)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Range: 30/120",
+                        properties: "Thrown",
+                        price: 0.5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Light Hammer (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Light Hammer)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 2,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Mace (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Mace)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Quarterstaff (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Quarterstaff)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Alternate Damage: 1d8, Alternate Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 0.2,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Sickle (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Sickle)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Range: 5 ft",
+                        properties: "Light",
+                        price: 1,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Spear (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Spear)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Alternate Damage: 1d8, Alternate Damage Type: piercing, Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 1,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Light Crossbow (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Light Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Range: 80/320",
+                        properties: "Ammunition, Loading, Two-Handed",
+                        price: 25,
+                        weight: 5,
+                        amount: 1
+                    },
+                    {
+                        description: "Dart (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Dart)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d4, Damage Type: piercing, Range: 20/60",
+                        properties: "Finesse, Thrown",
+                        price: 0.05,
+                        weight: 0.25,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortbow (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Shortbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Range: 80/320",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Sling (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Sling)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d4, Damage Type: bludgeoning, Range: 30/120",
+                        properties: "Ammunition",
+                        price: 0.1,
+                        weight: 0,
+                        amount: 1
+                    },
+                    {
+                        description: "Battleaxe (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Battleaxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 10,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Flail (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Flail)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Glaive (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Glaive)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Greataxe (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Greataxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: slashing, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 30,
+                        weight: 7,
+                        amount: 1
+                    },
+                    {
+                        description: "Greatsword (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Greatsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Halberd (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Halberd)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Lance (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Lance)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: piercing, Range: 10 ft",
+                        properties: "Reach, Special",
+                        price: 10,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        description: "Longsword (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Longsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Maul (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Maul)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 10,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        description: "Morningstar (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Morningstar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Range: 5 ft",
+                        properties: "",
+                        price: 15,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "Pike (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Pike)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: piercing, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 5,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        description: "Rapier (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Rapier)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Range: 5 ft",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Scimitar (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Scimitar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Shortsword (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Shortsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Trident (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Trident)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Alternate Damage: 1d8, Alternate Damage Type: piercing, Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        description: "War Pick (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (War Pick)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Warhammer (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Warhammer)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Alternate Damage: 1d10, Alternate Damage Type: bludgeoning, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Whip (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Whip)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Range: 10 ft",
+                        properites: "Finesse, Reach",
+                        price: 2,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Blowgun (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Blowgun)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1, Damage Type: piercing, Range: 25/100",
+                        properties: "Ammunition, Loading",
+                        price: 10,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        description: "Hand Crossbow (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Hand Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Range: 30/120",
+                        properties: "Ammunition, Light, Loading",
+                        price: 75,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        description: "Heavy Crossbow (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Heavy Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d10, Damage Type: piercing, Range: 100/400",
+                        properties: "Ammunition, Heavy, Loading, Two-Handed",
+                        price: 50,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        description: "Longbow (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Longbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Range: 150/600",
+                        properties: "Ammunition, Heavy, Two-Handed",
+                        price: 50,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        description: "Net (rare)<br><br>When you roll a 20 on your attack roll with this magic weapon, the target takes an extra 7 damage of the weapon\'s type.",
+                        name: "Vicious Weapon (Net)",
+                        modifiers: "Item Type: Ranged Weapon, Range: 5/15",
+                        properties: "Thrown, Special",
+                        price: 1,
+                        weight: 3,
                         amount: 1
                     }
                 ],
