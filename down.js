@@ -6050,7 +6050,7 @@ var Downtime = Downtime || (function(){
 					},
                     {
 						desc: "Shield (very rare), requires attunement<br><br>While holding this shield, you have advantage on saving throws against spells and other magical effects, and spell attacks have disadvantage against you.",
-						name: "Spelllguard Shield",
+						name: "Spellguard Shield",
 						modifiers: "Item Type: Shield, AC: 2, Saving Throws:Advantage",
 						properties: "",
 						price: 10,
@@ -6071,6 +6071,546 @@ var Downtime = Downtime || (function(){
             legendary: {
                 weapon: [
                     //Legendary Weapons
+                    {
+                        desc: "Greatsword (legendary), requires attunement by a creature of non-lawful alignment<br><br>Hidden in the dungeon of White Plume Mountain, Blackrazor shines like a piece of night sky filled with stars. Its black scabbard is decorated with pieces of cut obsidian.<br><br>You gain a +3 bonus to attack and damage rolls made with this magic weapon. It has the following additional properties.<br><br>Devour Soul. Whenever you use it to reduce a creature to 0 hit points, the sword slays the creature and devours its soul, unless it is a construct or an undead. A creature whose soul has been devoured by Blackrazor can be restored to life only by a Wish spell.<br><br>When it devours a soul, Blackrazor grants you temporary hit points equal to the slain creature's hit point maximum. These hit points fade after 24 hours. As long as these temporary hit points last and you keep Blackrazor in hand, you have advantage on attack rolls, saving throws, and ability checks.<br><br>If you hit an undead with this weapon, you take 1d10 necrotic damage and the target regains 1d10 hit points. If this necrotic damage reduces you to 0 hit points, Blackrazor devours your soul.<br><br>Soul Hunter. While you hold the weapon. you are aware of the presence of Tiny or larger creatures within 60 feet of you that aren\'t constructs or undead. You also can\'t be charmed or frightened.<br><br>Blackrazor can cast the Haste spell on you once per day. It decides when to cast the spell and maintains concentration on it so that you don\'t have to.<br><br>Sentience. Blackrazor is a sentient chaotic neutral weapon with an Intelligence of 17, a Wisdom of 10, and a Charisma of 19. It has hearing and darkvision out to a range of 120 feet.<br><br>The weapon can speak, read, and understand Common, and can communicate with its wielder telepathically. Its voice is deep and echoing. While you are attuned to it, Blackrazor also understands every language you know.<br><br>Personality. Blackrazor speaks with an imperious tone, as though accustomed to being obeyed. The sword\'s purpose is to consume souls. It doesn\'t care whose souls it eats, including the wielder\'s. The sword believes that all matter and energy sprang from a void of negative energy and will one day return to it. Blackrazor is meant to hurry that process along.<br><br>Despite its nihilism, Blackrazor feels a strange kinship to Wave and Whelm, two other weapons locked away under White Plume Mountain. It wants the three weapons to be united again and wielded together in combat, even though it violently disagrees with Whelm and finds Wave tedious.<br><br>Blackrazor\'s hunger for souls must be regularly fed. If the sword goes three days or more without consuming a soul, a conflict between it and its wielder occurs at the next sunset.",
+                        name: "Blackrazor",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Melee Attacks +3, Melee Damage +3, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        desc: "Greatsword (legendary), requires attunement<br><br>You gain a +3 bonus to attack and damage rolls made with this magic weapon.<br><br>The first time you attack with the sword on each of your turns, you can transfer some or all of the sword\'s bonus to your Armor Class, instead of using the bonus on any attacks that turn. For example, you could reduce the bonus to your attack and damage rolls to +1 and gain +2 to AC. The adjusted bonuses remain in effect until the start of your next turn, although you must hold the sword to gain a bonus to AC from it.",
+                        name: "Defender Greatsword",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Melee Attacks +3, Melee Damage +3, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        desc: "Longsword (legendary), requires attunement<br><br>You gain a +3 bonus to attack and damage rolls made with this magic weapon.<br><br>The first time you attack with the sword on each of your turns, you can transfer some or all of the sword\'s bonus to your Armor Class, instead of using the bonus on any attacks that turn. For example, you could reduce the bonus to your attack and damage rolls to +1 and gain +2 to AC. The adjusted bonuses remain in effect until the start of your next turn, although you must hold the sword to gain a bonus to AC from it.",
+                        name: "Defender Longsword",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +3, Melee Damage +3, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        desc: "Rapier (legendary), requires attunement<br><br>You gain a +3 bonus to attack and damage rolls made with this magic weapon.<br><br>The first time you attack with the sword on each of your turns, you can transfer some or all of the sword\'s bonus to your Armor Class, instead of using the bonus on any attacks that turn. For example, you could reduce the bonus to your attack and damage rolls to +1 and gain +2 to AC. The adjusted bonuses remain in effect until the start of your next turn, although you must hold the sword to gain a bonus to AC from it.",
+                        name: "Defender Rapier",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Melee Attacks +3, Melee Damage +3, Range: 5 ft",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        desc: "Scimitar (legendary), requires attunement<br><br>You gain a +3 bonus to attack and damage rolls made with this magic weapon.<br><br>The first time you attack with the sword on each of your turns, you can transfer some or all of the sword\'s bonus to your Armor Class, instead of using the bonus on any attacks that turn. For example, you could reduce the bonus to your attack and damage rolls to +1 and gain +2 to AC. The adjusted bonuses remain in effect until the start of your next turn, although you must hold the sword to gain a bonus to AC from it.",
+                        name: "Defender Scimitar",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Melee Attacks +3, Melee Damage +3, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        desc: "Shortsword (legendary), requires attunement<br><br>You gain a +3 bonus to attack and damage rolls made with this magic weapon.<br><br>The first time you attack with the sword on each of your turns, you can transfer some or all of the sword\'s bonus to your Armor Class, instead of using the bonus on any attacks that turn. For example, you could reduce the bonus to your attack and damage rolls to +1 and gain +2 to AC. The adjusted bonuses remain in effect until the start of your next turn, although you must hold the sword to gain a bonus to AC from it.",
+                        name: "Defender Shortsword",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Melee Attacks +3, Melee Damage +3, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        desc: "Spear (legendary), requires attunement<br><br>A dragonlance is a renowned weapon forged from rare metal with the aid of powerful artifacts associated with Bahamut. Different lances are forged for use by foot soldiers (as pikes) and by riders (as lances), but the magical properties of the weapons are the same.<br><br>You gain a +3 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit a Dragon with this weapon, the Dragon takes an extra 3d6 force damage, and any Dragon of your choice that you can see within 30 feet of you can immediately use its reaction to make a melee attack.",
+                        name: "Dragonlance (Spear)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 3d6, Secondary Damage Type: force against dragons, Alternate Damage: 1d8, Alternate Damage Type: piercing, Melee Attacks +3, Melee Damage +3, Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 1,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        desc: "Pike (legendary), requires attunement<br><br>A dragonlance is a renowned weapon forged from rare metal with the aid of powerful artifacts associated with Bahamut. Different lances are forged for use by foot soldiers (as pikes) and by riders (as lances), but the magical properties of the weapons are the same.<br><br>You gain a +3 bonus to attack and damage rolls made with this magic weapon.<br><br>When you hit a Dragon with this weapon, the Dragon takes an extra 3d6 force damage, and any Dragon of your choice that you can see within 30 feet of you can immediately use its reaction to make a melee attack.",
+                        name: "Dragonlance (Pike)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: piercing, Secondary Damage: 3d6, Secondary Damage Type: force against dragons, Melee Attacks +3, Melee Damage +3, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 5,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        desc: "Club (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Club)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Melee Attacks +3, Melee Damage +3, Range: 5 ft.",
+                        properties: "Light",
+                        price: 0.1,
+                        amount: 1,
+                        weight: 2
+                    },
+                    {
+                        desc: "Dagger (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Dagger)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: piercing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Melee Attacks +3, Melee Damage +3, Range: 20/60",
+                        properties: "Finesse, Light, Thrown",
+                        price: 2,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        desc: "Greatclub (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Greatclub)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Melee Attacks +3, Melee Damage +3, Range: 5 ft.",
+                        properties: "Two-Handed",
+                        price: 0.2,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        desc: "Handaxe (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Handaxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Melee Attacks +3, Melee Damage +3, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        desc: "Javelin (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Javelin)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Melee Attacks +3, Melee Damage +3, Range: 30/120",
+                        properties: "Thrown",
+                        price: 0.5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        desc: "Light Hammer (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Light Hammer)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: bludgeoning, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Melee Attacks +3, Melee Damage +3, Range: 20/60",
+                        properties: "Light, Thrown",
+                        price: 2,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        desc: "Mace (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Mace)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Melee Attacks +3, Melee Damage +3, Range: 5 ft.",
+                        properties: "",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        desc: "Quarterstaff (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Quarterstaff)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: bludgeoning, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Alternate Damage: 1d8, Alternate Damage Type: bludgeoning, Melee Damage +3, Melee Attacks +3, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 0.2,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        desc: "Sickle (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Sickle)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Melee Attacks +3, Melee Damage +3, Range: 5 ft.",
+                        properties: "Light",
+                        price: 1,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        desc: "Spear (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Spear)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Alternate Damage: 1d8, Alternate Damage Type: piercing, Melee Attacks +3, Melee Damage +3, Range: 20/60",
+                        properties: "Thrown, Versatile",
+                        price: 1,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        desc: "Light Crossbow (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Light Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Ranged Attacks +3, Ranged Damage +3, Range: 80/320",
+                        properties: "Ammunition, Loading, Two-Handed",
+                        price: 25,
+                        weight: 5,
+                        amount: 1
+                    },
+                    {
+                        desc: "Dart (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Dart)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d4, Damage Type: piercing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Ranged Attacks +3, Ranged Damage +3, Range: 20/60",
+                        properties: "Finesse, Thrown",
+                        price: 0.05,
+                        weight: 0.25,
+                        amount: 1
+                    },
+                    {
+                        desc: "Shortbow (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Shortbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Ranged Attacks +3, Ranged Damage +3, Range: 80/320",
+                        properties: "Ammunition, Two-Handed",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        desc: "Sling (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Sling)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d4, Damage Type: bludgeoning, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Ranged Attacks +3, Ranged Damage +3, Range: 30/120",
+                        properties: "Ammunition",
+                        price: 0.1,
+                        weight: 0,
+                        amount: 1
+                    },
+                    {
+                        desc: "Battleaxe (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Battleaxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s brath, Range: 5 ft., Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +3, Melee Damage +3",
+                        properties: "Versatile",
+                        price: 10,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        desc: "Flail (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Flail)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Range: 5 ft., Melee Attacks +3, Melee Damage +3",
+                        properties: "",
+                        price: 10,
+                        weight: 2,
+                        ammount: 1
+                    },
+                    {
+                        desc: "Glaive (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Glaive)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Melee Attacks +3, Melee Damage +3, Range: 10 ft.",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        desc: "Greataxe (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Greataxe)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: slashing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Melee Attacks +3, Melee Damage +3, Range: 5 ft.",
+                        properties: "Heavy, Two-Handed",
+                        price: 30,
+                        weight: 7,
+                        amount: 1
+                    },
+                    {
+                        desc: "Greatsword (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Greatsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Melee Attacks +3, Melee Damage +3, Range: 5 ft.",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        desc: "Halberd (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Halberd)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: slashing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Melee Attacks +3, Melee Damage +3, Range: 10 ft.",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 20,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        desc: "Lance (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Lance)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d12, Damage Type: piercing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Melee Attacks +3, Melee Damage +3, Range: 10 ft.",
+                        properties: "Reach, Special",
+                        price: 10,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        desc: "Longsword (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Longsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Range: 5 ft, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +3, Melee Damage +3",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        desc: "Maul (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Maul)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: bludgeoning, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Melee Attacks +3, Melee Damage +3, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 10,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        desc: "Morningstar (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Morningstar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Melee Attacks +3, Melee Damage +3, Range: 5 ft",
+                        properties: "",
+                        price: 15,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        desc: "Pike (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Pike)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d10, Damage Type: piercing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Melee Attacks +3, Melee Damage +3, Range: 10 ft",
+                        properties: "Heavy, Reach, Two-Handed",
+                        price: 5,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        desc: "Rapier (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Rapier)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Melee Attacks +3, Melee Damage +3, Range: 5 ft",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        desc: "Scimitar (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Scimitar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Melee Attacks +3, Melee Damage +3, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        desc: "Shortsword (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Shortsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Melee Attacks +3, Melee Damage +3, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        desc: "Trident (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Trident)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Range: 20/60, Alternate Damage: 1d8, Alternate Damage Type: piercing, Melee Attacks +3, Melee Damage +3",
+                        properties: "Thrown, Versatile",
+                        price: 5,
+                        weight: 4,
+                        amount: 1
+                    },
+                    {
+                        desc: "War Pick (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (War Pick)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Melee Attacks +3, Melee Damage +3, Range: 5 ft",
+                        properties: "",
+                        price: 5,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        desc: "Warhammer (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Warhammer)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Range: 5 ft, Alternate Damage: 1d10, Alternate Damage Type: bludgeoning, Melee Attacks +3, Melee Damage +3",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        desc: "Whip (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Whip)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: slashing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Ranged Attacks +3, Ranged Damage +3, Range: 10 ft",
+                        properties: "Finesse, Reach",
+                        price: 2,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        desc: "Blowgun (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Blowgun)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1, Damage Type: piercing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Ranged Attacks +3, Ranged Damage +3, Range: 25/100",
+                        properties: "Ammunition, Loading",
+                        price: 10,
+                        weight: 1,
+                        amount: 1
+                    },
+                    {
+                        desc: "Hand Crossbow (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Hand Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Ranged Attacks +3, Ranged Damage +3, Range: 30/120",
+                        properties: "Ammunition, Light, Loading",
+                        price: 75,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        desc: "Heavy Crossbow (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Heavy Crossbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d10, Damage Type: piercing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Ranged Attacks +3, Ranged Damage +3, Range: 100/400",
+                        properties: "Ammunition, Heavy, Loading, Two-Handed",
+                        price: 50,
+                        weight: 18,
+                        amount: 1
+                    },
+                    {
+                        desc: "Longbow (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Longbow)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Ranged Attacks +3, Ranged Damage +3, Range: 150/600",
+                        properties: "Ammunition, Heavy, Two-Handed",
+                        price: 50,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        desc: "Net (legendary), requires attunement<br><br>This weapon is decorated with dragon heads, claws, wings, scales, or Draconic letters. When it steeps in a dragon\'s hoard, it absorbs the energy of the dragon\'s breath weapon and deals damage of that type with its special properties.<br><br>The Ascendant weapon has the Slumbering property, and it improves on the Stirring and Wakened properties. The bonus to attack and damage rolls increases to +3, and the extra damage dealt by the weapon increases to 3d6.<br><br>The cone of destructive energy the weapon creates increases to a 60-foot cone, the save DC increases to 18, and the damage increases to 12d6.",
+                        name: "Ascendant Dragon\'s Wrath Weapon (Net)",
+                        modifiers: "Item Type: Ranged Weapon, Damage: 0, Secondary Damage: 12d6, Secondary Damage Type: dragon\'s breath, Ranged Attacks +3, Ranged Damage +3, Range: 5/15",
+                        properties: "Thrown, Special",
+                        price: 1,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        desc: "Flail (legendary), requires attunement<br><br>This magic flail is made in the image of Tiamat, with five jagged heads shaped like the heads of five different chromatic dragons. You gain a +3 bonus to attack and damage rolls made with this flail. When you hit with an attack roll using it, the target takes an extra 5d4 damage of your choice of one of the following damage types: acid, cold, fire, lightning, or poison.<br><br>While holding the flail, you can use an action and speak a command word to cause the heads to breathe multicolored flames in a 90-foot cone. Each creature in that area must make a DC 18 Dexterity saving throw. On a failed save, it takes 14d6 damage of one of the following damage types (your choice): acid, cold, fire, lightning, or poison. On a successful save, it takes half as much damage. Once this action is used, it can\'t be used again until the next dawn.",
+                        name: "Flail of Tiamat",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: bludgeoning, Secondary Damage: 5d4, Secondary Damage Type: acid\, cold\, fire\, lightning or poison, Range: 5 ft",
+                        properties: "",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        desc: "Maul (legendary), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon.<br><br>You must be wearing a Belt of Giant Strength (any variety) and Gauntlets of Ogre Power to attune to this weapon. The attunement ends if you take off either of those items. While you are attuned to this weapon and holding it, your Strength score increases by 4 and can exceed 20, but not 30. When you roll a 20 on an attack roll made with this weapon against a giant, the giant must succeed on a DC 17 Constitution saving throw or die.<br><br>The hammer also has 5 charges. While attuned to it, you can expend 1 charge and make a ranged weapon attack with the hammer, hurling it as if it had the thrown property with a normal range of 20 feet and a long range of 60 feet. If the attack hits, the hammer unleashes a thunderclap audible out to 300 feet. The target and every creature within 30 feet of it must succeed on a DC 17 Constitution saving throw or be stunned until the end of your next turn. The hammer regains 1d4 + 1 expended charges daily at dawn.",
+                        name: "Hammer of Thunderbolts",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: bludgeoning, Melee Attacks +1, Melee Damage +1, Range: 5 ft, Strength +4",
+                        properties: "Heavy, Two-Handed",
+                        price: 10,
+                        weight: 10,
+                        amount: 1
+                    },
+                    {
+                        desc: "Greatsword (legendary), requires attunement by a paladin<br><br>You gain a +3 bonus to attack and damage rolls made with this magic weapon. When you hit a fiend or an undead with it, that creature takes an extra 2d10 radiant damage.<br><br>While you hold the drawn sword, it creates an aura in a 10-foot radius around you. You and all creatures friendly to you in the aura have advantage on saving throws against spells and other magical effects. If you have 17 or more levels in the paladin class, the radius of the aura increases to 30 feet.",
+                        name: "Holy Avenger (Greatsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Secondary Damage: 2d10, Secondary Damage Type: radiant against fiends or undead, Melee Attacks +3, Melee Damage +3, Range: 5 ft, Saving Throws:Advantage",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        desc: "Longsword (legendary), requires attunement by a paladin<br><br>You gain a +3 bonus to attack and damage rolls made with this magic weapon. When you hit a fiend or an undead with it, that creature takes an extra 2d10 radiant damage.<br><br>While you hold the drawn sword, it creates an aura in a 10-foot radius around you. You and all creatures friendly to you in the aura have advantage on saving throws against spells and other magical effects. If you have 17 or more levels in the paladin class, the radius of the aura increases to 30 feet.",
+                        name: "Holy Avenger (Longsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Secondary Damage: 2d10, Secondary Damage Type: radiant against fiends or undead, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +3, Melee Damage +3, Range: 5 ft, Saving Throws:Advantage",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        desc: "Rapier (legendary), requires attunement by a paladin<br><br>You gain a +3 bonus to attack and damage rolls made with this magic weapon. When you hit a fiend or an undead with it, that creature takes an extra 2d10 radiant damage.<br><br>While you hold the drawn sword, it creates an aura in a 10-foot radius around you. You and all creatures friendly to you in the aura have advantage on saving throws against spells and other magical effects. If you have 17 or more levels in the paladin class, the radius of the aura increases to 30 feet.",
+                        name: "Holy Avenger (Rapier)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Secondary Damage: 2d10, Secondary Damage Type: radiant against fiends or undead, Melee Attacks +3, Melee Damage +3, Range: 5 ft, Saving Throws:Advantage",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        desc: "Scimitar (legendary), requires attunement by a paladin<br><br>You gain a +3 bonus to attack and damage rolls made with this magic weapon. When you hit a fiend or an undead with it, that creature takes an extra 2d10 radiant damage.<br><br>While you hold the drawn sword, it creates an aura in a 10-foot radius around you. You and all creatures friendly to you in the aura have advantage on saving throws against spells and other magical effects. If you have 17 or more levels in the paladin class, the radius of the aura increases to 30 feet.",
+                        name: "Holy Avenger (Scimitar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Secondary Damage: 2d10, Secondary Damage Type: radiant against fiends or undead, Melee Attacks +3, Melee Damage +3, Range: 5 ft, Saving Throws:Advantage",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        desc: "Shortsword (legendary), requires attunement by a paladin<br><br>You gain a +3 bonus to attack and damage rolls made with this magic weapon. When you hit a fiend or an undead with it, that creature takes an extra 2d10 radiant damage.<br><br>While you hold the drawn sword, it creates an aura in a 10-foot radius around you. You and all creatures friendly to you in the aura have advantage on saving throws against spells and other magical effects. If you have 17 or more levels in the paladin class, the radius of the aura increases to 30 feet.",
+                        name: "Holy Avenger (Shortsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Secondary Damage: 2d10, Secondary Damage Type: radiant against fiends or undead, Melee Attacks +3, Melee Damage +3, Range: 5 ft, Saving Throws:Advantage",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        desc: "Greatsword (legendary), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon. While the sword is on your person, you also gain a +1 bonus to saving throws.<br><br>If the sword is on your person, you can call on its luck (no action required) to reroll one attack roll, ability check, or saving throw you dislike. You must use the second roll. This property can't be used again until the next dawn.<br><br>The sword has 1d4- 1 charges. While holding it, you can use an action to expend 1 charge and cast the Wish spell from it. This property can\'t be used again until the next dawn. The sword loses this property if it has no charges.",
+                        name: "Luck Blade (Greatsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Saving Throws +1, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    },
+                    {
+                        desc: "Longsword (legendary), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon. While the sword is on your person, you also gain a +1 bonus to saving throws.<br><br>If the sword is on your person, you can call on its luck (no action required) to reroll one attack roll, ability check, or saving throw you dislike. You must use the second roll. This property can't be used again until the next dawn.<br><br>The sword has 1d4- 1 charges. While holding it, you can use an action to expend 1 charge and cast the Wish spell from it. This property can\'t be used again until the next dawn. The sword loses this property if it has no charges.",
+                        name: "Luck Blade (Longsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Saving Throws +1, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        desc: "Rapier (legendary), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon. While the sword is on your person, you also gain a +1 bonus to saving throws.<br><br>If the sword is on your person, you can call on its luck (no action required) to reroll one attack roll, ability check, or saving throw you dislike. You must use the second roll. This property can't be used again until the next dawn.<br><br>The sword has 1d4- 1 charges. While holding it, you can use an action to expend 1 charge and cast the Wish spell from it. This property can\'t be used again until the next dawn. The sword loses this property if it has no charges.",
+                        name: "Luck Blade (Rapier)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Saving Throws +1, Range: 5 ft",
+                        properties: "Finesse",
+                        price: 25,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        desc: "Scimitar (legendary), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon. While the sword is on your person, you also gain a +1 bonus to saving throws.<br><br>If the sword is on your person, you can call on its luck (no action required) to reroll one attack roll, ability check, or saving throw you dislike. You must use the second roll. This property can't be used again until the next dawn.<br><br>The sword has 1d4- 1 charges. While holding it, you can use an action to expend 1 charge and cast the Wish spell from it. This property can\'t be used again until the next dawn. The sword loses this property if it has no charges.",
+                        name: "Luck Blade (Scimitar)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Saving Throws +1, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 25,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        desc: "Shortsword (legendary), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon. While the sword is on your person, you also gain a +1 bonus to saving throws.<br><br>If the sword is on your person, you can call on its luck (no action required) to reroll one attack roll, ability check, or saving throw you dislike. You must use the second roll. This property can't be used again until the next dawn.<br><br>The sword has 1d4- 1 charges. While holding it, you can use an action to expend 1 charge and cast the Wish spell from it. This property can\'t be used again until the next dawn. The sword loses this property if it has no charges.",
+                        name: "Luck Blade (Shortsword)",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d6, Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Saving Throws +1, Range: 5 ft",
+                        properties: "Finesse, Light",
+                        price: 10,
+                        weight: 2,
+                        amount: 1
+                    },
+                    {
+                        desc: "Longsword (legendary), requires attunement by an elf or half-elf of neutral good alignment<br><br>Of all the magic items created by the elves, one of the most prized and jealously guarded is a moonblade. In ancient times, nearly all elven noble houses claimed one such blade. Over the centuries, some blades have faded from the world, their magic lost as family lines have become extinct. Other blades have vanished with their bearers during great quests. Thus, only a few of these weapons remain.<br><br>A moonblade passes down from parent to child. The sword chooses its bearer and remains bonded to that person for life. If the bearer dies, another heir can claim the blade. If no worthy heir exists, the sword lies dormant. It functions like a normal longsword until a worthy soul finds it and lays claim to its power.<br><br>A moonblade serves only one master at a time. The attunement process requires a special ritual in the throne room of an elven regent or in a temple dedicated to the elven gods.<br><br>A moonblade won\'t serve anyone it regards as craven, erratic, corrupt, or at odds with preserving and protecting elvenkind. If the blade rejects you, you make ability checks, attack rolls, and saving throws with disadvantage for 24 hours. If the blade accepts you, you become attuned to it and a new rune appears on the blade. You remain attuned to the weapon until you die or the weapon is destroyed.<br><br>A moonblade has one rune on its blade for each master it has served (typically 1d6 + 1). The first rune always grants a +1 bonus to attack and damage rolls made with this magic weapon. Each rune beyond the first grants the moonblade an additional property. The DM chooses each property or determines it randomly on the Moonblade Properties table.<br><br>Every moonblade seeks the advancement of elvenkind and elven ideals. Courage, loyalty, beauty, music, and life are all part of this purpose.<br><br>The weapon is bonded to the family line it is meant to serve. Once it has bonded with an owner who shares its ideals, its loyalty is absolute.<br><br>If a moonblade has a flaw, it is overconfidence. Once it has decided on an owner, it believes that only that person should wield it, even if the owner falls short of elven ideals.",
+                        name: "Moonblade",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +1, Melee Damage +1, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        desc: "Longsword (legendary), requires attunement by a paladin<br><br>You gain a +3 bonus to attack and damage rolls made with this magic weapon. When you hit a fiend or an undead with it, that creature takes an extra 2d10 radiant damage.<br><br>While you hold the drawn sword, it creates an aura in a 10-foot radius around you. You and all creatures friendly to you in the aura have advantage on saving throws against spells and other magical effects. If you have 17 or more levels in the paladin class, the radius of the aura increases to 30 feet.<br><br>Nepenthe is a sentient neutral evil weapon with an Intelligence of 10, a Wisdom of 8, and a Charisma of 18. It has hearing and darkvision out to a range of 60 feet. It can read and understand Elvish. It can also speak Elvish, but only through the voice of its wielder, with whom the sword can communicate telepathically.<br><br>In its lifetime, the sword has beheaded thousands of criminals, not all of whom were guilty of the crimes for which they were convicted. The sword cannot distinguish the guilty from the innocent. With each beheading, it hungers for more justice and blood. The sword is corrupt and irredeemable.",
+                        name: "Nepenthe",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d8, Damage Type: slashing, Secondary Damage: 2d10, Secondary Damage Type: radiant against fiends or undead, Alternate Damage: 1d10, Alternate Damage Type: slashing, Melee Attacks +3, Melee Damage +3, Saving Throws:Advantage, Range: 5 ft",
+                        properties: "Versatile",
+                        price: 15,
+                        weight: 3,
+                        amount: 1
+                    },
+                    {
+                        desc: "Dagger (legendary)<br><br>",
+                        name: "Dagger ",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: piercing, Range: 20/60",
+                        properties: "Finesse, Light, Thrown",
+                        price: 2,
+                        weight: 1,
+                        amount: 1
+                    },
                 ],
                 armor: [
                     //Legendary Armor
