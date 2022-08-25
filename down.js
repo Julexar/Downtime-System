@@ -6603,14 +6603,23 @@ var Downtime = Downtime || (function(){
                         amount: 1
                     },
                     {
-                        desc: "Dagger (legendary)<br><br>",
-                        name: "Dagger ",
-                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: piercing, Range: 20/60",
+                        desc: "Dagger (legendary), requires attunement<br><br>You gain a +1 bonus to attack and damage rolls made with this magic weapon. Its blade is cruelly serrated, and its hilt resembles a demonic head and wings. Whenever you slay a creature with an attack using the dagger, the creature\'s soul is imprisoned inside the dagger, and that creature can be restored to life only by a Wish spell. The dagger can hold a maximum of five souls.<br><br>For each soul imprisoned in the dagger, your attacks with it deal an extra 1d4 necrotic damage on a hit. While the dagger is within 5 feet of you, your dreams are haunted by whispers from the trapped souls.<br><br>The dagger has the following additional properties.<br><br>As a bonus action, you can release any number of stored souls from the dagger to regain 1d10 hit points per soul released.<br><br>If the dagger holds five souls, you can use this property: As a reaction immediately after you hit a creature with the dagger and deal damage to that target, you can release all five souls. If the target now has fewer than 75 hit points, it must succeed on a DC 15 Constitution saving throw or die. If the target dies, you can\'t use this property again until you finish a long rest.",
+                        name: "Rakdos Riteknife",
+                        modifiers: "Item Type: Melee Weapon, Damage: 1d4, Damage Type: piercing, Melee Attacks +1, Melee Damage +1, Range: 20/60",
                         properties: "Finesse, Light, Thrown",
                         price: 2,
                         weight: 1,
                         amount: 1
                     },
+                    {
+                        desc: "Greatsword (legendary), requires attunement by a non-evil creature<br><br>You gain a +3 bonus to attack and damage rolls made with this magic vorpal sword. In addition, the weapon ignores resistance to slashing damage.<br><br>When you use this weapon to attack a creature that has at least one head and roll a 20 on the attack roll, you cut off one of the creature\'s heads. The creature dies if it can\'t survive without the lost head. A creature is immune to this effect if it is immune to slashing damage, it doesn\'t have or need a head, it has legendary actions, or the DM decides that the creature is too big for its head to be cut off with this weapon. Such a creature instead takes an extra 6d8 slashing damage from the hit.<br><br>While attuned to Snicker-Snack, you have proficiency with greatswords, and you can use your Charisma modifier instead of your Strength modifier for attack and damage rolls made with the weapon.<br><br>Snicker-Snack is a sentient, chaotic good greatsword with an Intelligence of 9, a Wisdom of 14, and a Charisma of 18. It has hearing and darkvision out to a range of 120 feet. It can speak, read, and understand Common, and its voice sounds silvery and melodic. Snicker-Snack craves the destruction of evil Dragons and urges you to seek out these creatures and slay them.<br><br>Snicker-Snack has a fickle personality. It ends its attunement to you if you miss on attack rolls with the weapon three times in a row. Each time you finish a long rest after that happens, you can attempt to regain the sword's trust by making a contested Charisma check against Snicker-Snack. If you win the contest, your attunement to the weapon is instantly restored. Your attunement to the weapon can\'t be restored in any other way.",
+                        name: "Snicker-Snack",
+                        modifiers: "Item Type: Melee Weapon, Damage: 2d6, Damage Type: slashing, Melee Attacks +3, Melee Damage +3, Range: 5 ft",
+                        properties: "Heavy, Two-Handed",
+                        price: 50,
+                        weight: 6,
+                        amount: 1
+                    }
                 ],
                 armor: [
                     //Legendary Armor
